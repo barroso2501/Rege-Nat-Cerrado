@@ -1,0 +1,16 @@
+# Ambiente do projeto. Fixe as versões exatas (conda env export --from-history) ao rodar F1 pela primeira vez.
+name: regeneracao-cerrado
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - earthengine-api
+  - geopandas
+  - rasterio
+  - pandas
+  - numpy
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - matplotlib
+  - pyarrow
+  - jupyterlab
