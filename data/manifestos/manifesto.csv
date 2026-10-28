@@ -1,1 +1,6 @@
 asset_id,colecao,bandas,regiao,escala_m,data_acesso,script_gerador,arquivo_saida,sha256
+lulc/collection11/mapbiomas_brazil_collection11_coverage_v3,11 (version v3),classification_1985..2025 (41),Brasil,30,2026-10-28,src/gee/01_verificar_assets.js,(nenhum: só leitura de metadados),system:asset_size=33309101911
+lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5,11 (version v5),classification_1987..2025 (39),Brasil,30,2026-10-28,src/gee/01_verificar_assets.js,(nenhum),system:asset_size=22010199496
+lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1,11 (version v1),classification_1987..2025 (39),Brasil,30,2026-10-28,src/gee/01_verificar_assets.js,(nenhum),system:asset_size=48471533076
+lulc/collection11/mapbiomas_brazil_collection11_pasture_origin_age_v2,11 (sem propriedades de versão),classification_1985..2025 (41),Brasil,30,2026-10-28,src/gee/01_verificar_assets.js,(nenhum),system:asset_size=61923083758
+lulc/collection11/mapbiomas_brazil_collection11_pasture_vigor_v1,11 (version v1),classification_2000..2025 (26),Brasil,30,2026-10-28,src/gee/01_verificar_assets.js,(nenhum),system:asset_size=21979308780

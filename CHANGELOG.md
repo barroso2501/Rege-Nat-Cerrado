@@ -47,3 +47,14 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:**
 - `src/gee/.gitkeep` (a pasta deixou de estar vazia). No GitHub, apague esse arquivo manualmente, porque o upload pelo navegador não remove nada.
+
+## 2026-10-28 · pacote 0.5
+**Novos:**
+- `results/f0_diagnosticos/01_assets_20261028.txt` — saída do script 01. Os 5 assets existem, com as bandas esperadas.
+
+**Alterados:**
+- `src/gee/02_semantica_idade_pastagem.js` → versão 2. A amostragem por pontos aleatórios substitui o `stratifiedSample`, que estourava o tempo no Console. Lê os códigos ano a ano de 2010 a 2020. A análise completa sai pelo Export.
+- `data/manifestos/manifesto.csv` — 5 assets registrados, com a última coluna (`sha256`) usada provisoriamente para o `system:asset_size`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
