@@ -24,7 +24,7 @@ Status possíveis:
 | D07 | Origem: só 15 ou 15 + 21 | Proposta: só 15 (código 515); 21 (521) como sensibilidade | pendente |
 | D08 | Réplica temporal (busca 2012–2016, confirmação 2017–2020) para testar transferência no tempo | Opcional; recomendada para a P3 | pendente |
 | D09 | Fonte do evento | Proposta: código 5 do produto Desmatamento e Vegetação Secundária C11 (`by_coverage_v1` = 515) + LULC `coverage_v3` = 4 nos anos exigidos. Ver `produto_vegetacao_secundaria_c11.md` | proposta |
-| D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**, verificado por Mario contra os erros da versão anterior | **decidida** (2026-10-27, Mario). Pendente: anexar a verificação ao repositório |
+| D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Pendências residuais: semântica e exatidão do 2xx; cobertura do Cerrado |
 
 ---
 
@@ -72,8 +72,19 @@ Status possíveis:
 
 **Asset:** `projects/mapbiomas-public/assets/brazil/lulc/collection11/mapbiomas_brazil_collection11_pasture_origin_age_v2`
 
-**[E]** Mario verificou que esta versão não tem os erros identificados na anterior. Esses erros foram documentados no repositório `pasture-crop-dynamic`: código bruto 1 inesperado e reuso do código 100 após interrupção da pastagem.
+**Verificação** (anexada em 2026-10-28): auditoria direcionada de Mario, aceita em 2026-10-20 e reproduzida localmente em 2026-10-28 com `PASS`.
+- Domínio: 21.869 células, Cerrado + Amazônia, 1985–2025.
+- Não foram detectados o código 1, o 100 após não-pastagem nem o reuso de 100.
+- Detalhe e limites: `docs/verificacoes/pasture_origin_age_v2/USO_NO_PROJETO.md`.
+- Com isso, a afirmação deixa de ser [E].
 
-**Pendências:**
-- incluir em `src/` ou `docs/` o script e o resultado da verificação, para que a afirmação passe de [E] a reprodutível;
-- registrar o asset na KB MapBiomas, que na captura de 2026-10-14 não o listava.
+**Teste crítico** (o que um revisor ainda atacaria):
+1. **A auditoria verifica códigos, não idades.**
+   - O valor 2xx só foi checado quanto à faixa.
+   - Resposta: a extração do projeto compara a idade do asset com a contagem de anos consecutivos de classe 15 em cada ponto usado, e reporta a concordância.
+2. **O domínio auditado pode não cobrir todo o Cerrado.** Resposta: depende do critério da grade de seleção [L]. Pontos fora do domínio entram como sensibilidade.
+3. **O asset remoto pode mudar sem aviso.** Resposta: os metadados do asset vão para o manifesto no momento da extração.
+
+**Pendências antes do congelamento:**
+- confirmar se o 2xx codifica idade ou ano de origem;
+- confirmar o critério da grade `grade_hex_CeAmz_selecao`.

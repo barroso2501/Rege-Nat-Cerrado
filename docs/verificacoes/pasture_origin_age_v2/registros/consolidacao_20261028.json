@@ -1,0 +1,58 @@
+{
+  "documentation_date": "2026-10-28",
+  "native_acceptance_date": "2026-10-20",
+  "status": "ACCEPTED_TARGETED_AUDIT",
+  "new_native_raster_execution_on_documentation_date": false,
+  "source_archives": {
+    "pasture_v2_recheck82_acceptance_v1.zip": "0d7fb2e627dc6d2365e821781a0b84ade9c563a023a4b358c510f4f65fc97429",
+    "auditoria_pasture_v2_dominio_novo_v1_2.zip": "4470a97930687b176c93eb13ebbceefdbb170b16a6e4e9488551df85aa6875b6"
+  },
+  "scripts": {
+    "gee/auditar_pasture_origin_age_v2_dominio_novo_v1_2.js": "f257794779c454051db08358b0f5ffa6f88ac906948251d831c4fb468b8591a0",
+    "gee/recheck_pasture_v2_82cells_v3.js": "4bb7fa9664ccd1d41438da0cf4f930888ae4fad62e1dd9dad0d25d35f61e3862"
+  },
+  "parent_native_run": "20261016150312",
+  "accepted_native_recheck_run": "20261020151405",
+  "years": [
+    1985,
+    2025
+  ],
+  "selected_domain_cells": 21869,
+  "native_rechecked_cells": 82,
+  "parent_cells_reused": 21787,
+  "pending_targeted_audit_controls": [],
+  "local_reproduction": {
+    "parent_validation": "PASS_byte_identical",
+    "recheck_validation": "PASS_byte_identical",
+    "combined_panel": "PASS_byte_identical",
+    "flag_changes": "PASS_byte_identical",
+    "domain_scalar_cases": 14,
+    "recheck_scalar_cases": 14,
+    "additional_coverage_cases": 3,
+    "real_reduction_software_scenarios": 5,
+    "validation_tests": "PASS"
+  },
+  "final_affected_cells": {
+    "code1": 0,
+    "invalid100_after_nonpas": 0,
+    "reused100_after_exit": 0,
+    "code100_without_confirmed_initial": 0,
+    "code100_after_gap_only": 0,
+    "age100_outside_pas": 0,
+    "age_positive_outside_pas": 0,
+    "pasture_age_masked": 0,
+    "pasture_age_zero": 0,
+    "unexpected_age_code": 0,
+    "coverage_unknown_code": 0,
+    "has_pasture": 21036,
+    "has_code100": 16004,
+    "has_2xx": 21033,
+    "has_valid_coverage": 21869
+  },
+  "limitations": [
+    "Selected 21,869-cell grid, not canonical 24,889-cell domain or national audit.",
+    "Audited code/temporal controls, not complete numerical-age or independent thematic validation.",
+    "Archived exports supplied by operator; no attested executed script hash or independent raster asset fingerprint.",
+    "No canonical-source migration or accounting rerun."
+  ]
+}

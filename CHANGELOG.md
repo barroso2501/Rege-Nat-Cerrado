@@ -21,3 +21,16 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-28 · pacote 0.3
+**Novos:**
+- `docs/verificacoes/pasture_origin_age_v2/` — subconjunto do pacote de verificação do asset de idade de pastagem: relatório, manifesto, scripts GEE finais e registros de aceite e validação.
+  - `USO_NO_PROJETO.md` diz o que a verificação fecha e o que fica pendente.
+  - Zip completo: SHA-256 `55b9efda…91dc`.
+
+**Alterados:**
+- `docs/decisoes.md`: D10 com a verificação anexada, teste crítico e pendências residuais.
+- `docs/fontes_dados.md`: linha da idade da pastagem.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
