@@ -34,3 +34,16 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-28 · pacote 0.4
+**Novos:**
+- `src/gee/00_config_comum.js`, `01_verificar_assets.js`, `02_semantica_idade_pastagem.js`, `03_conferir_codigo_515.js`, `04_contagem_eventos_produto_vs_lulc.js` — verificações da F0.
+- `src/gee/README.md` — ordem de execução.
+- `results/f0_diagnosticos/README.md`.
+
+**Alterados:**
+- `PROTOCOLO.md` §7: diagnósticos de F0 permitidos antes do congelamento.
+- `CHANGELOG.md`.
+
+**Removidos:**
+- `src/gee/.gitkeep` (a pasta deixou de estar vazia). No GitHub, apague esse arquivo manualmente, porque o upload pelo navegador não remove nada.

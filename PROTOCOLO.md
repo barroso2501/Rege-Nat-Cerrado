@@ -134,7 +134,8 @@ Nos dois casos:
 3. **Holdout.** Uma ecorregião (ou conjunto delas) é sorteada e trancada até a avaliação final de P3.
 4. **Reportar tudo.** Resultados nulos ou contrários às hipóteses entram no white paper com o mesmo destaque.
 5. **Uma afirmação, uma marca.** No texto final, cada afirmação traz [D], [C], [H] ou [L], ou deriva de resultado reprodutível do repositório.
-6. **Análise exploratória separada.** Notebooks exploratórios ficam em `notebooks/exploratorio/` e não geram números reportáveis.
+6. **Diagnósticos de F0 permitidos antes do congelamento:** verificação de assets, codificação e contagem de eventos sob as definições registradas (`src/gee/01`–`04`). Nenhum preditor é extraído antes do congelamento, e a contagem não serve para escolher a definição que "dá mais eventos".
+7. **Análise exploratória separada.** Notebooks exploratórios ficam em `notebooks/exploratorio/` e não geram números reportáveis.
 
 ## 8. Reprodutibilidade (nível aplicado: intermediário)
 
