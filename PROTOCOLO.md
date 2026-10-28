@@ -1,6 +1,6 @@
 # Protocolo — Potencial de regeneração natural em pastagens do Cerrado
 
-**Versão:** 0.1 (rascunho, não congelado) · **Data:** 2026-10-27 · **Responsável:** Mario Barroso (TNC Brasil)
+**Versão:** 0.2 (rascunho, não congelado) · **Data:** 2026-10-27 · **Responsável:** Mario Barroso (TNC Brasil)
 **Status:** aguardando decisões pendentes (ver `docs/decisoes.md`). Este protocolo só é **congelado** (tag `protocolo-v1.0`) depois que essas decisões forem tomadas e **antes** de extrair qualquer dado de desfecho.
 
 **Marcas epistêmicas** (as mesmas da KB MapBiomas):
@@ -25,6 +25,12 @@ O piloto de 2025 (`docs/piloto_2025.md`) é tratado como **exploratório**. Nenh
 | Fonte da altura não identificada | Toda camada precisa ter asset, versão e data no manifesto antes do uso (§3) |
 | N divergente entre etapas | Cada filtro registra quantos entram e quantos saem (tabela de atrito) |
 | Coleção 9, com regra de prevalência pastagem > savana | Uma única coleção (11) para toda a série (§3.1) |
+
+## 1.1 Decisões já tomadas (v0.2)
+
+- **Destino: só classe 4 (formação savânica)** da LULC C11 (D01). Os resultados valem para regeneração savânica, não para campo nem floresta.
+- **Idade da pastagem:** asset `pasture_origin_age_v2` (D10).
+- Em avaliação: janela 2017–2021 / 2022–2025 (D02) e evento definido pelo código 5 do produto de Vegetação Secundária C11 cruzado com a LULC (D09).
 
 ## 2. Perguntas, em ordem de dependência
 
@@ -76,7 +82,7 @@ Detalhes, asset IDs e versões estão em `docs/fontes_dados.md`. Os pontos crít
 |---|---|---|
 | Vigor da pastagem | MapBiomas Pastagem Col. 11 (2000–2025) | **[D]** normalizado por estado e por região climática (KB:06). Compara pixels dentro da mesma região, não valores absolutos entre regiões |
 | Biomassa da pastagem | Col. 11 `pasture_biomass_v1` (só no catálogo `.github`) | **[D]** derivada do uGPP do Global Pasture Watch. **[L]** acesso e período a confirmar (divergência D11 da KB) |
-| Idade e histórico da pastagem | Calculados **por nós** a partir da LULC Col. 11 | Anos consecutivos como 15, número de interrupções. **[L]** a Col. 11 não publica idade de pastagem no toolkit |
+| Idade da pastagem | `mapbiomas_brazil_collection11_pasture_origin_age_v2` (D10) | Versão corrigida; verificação a anexar ao repositório. Histórico (interrupções) pode ser derivado da LULC C11 |
 | Paisagem / fonte de propágulos | LULC Col. 11 | % de vegetação nativa em raios de 250 m, 500 m e 1 km; distância à vegetação nativa remanescente (nativa estável ≥10 anos) |
 | Fogo | MapBiomas Fogo Col. 5 | Frequência e tempo desde o último fogo. **[C]** circularidade: o classificador do Cerrado usa tempo desde o fogo como preditor (KB:06). Usar com análise de sensibilidade com e sem fogo |
 | Terreno | FABDEM / declividade, HAND | |

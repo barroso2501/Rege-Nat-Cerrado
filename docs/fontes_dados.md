@@ -11,7 +11,9 @@ Os IDs de asset começam por `projects/mapbiomas-public/assets/brazil/`; nas tab
 | Camada | Asset (Col. 11 salvo indicação) | Período | Marca | Observações |
 |---|---|---|---|---|
 | LULC | `lulc/collection11/mapbiomas_brazil_collection11_coverage_v3` | 1985–2025 | [D] | Legenda Col. 11 (`KB:04_legenda_lulc.md`). Nunca aplicar a legenda de outra coleção (D09 da KB) |
-| Desmatamento e vegetação secundária | `lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5` | 1987–2025 | [D] | **[L]** o toolkit da Col. 11 não lista banda de idade da vegetação secundária. Calculamos a idade a partir da LULC |
+| Desmatamento e vegetação secundária (transições 0–7) | `lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5` | 1987–2025 | [D] | Evento = código 5 (recuperação). Regras em `docs/produto_vegetacao_secundaria_c11.md`. Código: `mapbiomas/brazil-deforestation-sec-vegetation` @ `ee9707a` |
+| Idem, cruzado com cobertura do ano anterior | `lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1` | 1987–2025 | [D] | `transição*100 + cobertura(ano−1)`; 515 = recuperação a partir de pastagem. Idade da veg. secundária C11 **não é pública** |
+| Idade da pastagem | `lulc/collection11/mapbiomas_brazil_collection11_pasture_origin_age_v2` | [L] confirmar | [E] | Versão corrigida; verificação de Mario a anexar (D10). Ausente da KB v0.5 |
 | Vigor da pastagem | `lulc/collection11/mapbiomas_brazil_collection11_pasture_vigor_v1` | 2000–2025 | [D] | Normalizado por estado e por região climática |
 | Biomassa da pastagem | `mapbiomas_brazil_collection11_pasture_biomass_v1` (só no catálogo `.github`) | [L] | [D]/[L] | Divergência D11 da KB. Derivada do uGPP do GPW |
 | Fogo | `fire/collection5/...` (frequência, ano do último fogo, intervalo desde o fogo) | 1985–2025 | [D] | Circularidade com a LULC do Cerrado (KB:06) |
