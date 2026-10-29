@@ -1,29 +1,30 @@
 /**
  * 05_verificar_limites_e_sortear_holdout.js — Rege-Nat-Cerrado, fase F0 (congelamento)
+ * VERSÃO 3 (2026-10-29) — HOLDOUT FIXO + ZONA DE EXCLUSÃO
  * ---------------------------------------------------------------------------
- * O QUE FAZ (PROTOCOLO §11)
- *   1. Confere que o asset IBGE do limite do Cerrado e o asset das 38 regiões
- *      de classificação existem e são legíveis.
- *   2. Calcula a área (km²) de cada região dentro do limite IBGE do Cerrado.
- *   3. Sorteia o HOLDOUT: ordena as regiões por um número aleatório com semente
- *      fixa (20261029) e acumula até atingir ≥ 10% da área do Cerrado.
- *   4. Exporta a tabela (região, área, número aleatório, posição, holdout 0/1).
+ * HISTÓRICO
+ *   - Tentativa 1: regiões vetoriais (sobrepostas). Ordem do sorteio com semente
+ *     20261029: 13, 9, 28, 16, 30, … Descartada pela sobreposição (05b).
+ *   - Tentativa 2: partição raster; o randomColumn gerou outra ordem (17, 27, …)
+ *     porque a coleção foi montada de outro modo — os números aleatórios do GEE
+ *     dependem da construção da coleção, não só da semente.
+ *   - Decisão de Mario (2026-10-29): vale a regra registrada antes da tentativa 2 —
+ *     ORDEM da tentativa 1 + ÁREAS da partição raster. Resultado calculado por
+ *     src/python/f0_05_holdout_final.py → results/f0_diagnosticos/F0_05_holdout.csv:
+ *     HOLDOUT = regiões 13, 9, 28, 16 (11,56% do Cerrado).
+ *
+ * O QUE ESTE SCRIPT FAZ AGORA (nada aleatório)
+ *   1. Confere no Console a fração do Cerrado coberta pelo holdout fixo (≈ 0,1156).
+ *   2. Exporta a ZONA de exclusão como asset: 1 = holdout; 2 = faixa de 10 km ao
+ *      redor (descartada do treino); 0 = disponível para treino.
  *
  * COMO RODAR
- *   1. (LIMITE_IBGE já preenchido: projects/ee-barroso2501/assets/biomas_IBGE, NM_BIOMA = 'Cerrado'.)
- *   2. Run. Confira no Console: número de regiões (38 esperadas) e as regiões
- *      sorteadas.
- *   3. Tasks → Run em "F0_05_holdout". Envie o CSV. Ele entra no repositório
- *      ANTES da tag protocolo-v1.0.
- *
- * REGRA
- *   Rode o sorteio UMA vez. Se precisar rodar de novo (por erro técnico), a
- *   semente é a mesma e o resultado deve ser idêntico; registre o motivo.
+ *   Run → confira a fração no Console → Tasks → Run em "F0_05_holdout_zona_exclusao".
+ *   Me avise quando o asset estiver pronto (não há CSV a enviar).
  *
  * O QUE PODE QUEBRAR E COMO PERCEBER
- *   - "Asset not found"/permissão nas regiões: o asset de terceiros não é
- *     público. Pare e me avise (alternativa: regiões do repositório MapBiomas).
- *   - Número de regiões ≠ 38: versão do asset diferente da Col. 11 — me avise.
+ *   - Fração no Console muito diferente de 0,1156: me avise antes de exportar.
+ *   - "Asset already exists": apague o asset da tentativa 2 (mesmo nome) antes.
  * ---------------------------------------------------------------------------
  */
 
@@ -31,66 +32,51 @@
 var LIMITE_IBGE = 'projects/ee-barroso2501/assets/biomas_IBGE';
 var CAMPO_BIOMA = 'NM_BIOMA';
 var VALOR_CERRADO = 'Cerrado';
+var REGIOES_RASTER = 'users/dh-conciani/collection7/classification_regions/raster';
 
-var REGIOES = 'users/dh-conciani/collection7/classification_regions/vector_v2';
-var CAMPO_REGIAO = 'mapb';     // 1..38 no código MapBiomas Cerrado
-
-var SEMENTE = 20261029;
-var FRACAO_HOLDOUT = 0.10;
-var PASTA_DRIVE = 'RegeNat_F0_diagnosticos';
+var HOLDOUT = [13, 9, 28, 16];       // results/f0_diagnosticos/F0_05_holdout.csv
+var BUFFER_EXCLUSAO_M = 10000;       // 10 km
+var ESCALA_CONFERENCIA = 1000;       // só para a conferência no Console
+var ASSET_ZONA = 'projects/ee-barroso2501/assets/RegeNat/F0_holdout_zona_exclusao_v1';
 // ---------------------------------------------------------------------------
 
 var cerrado = ee.FeatureCollection(LIMITE_IBGE)
   .filter(ee.Filter.eq(CAMPO_BIOMA, VALOR_CERRADO)).geometry();
-var regioes = ee.FeatureCollection(REGIOES);
+var regRaster = ee.Image(REGIOES_RASTER).select(0);
+var mascaraCerrado = ee.Image(0).paint(cerrado, 1);
 
-print('Feições do limite IBGE (Cerrado):',
-      ee.FeatureCollection(LIMITE_IBGE).filter(ee.Filter.eq(CAMPO_BIOMA, VALOR_CERRADO)).size());
-print('Número de regiões (esperado 38):', regioes.size());
-print('Valores do campo', CAMPO_REGIAO, regioes.aggregate_array(CAMPO_REGIAO).sort());
+// 1 nas regiões do holdout, 0 nas demais.
+var mascaraHoldout = regRaster.remap(HOLDOUT, [1, 1, 1, 1], 0).unmask(0);
 
-// Área de cada região dentro do Cerrado IBGE (km²), com erro máximo de 100 m.
-var comArea = regioes.map(function (f) {
-  var dentro = f.geometry().intersection(cerrado, 100);
-  return ee.Feature(null, {
-    regiao: f.get(CAMPO_REGIAO),
-    area_km2: dentro.area(100).divide(1e6)
-  });
+// Conferência da fração (km², a 1 km).
+var areaKm2 = ee.Image.pixelArea().divide(1e6).multiply(mascaraCerrado);
+var somas = areaKm2.multiply(mascaraHoldout).rename('holdout')
+  .addBands(areaKm2.rename('cerrado'))
+  .reduceRegion({reducer: ee.Reducer.sum(), geometry: cerrado.bounds(),
+                 scale: ESCALA_CONFERENCIA, maxPixels: 1e10, tileScale: 4});
+print('Fração do Cerrado no holdout (esperado ≈ 0,1156):',
+      ee.Number(somas.get('holdout')).divide(ee.Number(somas.get('cerrado'))));
+
+// Distância (m) ao holdout, para a faixa de exclusão de 10 km.
+var distHoldout = mascaraHoldout.selfMask()
+  .fastDistanceTransform(512, 'pixels', 'squared_euclidean').sqrt()
+  .multiply(ee.Image.pixelArea().sqrt());        // pixels → metros (aprox.)
+var zona = ee.Image(0)
+  .where(distHoldout.lte(BUFFER_EXCLUSAO_M), 2)
+  .where(mascaraHoldout.eq(1), 1)
+  .updateMask(mascaraCerrado)
+  .rename('zona').toByte();
+
+Export.image.toAsset({
+  image: zona,
+  description: 'F0_05_holdout_zona_exclusao',
+  assetId: ASSET_ZONA,
+  region: cerrado.bounds(),
+  scale: 30,
+  maxPixels: 1e13,
+  pyramidingPolicy: {'.default': 'mode'}
 });
 
-// Número aleatório reprodutível por região, e ordenação por ele.
-var ordenadas = comArea.randomColumn('aleatorio', SEMENTE).sort('aleatorio');
-var areaTotal = ee.Number(ordenadas.aggregate_sum('area_km2'));
-
-// Acumula áreas na ordem sorteada; holdout = regiões até atingir a fração-alvo
-// (a região que cruza o limite entra, para garantir ≥ 10%).
-var lista = ordenadas.toList(ordenadas.size());
-var resultado = ee.Dictionary(lista.iterate(function (f, acc) {
-  acc = ee.Dictionary(acc);
-  f = ee.Feature(f);
-  var acumAntes = ee.Number(acc.get('acum'));
-  var dentro = acumAntes.lt(areaTotal.multiply(FRACAO_HOLDOUT));
-  var acum = acumAntes.add(f.get('area_km2'));
-  var pos = ee.Number(acc.get('pos')).add(1);
-  var nova = f.set({posicao: pos, area_acum_km2: acum, holdout: ee.Number(dentro).int()});
-  return ee.Dictionary({acum: acum, pos: pos,
-                        fs: ee.List(acc.get('fs')).add(nova)});
-}, ee.Dictionary({acum: 0, pos: 0, fs: ee.List([])}))).get('fs');
-
-var tabela = ee.FeatureCollection(ee.List(resultado));
-
-print('Área total do Cerrado nas regiões (km²):', areaTotal);
-print('Regiões sorteadas para o HOLDOUT:', tabela.filter(ee.Filter.eq('holdout', 1)).aggregate_array('regiao'));
-print('Fração da área no holdout:',
-      ee.Number(tabela.filter(ee.Filter.eq('holdout', 1)).aggregate_sum('area_km2')).divide(areaTotal));
-
-Export.table.toDrive({
-  collection: tabela,
-  description: 'F0_05_holdout',
-  folder: PASTA_DRIVE,
-  fileFormat: 'CSV',
-  selectors: ['posicao', 'regiao', 'aleatorio', 'area_km2', 'area_acum_km2', 'holdout']
-});
-
-Map.addLayer(regioes, {color: '999999'}, 'Regiões');
-Map.addLayer(cerrado, {color: '00aa00'}, 'Cerrado IBGE');
+Map.centerObject(cerrado, 5);
+Map.addLayer(zona.updateMask(zona.gt(0)), {min: 1, max: 2, palette: ['0000ff', 'ffaa00']},
+             'Holdout (azul) e exclusão 10 km (laranja)');

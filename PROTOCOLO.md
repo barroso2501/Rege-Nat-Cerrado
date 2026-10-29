@@ -1,21 +1,8 @@
 # Protocolo — Regeneração natural savânica em pastagens do Cerrado
 
-**Versão:** 1.0-rc (candidata a congelamento) · **Data:** 2026-10-29 · **Responsável:** Mario Barroso (TNC Brasil)
+**Versão:** 1.0 (congelada pela tag `protocolo-v1.0`) · **Data:** 2026-10-29 · **Responsável:** Mario Barroso (TNC Brasil)
 
-**Status:** todas as decisões tomadas (`docs/decisoes.md`), exceto dois itens operacionais que fecham no congelamento (§11):
-- o asset IBGE do limite do Cerrado;
-- o sorteio do holdout.
-
-Depois da tag `protocolo-v1.0`, toda mudança vai para `docs/desvios.md`.
-
-**Marcas epistêmicas:**
-- **[D]** documentado;
-- **[C]** inferido de código ou método;
-- **[H]** hipótese;
-- **[L]** lacuna;
-- **[E]** externo não documentado.
-
-As citações da KB MapBiomas têm a forma `KB:arquivo`.
+**Status:** congelado. Todas as decisões estão em `docs/decisoes.md` e os itens do §11 foram concluídos em 2026-10-29. A partir da tag `protocolo-v1.0`, toda mudança vai para `docs/desvios.md`.
 
 ---
 
@@ -154,7 +141,7 @@ O plano completo está em `docs/plano_validacao_P1.md`. Em resumo:
 - **Amostra:** 500 eventos (100 por ano), 150 pastagens sem evento e 100 eventos < 1 ha.
 - **Ordem:** aleatória, com o intérprete cego quanto ao estrato.
 - **Intérprete:** Mario.
-- **Consistência intra-intérprete:** 10% da amostra é reinterpretada às cegas depois de ≥14 dias.
+- **Consistência intra-intérprete:** 10% da amostra (75 pontos) é reinterpretada às cegas depois de ≥14 dias. Mantida por decisão de Mario em 2026-10-29.
 - **Critério de aprovação:** calculado sobre o estrato de eventos.
 
 ## 9. Regras de honestidade
@@ -190,8 +177,19 @@ DVC e MLflow ficam de fora de propósito; reavaliar na F3 se houver muitos exper
    - **[L]** A região 38 foi redesenhada na Col. 11 (KB:06). Verificar o acesso e a versão com `src/gee/05_verificar_limites_e_sortear_holdout.js`.
 3. **Sorteio do holdout:** regiões ordenadas por número aleatório com semente **20261029**, acumuladas até ≥10% da área do Cerrado. O resultado é registrado em `results/f0_diagnosticos/F0_05_holdout.csv` antes da tag.
    - **Tentativa 1 (2026-10-29):** regiões 13, 9, 28 e 16. A soma das áreas das regiões dentro do Cerrado deu 2,60 milhões de km², contra ~1,98 milhão de km² do Cerrado IBGE. Isso indica sobreposição de regiões ou falha na interseção.
-   - **[L]** Diagnóstico com `src/gee/05b_diagnostico_sobreposicao_regioes.js` antes de aceitar o sorteio. Se houver sobreposição, a regra de atribuição de pixels sobrepostos precisa ser fixada antes da tag.
-   - Arquivo da tentativa 1: `results/f0_diagnosticos/F0_05_holdout_tentativa1.csv`.
+   - **Diagnóstico 05b (2026-10-29): as regiões vetoriais se sobrepõem.**
+     - Área do Cerrado coberta por mais de uma região: 492.773 km² por 2 regiões, 41.678 km² por 3 e 1.868 km² por 4, cerca de 27% do bioma.
+     - Fração real do holdout da tentativa 1, por raster: 12,5%.
+     - **A tentativa 1 é descartada.**
+   - **Tentativa 2 (2026-10-29):** partição raster `users/dh-conciani/collection7/classification_regions/raster`.
+     - Autoverificação: soma das regiões = 2.004.297,7 km² contra Cerrado raster = 2.004.377,5 km² (diferença de 0,004%). **É partição.**
+     - O `randomColumn` gerou outra ordem (17, 27, 11, 31, 12…), porque no GEE os números aleatórios dependem da construção da coleção, não só da semente. Registro: `F0_05_holdout_tentativa2.csv`.
+   - **Holdout definitivo (decisão de Mario, 2026-10-29):** vale a regra registrada antes da tentativa 2.
+     - **Ordem da tentativa 1, áreas da partição raster.**
+     - Calculado por `src/python/f0_05_holdout_final.py`, saída em `results/f0_diagnosticos/F0_05_holdout.csv`.
+     - **Holdout = regiões 13, 9, 28 e 16, 11,56% do Cerrado.**
+     - Nenhuma das tentativas usou dado de desfecho.
+   - **Zona de exclusão:** pontos de treino a menos de 10 km do holdout são descartados. Asset `projects/ee-barroso2501/assets/RegeNat/F0_holdout_zona_exclusao_v1` (1 = holdout, 2 = exclusão, 0 = treino), gerado pelo script 05 v3. Exportado por Mario em 2026-10-29.
 
 ## 12. Fases
 

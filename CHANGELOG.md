@@ -137,3 +137,40 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0-rc5
+**Alterados:**
+- `src/gee/05_verificar_limites_e_sortear_holdout.js` → versão 2:
+  - partição pelo raster de regiões, sem sobreposição;
+  - mesma ordem de sorteio;
+  - autoverificação de área;
+  - zona de exclusão de 10 km exportada como asset.
+- `PROTOCOLO.md` §11: resultado do 05b e proposta da versão 2.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0-rc6
+**Novos:**
+- `results/f0_diagnosticos/F0_05_holdout_tentativa2.csv` — registro histórico.
+- `results/f0_diagnosticos/F0_05_holdout.csv` — holdout **definitivo**: regiões 13, 9, 28, 16 (11,56%).
+- `src/python/f0_05_holdout_final.py` — gera o CSV definitivo.
+
+**Alterados:**
+- `src/gee/05_verificar_limites_e_sortear_holdout.js` → versão 3: holdout fixo, nada aleatório; só confere a fração e exporta a zona de exclusão.
+- `PROTOCOLO.md` §11, `docs/decisoes.md` (holdout) e `README.md`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0 — PROTOCOLO CONGELADO
+**Alterados:**
+- `PROTOCOLO.md` → versão 1.0, congelada.
+- `docs/decisoes.md` (D06): reinterpretação cega de 10% mantida.
+- `data/manifestos/manifesto.csv`: asset da zona de exclusão registrado.
+- `README.md`: F0 concluída.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+**Depois deste pacote:** criar a tag `protocolo-v1.0` no GitHub. Toda mudança posterior vai para `docs/desvios.md`.

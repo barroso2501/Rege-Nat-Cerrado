@@ -135,7 +135,7 @@ Mario aprovou D01b, D02, D03, D04, D07, D08 e D09 conforme as propostas. Para D0
 - **Mitigação incluída:** reinterpretação cega de 10% depois de ≥14 dias, com kappa intra-intérprete.
   - Mede consistência, não viés.
 - **O white paper declara a limitação.**
-- Se Mario preferir, a reinterpretação de 10% pode sair. Nesse caso, precisa sair **antes** da tag.
+- **Mantida por decisão de Mario (2026-10-29).**
 
 ### D04 — Altura fora
 
@@ -174,3 +174,22 @@ Fica como [L] para trabalho futuro.
 2. **Colinearidade com o vigor.** Mitigação pela regra pré-fixada: se |r| > 0,7, efeito do grupo em conjunto na P2.
 3. **[L] Disponibilidade.** O asset aparece só no catálogo `.github`, não no toolkit (D11 da KB). Confirmar pelo script 01 antes da tag.
 4. **[L] Confiabilidade no Cerrado.** Não sabemos quantas torres de fluxo da validação do GPP estão em pastagens do Cerrado.
+
+### Holdout (PROTOCOLO §11) — 2026-10-29
+
+**Decisão de Mario:** holdout = regiões 13, 9, 28 e 16 (11,56% do Cerrado), pela ordem da tentativa 1 e pelas áreas da partição raster.
+
+**Contexto:**
+- A tentativa 1 foi descartada porque as regiões vetoriais se sobrepõem em cerca de 27% do Cerrado.
+- Na tentativa 2, o `randomColumn` mudou a ordem.
+
+**Teste crítico:**
+- **Por que não aceitar a tentativa 2, mais perto de 10%?**
+  - Porque a regra escrita antes dela fixava a ordem da tentativa 1.
+  - Escolher entre duas ordens depois de ver as duas é um grau de liberdade do analista, ainda que nenhuma use desfecho.
+- **Custo:** o holdout fica com 11,6% em vez de 10%. É aceitável, porque a regra já previa que a região que cruza o limite entra.
+- **Lição técnica:** o `randomColumn` não serve como sorteio reprodutível entre versões de script. Sorteios futuros devem gerar a ordem uma vez e gravá-la em arquivo.
+- **Zona de exclusão de 10 km:**
+  - o valor é convencional;
+  - a autocorrelação espacial da regeneração não foi medida;
+  - a sensibilidade com 0 km e 25 km fica a critério da F3, como desvio declarado se for feita.

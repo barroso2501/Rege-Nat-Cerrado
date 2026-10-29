@@ -28,8 +28,9 @@ results/                 saídas geradas por src/ (tabelas e figuras), nunca edi
 
 | Fase | Situação |
 |---|---|
-| F0 — protocolo e repositório | protocolo v1.0-rc; falta o asset IBGE e o sorteio do holdout para a tag `protocolo-v1.0` |
-| F1–F5 | não iniciadas |
+| F0 — protocolo e repositório | **concluída**: protocolo v1.0 congelado (tag `protocolo-v1.0`) |
+| F1 — eventos e validação visual (P1) | próxima |
+| F2–F5 | não iniciadas |
 
 ## Reprodutibilidade
 
