@@ -24,7 +24,7 @@ Status possíveis:
 | D07 | Origem: só 15 ou 15 + 21 | Proposta: só 15 (código 515); 21 (521) como sensibilidade | pendente |
 | D08 | Réplica temporal (busca 2012–2016, confirmação 2017–2020) para testar transferência no tempo | Opcional; recomendada para a P3 | pendente |
 | D09 | Fonte do evento | Proposta: código 5 do produto Desmatamento e Vegetação Secundária C11 (`by_coverage_v1` = 515) + LULC `coverage_v3` = 4 nos anos exigidos. Ver `produto_vegetacao_secundaria_c11.md` | proposta |
-| D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Pendências residuais: semântica e exatidão do 2xx; cobertura do Cerrado |
+| D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Semântica 2xx = 200 + idade confirmada (F0_02). Pendente: cobertura do Cerrado pela grade auditada |
 
 ---
 
@@ -85,6 +85,13 @@ Status possíveis:
 2. **O domínio auditado pode não cobrir todo o Cerrado.** Resposta: depende do critério da grade de seleção [L]. Pontos fora do domínio entram como sensibilidade.
 3. **O asset remoto pode mudar sem aviso.** Resposta: os metadados do asset vão para o manifesto no momento da extração.
 
-**Pendências antes do congelamento:**
-- confirmar se o 2xx codifica idade ou ano de origem;
+**Resultado F0_02 (2026-10-29)** — pendência da semântica do 2xx **fechada**:
+- Amostra: 13.047 pixels do Cerrado com pastagem em todos os anos de 2010 a 2020, não contínua desde 1985 (`results/f0_diagnosticos/F0_02_resumo.md`).
+- **2xx = 200 + idade.** A idade é o número de anos consecutivos de classe 15 na `coverage_v3`, contando o ano corrente (vale 1 no primeiro ano).
+- Concordância com a contagem refeita a partir da LULC: 100%. Incremento anual: +1 em todos os 130.470 pares de anos.
+- O reinício da contagem após uma interrupção da pastagem anterior a 2010 está implicitamente confirmado: a contagem da LULC zera nas interrupções e bateu em 100%.
+- **Consequência [C]:** a idade é derivada deterministicamente da própria LULC. Ela não traz informação independente da série de cobertura; é uma conveniência, não uma segunda fonte. Erros de classificação da pastagem na LULC passam integralmente para a idade.
+- **Não testado:** o comportamento em lacunas (NODATA/27) dentro de um episódio, e fora da amostra (pastagem que começou depois de 2010).
+
+**Pendente** (deixado em aberto por decisão de Mario, 2026-10-28):
 - confirmar o critério da grade `grade_hex_CeAmz_selecao`.

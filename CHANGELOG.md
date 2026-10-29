@@ -58,3 +58,20 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-29 · pacote 0.6
+**Novos:**
+- `results/f0_diagnosticos/F0_02_semantica_idade_pastagem.csv` (SHA-256 `bc4c2247…8968`) e `F0_02_resumo.md`.
+- `src/python/f0_02_resumo_semantica_idade.py` — gera o resumo a partir do CSV.
+- `src/gee/03_exportar_indicadores_1km.js` e `04_somar_indicadores.js` — substituem os antigos 03 e 04, que estouraram 12 h.
+
+**Alterados:**
+- `docs/decisoes.md` (D10): semântica 2xx = 200 + idade confirmada; pendente só o critério da grade.
+- `docs/verificacoes/pasture_origin_age_v2/USO_NO_PROJETO.md`: atualização de 2026-10-29.
+- `src/gee/README.md`.
+- `CHANGELOG.md`.
+
+**Removidos (apagar à mão no GitHub):**
+- `src/gee/03_conferir_codigo_515.js`
+- `src/gee/04_contagem_eventos_produto_vs_lulc.js`
+- `src/python/.gitkeep`

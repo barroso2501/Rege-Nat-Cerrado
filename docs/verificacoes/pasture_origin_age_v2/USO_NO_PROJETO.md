@@ -54,6 +54,12 @@ Também deram zero:
    - O raster não foi fixado por hash, e o hash do script efetivamente executado no GEE é `null`.
    - Se o MapBiomas republicar o asset com o mesmo nome, a verificação não detecta.
 
+## Atualização 2026-10-29
+
+- **Item 1 fechado.** 2xx = 200 + anos consecutivos de pastagem (classe 15 na `coverage_v3`). Concordância de 100% em 13.047 pixels (`results/f0_diagnosticos/F0_02_resumo.md`).
+- **Item 2:** pendente, por decisão de Mario.
+- **Item 3:** o asset não tem propriedades de versão. A identidade está registrada pelo `system:asset_size` no manifesto (2026-10-28).
+
 ## Como fechar o que falta, sem nova auditoria pesada
 
 1. **Semântica do 2xx.** Ler os metadados e a descrição do asset no GEE (`ee.data.getAsset`). Num punhado de pixels de pastagem contínua, verificar se o código muda de um ano para outro.
