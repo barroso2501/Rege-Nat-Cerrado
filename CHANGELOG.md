@@ -202,3 +202,20 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `src/gee/10_f1_candidatos_amostra_p1.js`. O `stratifiedSample` não processou em 5 h; as tarefas foram canceladas.
 
 **Desvios do protocolo:** nenhum. Mudança de implementação: o sorteio continua equivalente a um sorteio aleatório simples por pixel dentro de cada estrato.
+
+## 2026-10-29 · pacote 1.3
+**Novos:**
+- `results/f1/amostra_p1_passoC_registro.json` — semente, hashes e contagem de células do passo C.
+  - Entrada: 407.480 células.
+  - Sorteadas: 400 células E e 100 células P por ano.
+- `src/gee/10d_f1_pixel_por_celula.js` — gerado no passo C. **Entregue fora do pacote e fora do GitHub até o fim da interpretação**, porque contém os centros das células por estrato. O hash está no registro.
+
+**Conferência de consistência** (área implícita nas frações × área da célula, mil ha por ano):
+- E: 197, 211, 196, 190 e 191 (2017–2021);
+- P: 13–15.
+- Comparação com o F0_04 (230–243 e 15–17), que tinha limite RESOLVE e incluía o holdout: a razão ~0,86–0,87 é compatível com a exclusão de 11,6% do holdout mais a troca de limite. Sem anomalia.
+
+**Alterados:**
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.

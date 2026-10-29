@@ -1,0 +1,56 @@
+{
+  "semente": 20261030,
+  "n_celulas": {
+    "E": 400,
+    "P": 100
+  },
+  "entrada": {
+    "F1_10b_celulas_candidatas.csv": "179208cbefbf4288eaea6aebca1f3730c72416bf96288c58ad48b6bac86a40e5"
+  },
+  "saida_js": {
+    "10d_f1_pixel_por_celula.js": "f72b0a6edc2f5ed0c2ec394e90674af72b156ce0f624872a24c3a2d1560017c7"
+  },
+  "contagem": {
+    "E_2017": {
+      "celulas_com_fracao": 135294,
+      "sorteadas": 400
+    },
+    "P_2017": {
+      "celulas_com_fracao": 33347,
+      "sorteadas": 100
+    },
+    "E_2018": {
+      "celulas_com_fracao": 140306,
+      "sorteadas": 400
+    },
+    "P_2018": {
+      "celulas_com_fracao": 33633,
+      "sorteadas": 100
+    },
+    "E_2019": {
+      "celulas_com_fracao": 136118,
+      "sorteadas": 400
+    },
+    "P_2019": {
+      "celulas_com_fracao": 31145,
+      "sorteadas": 100
+    },
+    "E_2020": {
+      "celulas_com_fracao": 135350,
+      "sorteadas": 400
+    },
+    "P_2020": {
+      "celulas_com_fracao": 31578,
+      "sorteadas": 100
+    },
+    "E_2021": {
+      "celulas_com_fracao": 132494,
+      "sorteadas": 400
+    },
+    "P_2021": {
+      "celulas_com_fracao": 32917,
+      "sorteadas": 100
+    }
+  },
+  "avisos": []
+}
