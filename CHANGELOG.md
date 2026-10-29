@@ -174,3 +174,16 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 **Removidos:** nenhum.
 
 **Depois deste pacote:** criar a tag `protocolo-v1.0` no GitHub. Toda mudança posterior vai para `docs/desvios.md`.
+
+## 2026-10-29 · pacote 1.1 — início da F1 (pós-congelamento)
+**Novos:**
+- `src/gee/10_f1_candidatos_amostra_p1.js` — candidatos da amostra P1 por ano e estrato, fora do holdout.
+- `src/python/f1_11_selecionar_amostra_p1.py` — sorteio final com semente 20261030, distância mínima de 500 m, códigos neutros e os 10% da reinterpretação. Separa o arquivo de interpretação da CHAVE.
+- `results/f1/README.md` — regras de cegamento.
+
+**Alterados:**
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+**Desvios do protocolo:** nenhum. A implementação segue `docs/plano_validacao_P1.md`. Detalhe de execução: o sorteio final é feito em Python, não no GEE, pela lição do F0_05.
