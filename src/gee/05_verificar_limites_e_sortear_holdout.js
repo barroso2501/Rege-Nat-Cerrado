@@ -65,7 +65,7 @@ var areaTotal = ee.Number(ordenadas.aggregate_sum('area_km2'));
 // Acumula áreas na ordem sorteada; holdout = regiões até atingir a fração-alvo
 // (a região que cruza o limite entra, para garantir ≥ 10%).
 var lista = ordenadas.toList(ordenadas.size());
-var resultado = ee.List(lista.iterate(function (f, acc) {
+var resultado = ee.Dictionary(lista.iterate(function (f, acc) {
   acc = ee.Dictionary(acc);
   f = ee.Feature(f);
   var acumAntes = ee.Number(acc.get('acum'));

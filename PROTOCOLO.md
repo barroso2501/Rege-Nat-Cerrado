@@ -184,11 +184,14 @@ DVC e MLflow ficam de fora de propósito; reavaliar na F3 se houver muitos exper
 1. **Asset IBGE do limite do Cerrado:** `projects/ee-barroso2501/assets/biomas_IBGE`, filtro `NM_BIOMA = 'Cerrado'` (informado por Mario em 2026-10-29).
    - Substitui o limite RESOLVE provisório em todos os scripts.
    - Os diagnósticos de F0 com RESOLVE não são refeitos: foram só de definição.
-   - **Biomassa:** o asset `pasture_biomass_v1` precisa ser confirmado pelo script 01 (bandas 2000–2025) e registrado no manifesto antes da tag (D11).
+   - **Biomassa:** asset `pasture_biomass_v1` confirmado em 2026-10-29 (bandas `biomass_2000`…`_2025`, em t/ha) e registrado no manifesto (D11).
 2. **Regiões de classificação:** `users/dh-conciani/collection7/classification_regions/vector_v2`, campo `mapb` (1–38).
    - **[C]** É o asset usado no código Col. 10/11 de `mapbiomas/brazil-cerrado` @ `93826bc`.
    - **[L]** A região 38 foi redesenhada na Col. 11 (KB:06). Verificar o acesso e a versão com `src/gee/05_verificar_limites_e_sortear_holdout.js`.
 3. **Sorteio do holdout:** regiões ordenadas por número aleatório com semente **20261029**, acumuladas até ≥10% da área do Cerrado. O resultado é registrado em `results/f0_diagnosticos/F0_05_holdout.csv` antes da tag.
+   - **Tentativa 1 (2026-10-29):** regiões 13, 9, 28 e 16. A soma das áreas das regiões dentro do Cerrado deu 2,60 milhões de km², contra ~1,98 milhão de km² do Cerrado IBGE. Isso indica sobreposição de regiões ou falha na interseção.
+   - **[L]** Diagnóstico com `src/gee/05b_diagnostico_sobreposicao_regioes.js` antes de aceitar o sorteio. Se houver sobreposição, a regra de atribuição de pixels sobrepostos precisa ser fixada antes da tag.
+   - Arquivo da tentativa 1: `results/f0_diagnosticos/F0_05_holdout_tentativa1.csv`.
 
 ## 12. Fases
 

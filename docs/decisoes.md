@@ -25,7 +25,7 @@ Status possíveis:
 | D08 | Réplica temporal | Busca 2012–2016, usada só no teste de transferência temporal da P3 | **decidida** (2026-10-29) |
 | D09 | Fonte do evento | Produto (`by_coverage_v1` = 515) + LULC classe 4 em t..t+3; eventos < 1 ha como sensibilidade S2 | **decidida** (2026-10-29) |
 | D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Semântica 2xx = 200 + idade confirmada (F0_02). Pendente: cobertura do Cerrado pela grade auditada |
-| D11 | Biomassa da pastagem como preditor | Incluída no grupo Pastagem (média de t−3..t−1 e tendência), como índice relativo de produtividade; sensibilidade S6 de atraso de rótulo; regra de colinearidade com o vigor | **decidida** (2026-10-29, Mario); asset a confirmar pelo script 01 |
+| D11 | Biomassa da pastagem como preditor | Incluída no grupo Pastagem (média de t−3..t−1 e tendência), como índice relativo de produtividade; sensibilidade S6 de atraso de rótulo; regra de colinearidade com o vigor | **decidida** (2026-10-29, Mario); asset confirmado pelo script 01 (bandas `biomass_2000`…`_2025`, t/ha) |
 
 ---
 

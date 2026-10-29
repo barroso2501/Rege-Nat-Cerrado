@@ -117,3 +117,23 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0-rc3
+**Alterados:**
+- `src/gee/05_verificar_limites_e_sortear_holdout.js`: correção de bug. O resultado do `iterate` era lido como `ee.List` em vez de `ee.Dictionary` (erro "Invalid argument specified for ee.Number(): fs"). A lógica do sorteio e a semente não mudaram.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0-rc4
+**Novos:**
+- `src/gee/05b_diagnostico_sobreposicao_regioes.js` — diagnóstico de sobreposição entre as 38 regiões.
+- `results/f0_diagnosticos/F0_05_holdout_tentativa1.csv` — sorteio da tentativa 1, ainda não aceito.
+
+**Alterados:**
+- `data/manifestos/manifesto.csv`: biomassa registrada.
+- `docs/fontes_dados.md` e `docs/decisoes.md` (D11): asset de biomassa confirmado, com prefixo de banda `biomass_`.
+- `PROTOCOLO.md` §11: biomassa confirmada; tentativa 1 do holdout com a pendência de sobreposição.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
