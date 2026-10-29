@@ -75,3 +75,14 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `src/gee/03_conferir_codigo_515.js`
 - `src/gee/04_contagem_eventos_produto_vs_lulc.js`
 - `src/python/.gitkeep`
+
+## 2026-10-29 · pacote 0.7
+**Novos:**
+- `results/f0_diagnosticos/F0_04_contagem_eventos.csv` e `F0_04_resumo.md`.
+- `src/python/f0_04_resumo_contagem_eventos.py`.
+
+**Alterados:**
+- `docs/decisoes.md`: D09 com o resultado do F0_04 e o teste crítico.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.

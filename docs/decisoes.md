@@ -23,7 +23,7 @@ Status possíveis:
 | D06 | Critério de aprovação da P1 (validação visual) | Tamanho da amostra e acerto mínimo, definidos antes de olhar os pontos | pendente |
 | D07 | Origem: só 15 ou 15 + 21 | Proposta: só 15 (código 515); 21 (521) como sensibilidade | pendente |
 | D08 | Réplica temporal (busca 2012–2016, confirmação 2017–2020) para testar transferência no tempo | Opcional; recomendada para a P3 | pendente |
-| D09 | Fonte do evento | Proposta: código 5 do produto Desmatamento e Vegetação Secundária C11 (`by_coverage_v1` = 515) + LULC `coverage_v3` = 4 nos anos exigidos. Ver `produto_vegetacao_secundaria_c11.md` | proposta |
+| D09 | Fonte do evento | Resultado F0_04: com a definição estrita (15 em t−3..t−1, 4 em t..t+3), o produto equivale à LULC com área mínima de ~1 ha. Proposta: usar o produto (515) por comparabilidade, com os eventos < 1 ha (só-LULC) como sensibilidade | proposta, com evidência F0 |
 | D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Semântica 2xx = 200 + idade confirmada (F0_02). Pendente: cobertura do Cerrado pela grade auditada |
 
 ---
@@ -95,3 +95,28 @@ Status possíveis:
 
 **Pendente** (deixado em aberto por decisão de Mario, 2026-10-28):
 - confirmar o critério da grade `grade_hex_CeAmz_selecao`.
+
+## D09 — Fonte do evento: resultado do diagnóstico F0_04 (2026-10-29)
+
+Detalhe: `results/f0_diagnosticos/F0_04_resumo.md`. Limite do Cerrado provisório (RESOLVE).
+
+**Achados [D: reprodutível]:**
+1. **A codificação 515 confere.** 515 ≡ (v5 = 5 e cobertura(t−1) = 15), com discordância 0 em 2017–2021.
+2. **Diferença entre produto e só-LULC.**
+   - Com a definição estrita, o produto retém 93,4–93,7% da área dos eventos só-LULC.
+   - **Os 6–7% removidos vêm só do filtro espacial do produto:** manchas ≤ 11 pixels (~1 ha), código 7.
+   - As regras temporais do produto não removem nada além do que a definição estrita já exclui.
+3. **Magnitude:** 220–243 mil ha/ano de eventos com o produto. Total de 1,14 Mha em 2017–2021, com coortes disjuntas.
+   - Cerca de 77–83% de toda a recuperação a partir de pastagem (515) já é classe 4 no primeiro ano.
+4. **Origem 21 (D07):** soma 27–36 mil ha/ano a mais, cerca de 12–16% do principal.
+
+**Implicação [C].** Para a definição estrita, a escolha entre produto e LULC se reduz a uma escolha de **área mínima mapeável**. Usar o produto:
+- dá comparabilidade com números oficiais do MapBiomas;
+- deixa a área mínima documentada por terceiros.
+
+O custo é excluir regeneração em manchas < 1 ha. Ela fica medida como sensibilidade (`soLulc`, cerca de 15–17 mil ha/ano).
+
+**Teste crítico:**
+- **Viés espacial da área mínima.** Excluir manchas < 1 ha pode deslocar a análise para paisagens com regeneração em blocos maiores. Mitigação: comparar a distribuição espacial dos eventos `soLulc` e `produto` na fase F1.
+- **A contagem não valida o evento.** Uma área de ~230 mil ha/ano de pastagem → savana é compatível tanto com regeneração real quanto com confusão pastagem ↔ savana do classificador (omissão de pastagem de ~12% nos anos recentes, KB:06). **Só a validação visual (P1, D06) separa as duas.**
+- **Ressalva de protocolo.** Esta contagem foi vista antes do congelamento. A proposta acima segue o critério que já estava registrado (o produto como fonte, por comparabilidade), não o número de eventos.
