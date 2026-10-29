@@ -54,9 +54,9 @@ var cobertura = ee.Image(C11 + 'mapbiomas_brazil_collection11_coverage_v3');
 var vegsec = ee.Image(C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5');
 var vegsecCob = ee.Image(C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1');
 
-// [L] TROQUE pelo limite IBGE do Cerrado (ver 00_config_comum.js).
-var CERRADO = ee.FeatureCollection('RESOLVE/ECOREGIONS/2017')
-  .filter(ee.Filter.eq('ECO_NAME', 'Cerrado')).geometry();
+// Limite IBGE do Cerrado (D05, PROTOCOLO §11), definido em 2026-10-29.
+var CERRADO = ee.FeatureCollection('projects/ee-barroso2501/assets/biomas_IBGE')
+  .filter(ee.Filter.eq('NM_BIOMA', 'Cerrado')).geometry();
 
 var ASSET_SAIDA = 'projects/ee-barroso2501/assets/RegeNat/F0_indicadores_1km_v1';
 var ANOS = [2017, 2018, 2019, 2020, 2021];

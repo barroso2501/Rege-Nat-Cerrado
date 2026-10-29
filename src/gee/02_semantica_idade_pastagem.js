@@ -41,9 +41,9 @@ var C11 = 'projects/mapbiomas-public/assets/brazil/lulc/collection11/';
 var cobertura = ee.Image(C11 + 'mapbiomas_brazil_collection11_coverage_v3');
 var idade = ee.Image(C11 + 'mapbiomas_brazil_collection11_pasture_origin_age_v2');
 
-// [L] TROQUE pelo limite IBGE do Cerrado (ver 00_config_comum.js).
-var CERRADO = ee.FeatureCollection('RESOLVE/ECOREGIONS/2017')
-  .filter(ee.Filter.eq('ECO_NAME', 'Cerrado')).geometry();
+// Limite IBGE do Cerrado (D05, PROTOCOLO §11), definido em 2026-10-29.
+var CERRADO = ee.FeatureCollection('projects/ee-barroso2501/assets/biomas_IBGE')
+  .filter(ee.Filter.eq('NM_BIOMA', 'Cerrado')).geometry();
 
 var PASTA_DRIVE = 'RegeNat_F0_diagnosticos';
 var SEMENTE = 42;        // semente fixa (reprodutibilidade)

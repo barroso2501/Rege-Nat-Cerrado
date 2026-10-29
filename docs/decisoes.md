@@ -15,16 +15,17 @@ Status possíveis:
 | ID | Decisão | Situação atual | Status |
 |---|---|---|---|
 | D01 | Classe de destino da regeneração | **Só classe 4 da LULC Col. 11 (formação savânica)** | **decidida** (2026-10-27, Mario) |
-| D01b | Persistência mínima na classe 4 | Proposta: classe 4 em t, t+1, t+2 e t+3 (seguimento fixo de 4 anos); persistência até 2025 como critério complementar | proposta |
-| D02 | Janela temporal | Sugestão de Mario: busca 2017–2021, confirmação 2022–2025 | proposta, em avaliação |
-| D03 | Desenho analítico | A: risco em tempo discreto; B: caso-controle pareado. Proposta: A | pendente |
-| D04 | Papel da altura (SVH) | Proposta: só validação, e só com produto não usado no treino do MapBiomas | pendente |
-| D05 | Escopo geográfico | Proposta: Cerrado inteiro, com resultados por ecorregião | pendente |
-| D06 | Critério de aprovação da P1 (validação visual) | Tamanho da amostra e acerto mínimo, definidos antes de olhar os pontos | pendente |
-| D07 | Origem: só 15 ou 15 + 21 | Proposta: só 15 (código 515); 21 (521) como sensibilidade | pendente |
-| D08 | Réplica temporal (busca 2012–2016, confirmação 2017–2020) para testar transferência no tempo | Opcional; recomendada para a P3 | pendente |
-| D09 | Fonte do evento | Resultado F0_04: com a definição estrita (15 em t−3..t−1, 4 em t..t+3), o produto equivale à LULC com área mínima de ~1 ha. Proposta: usar o produto (515) por comparabilidade, com os eventos < 1 ha (só-LULC) como sensibilidade | proposta, com evidência F0 |
+| D01b | Persistência mínima na classe 4 | Classe 4 em t..t+3. Sensibilidades: S1 (qualquer nativa em t+1..t+3) e S5 (persistência até 2025) | **decidida** (2026-10-29) |
+| D02 | Janela temporal | Busca 2017–2021, seguimento fixo t..t+3, persistência até 2025 como complemento (P4) | **decidida** (2026-10-29) |
+| D03 | Desenho analítico | Risco em tempo discreto: pixel-ano em risco, logística com efeitos fixos de ano e região, erros-padrão agrupados por blocos (PROTOCOLO §6) | **decidida** (2026-10-29) |
+| D04 | Papel da altura (SVH) | Fora do projeto: nem preditor nem desfecho | **decidida** (2026-10-29) |
+| D05 | Escopo geográfico | Cerrado pelo limite IBGE (`projects/ee-barroso2501/assets/biomas_IBGE`, `NM_BIOMA = 'Cerrado'`); resultados também pelas 38 regiões MapBiomas | **decidida** (2026-10-29) |
+| D06 | Critério de aprovação da P1 | Acerto ≥75% e limite inferior do IC 95% ≥70%; amostra de 500 eventos + 150 não-eventos + 100 eventos < 1 ha; intérprete único (Mario), com reinterpretação de 10% (`docs/plano_validacao_P1.md`) | **decidida** (2026-10-29) |
+| D07 | Origem: só 15 ou 15 + 21 | Só 15 (515); origem 21 (521) como sensibilidade S3 | **decidida** (2026-10-29) |
+| D08 | Réplica temporal | Busca 2012–2016, usada só no teste de transferência temporal da P3 | **decidida** (2026-10-29) |
+| D09 | Fonte do evento | Produto (`by_coverage_v1` = 515) + LULC classe 4 em t..t+3; eventos < 1 ha como sensibilidade S2 | **decidida** (2026-10-29) |
 | D10 | Idade da pastagem | **Asset `mapbiomas_brazil_collection11_pasture_origin_age_v2`**. Ausência dos erros conhecidos documentada e reprodutível (`docs/verificacoes/pasture_origin_age_v2/`) | **decidida** (2026-10-27, Mario). Semântica 2xx = 200 + idade confirmada (F0_02). Pendente: cobertura do Cerrado pela grade auditada |
+| D11 | Biomassa da pastagem como preditor | Incluída no grupo Pastagem (média de t−3..t−1 e tendência), como índice relativo de produtividade; sensibilidade S6 de atraso de rótulo; regra de colinearidade com o vigor | **decidida** (2026-10-29, Mario); asset a confirmar pelo script 01 |
 
 ---
 
@@ -120,3 +121,56 @@ O custo é excluir regeneração em manchas < 1 ha. Ela fica medida como sensibi
 - **Viés espacial da área mínima.** Excluir manchas < 1 ha pode deslocar a análise para paisagens com regeneração em blocos maiores. Mitigação: comparar a distribuição espacial dos eventos `soLulc` e `produto` na fase F1.
 - **A contagem não valida o evento.** Uma área de ~230 mil ha/ano de pastagem → savana é compatível tanto com regeneração real quanto com confusão pastagem ↔ savana do classificador (omissão de pastagem de ~12% nos anos recentes, KB:06). **Só a validação visual (P1, D06) separa as duas.**
 - **Ressalva de protocolo.** Esta contagem foi vista antes do congelamento. A proposta acima segue o critério que já estava registrado (o produto como fonte, por comparabilidade), não o número de eventos.
+
+## Decisões de 2026-10-29 — aprovadas por Mario para congelar o protocolo
+
+Mario aprovou D01b, D02, D03, D04, D07, D08 e D09 conforme as propostas. Para D05 e D06, fez as escolhas registradas na tabela. O teste crítico de cada uma está nas seções acima e no PROTOCOLO. Abaixo, só o que é novo.
+
+### D06 — Intérprete único
+
+**Escolha de Mario:** só Mario interpreta.
+
+**Teste crítico:**
+- Sem segundo intérprete, não há como medir viés sistemático do intérprete. Isso é justamente a crítica que o projeto faz à validação oficial (KB:07, E04).
+- **Mitigação incluída:** reinterpretação cega de 10% depois de ≥14 dias, com kappa intra-intérprete.
+  - Mede consistência, não viés.
+- **O white paper declara a limitação.**
+- Se Mario preferir, a reinterpretação de 10% pode sair. Nesse caso, precisa sair **antes** da tag.
+
+### D04 — Altura fora
+
+**Teste crítico:** perde-se um indicador estrutural de regeneração.
+
+**Resposta:**
+- não há produto de altura anual independente do treino do MapBiomas (KB:06);
+- o produto do piloto não foi identificado.
+
+Fica como [L] para trabalho futuro.
+
+### D03 — Desfecho binário com regeneração não estrita contada como não-evento
+
+**Teste crítico:** isso dilui o contraste entre pixels com e sem evento.
+
+**Resposta:** a sensibilidade S4 exclui esses pixels dos não-eventos.
+
+### D11 — Biomassa da pastagem (aprovada por Mario em 2026-10-29)
+
+**Origem.** O produto estava entre os candidatos na v0.1. Saiu da v1.0-rc por omissão, sem decisão registrada, e foi reincluído antes do congelamento.
+
+**Asset:** `projects/mapbiomas-public/assets/brazil/lulc/collection11/mapbiomas_brazil_collection11_pasture_biomass_v1`.
+
+**[D] Método**, pela descrição do MapBiomas e KB:06:
+- GPP estimado de Landsat por modelo LUE (0,5 gC/m²/dia/MJ), a partir do uGPP do Global Pasture Watch;
+- convertido em biomassa por fator constante (0,0115);
+- GPP validado com torres de fluxo; conversão para forragem validada só em caráter preliminar.
+
+**Uso.** Índice relativo de produtividade. Como o fator é constante, equivale ao GPP para comparar pixels. Os valores em t/ha **não** são interpretados.
+
+**Teste crítico:**
+1. **Atraso de rótulo [C].** A LULC e a biomassa vêm das mesmas imagens Landsat. Biomassa alta em t−1 pode ser regeneração já em curso que o classificador ainda chama de pastagem.
+   - Isso inflaria a P3 sem conteúdo preditivo real.
+   - O mesmo vale para o vigor.
+   - **Mitigação:** a sensibilidade S6 mede vigor e biomassa só em t−3 e t−2.
+2. **Colinearidade com o vigor.** Mitigação pela regra pré-fixada: se |r| > 0,7, efeito do grupo em conjunto na P2.
+3. **[L] Disponibilidade.** O asset aparece só no catálogo `.github`, não no toolkit (D11 da KB). Confirmar pelo script 01 antes da tag.
+4. **[L] Confiabilidade no Cerrado.** Não sabemos quantas torres de fluxo da validação do GPP estão em pastagens do Cerrado.

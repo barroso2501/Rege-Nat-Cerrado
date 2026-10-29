@@ -26,9 +26,9 @@
 // ----------------------------- CONFIG ---------------------------------------
 var ASSET_ENTRADA = 'projects/ee-barroso2501/assets/RegeNat/F0_indicadores_1km_v1';
 
-// [L] Use o MESMO limite do script 03.
-var CERRADO = ee.FeatureCollection('RESOLVE/ECOREGIONS/2017')
-  .filter(ee.Filter.eq('ECO_NAME', 'Cerrado')).geometry();
+// Limite IBGE do Cerrado (D05) — o mesmo do script 03.
+var CERRADO = ee.FeatureCollection('projects/ee-barroso2501/assets/biomas_IBGE')
+  .filter(ee.Filter.eq('NM_BIOMA', 'Cerrado')).geometry();
 
 var PASTA_DRIVE = 'RegeNat_F0_diagnosticos';
 var ANOS = [2017, 2018, 2019, 2020, 2021];

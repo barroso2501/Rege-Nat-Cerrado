@@ -18,6 +18,8 @@
  *   - "Asset not found" ou "permission denied": o asset mudou de nome ou não
  *     é público. Pare e me avise; não substitua por outro asset.
  *   - Banda final diferente de 2025: a série publicada mudou.
+ *   - Biomassa (D11): esperado classification_2000 … _2025. Se não existir ou não for
+ *     legível, a D11 volta para decisão antes da tag.
  * ---------------------------------------------------------------------------
  */
 
@@ -27,7 +29,8 @@ var ASSETS = {
   vegsec: C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5',
   vegsecCob: C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1',
   idadePastagem: C11 + 'mapbiomas_brazil_collection11_pasture_origin_age_v2',
-  vigor: C11 + 'mapbiomas_brazil_collection11_pasture_vigor_v1'
+  vigor: C11 + 'mapbiomas_brazil_collection11_pasture_vigor_v1',
+  biomassa: C11 + 'mapbiomas_brazil_collection11_pasture_biomass_v1'   // D11
 };
 
 print('=== MANIFESTO === executado em', new Date().toISOString());

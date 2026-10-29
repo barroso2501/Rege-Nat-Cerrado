@@ -86,3 +86,34 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-29 · pacote 0.8 — candidato a congelamento
+**Novos:**
+- `docs/plano_validacao_P1.md` — plano de validação visual (D06).
+- `src/gee/05_verificar_limites_e_sortear_holdout.js` — confere os limites e sorteia o holdout (semente 20261029).
+
+**Alterados:**
+- `PROTOCOLO.md` → v1.0-rc, reescrito e consistente com todas as decisões: evento, conjunto em risco, sensibilidades S1–S5, critérios de aprovação de P1–P3, desenho da P2, predição da P3 e itens do congelamento (§11).
+- `docs/decisoes.md`: D01b–D09 decididas.
+- `README.md`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-10-29 · pacote 0.9
+**Alterados:**
+- Todos os scripts em `src/gee/` (00, 02, 03, 04, 05): o limite do Cerrado agora é `projects/ee-barroso2501/assets/biomas_IBGE`, com `NM_BIOMA = 'Cerrado'`.
+- `PROTOCOLO.md` §1 e §11, `docs/decisoes.md` (D05) e `docs/fontes_dados.md`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.0-rc2
+**Alterados:**
+- `PROTOCOLO.md`: biomassa da pastagem no §3 e no grupo Pastagem do §6; nova sensibilidade S6 (atraso de rótulo); regra de colinearidade; hipótese no §5; verificação do asset no §11.
+- `docs/decisoes.md`: nova D11, com o teste crítico.
+- `docs/fontes_dados.md`: linha da biomassa.
+- `src/gee/00_config_comum.js` e `01_verificar_assets.js`: incluem o asset de biomassa.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.

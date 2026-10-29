@@ -24,18 +24,14 @@ var ASSETS = {
   // Idade/origem da pastagem (D10). Prefixo das bandas a confirmar no script 01.
   idadePastagem: C11 + 'mapbiomas_brazil_collection11_pasture_origin_age_v2',
   // Vigor da pastagem C11 (preditor futuro; aqui só verificamos que existe).
-  vigor: C11 + 'mapbiomas_brazil_collection11_pasture_vigor_v1'
+  vigor: C11 + 'mapbiomas_brazil_collection11_pasture_vigor_v1',
+  // Biomassa da pastagem (D11): índice relativo de produtividade.
+  biomassa: C11 + 'mapbiomas_brazil_collection11_pasture_biomass_v1'
 };
 
-// [L] LIMITE DO CERRADO — TROQUE pelo asset IBGE de biomas que você usa.
-// O padrão abaixo (ecorregião "Cerrado" da RESOLVE 2017) é só provisório:
-// os limites NÃO coincidem com o bioma IBGE usado pelo MapBiomas.
-var CERRADO = ee.FeatureCollection('RESOLVE/ECOREGIONS/2017')
-  .filter(ee.Filter.eq('ECO_NAME', 'Cerrado'))
-  .geometry();
-// Exemplo de troca (ajuste o caminho e o filtro):
-// var CERRADO = ee.FeatureCollection('users/SEU_USUARIO/biomas_IBGE_2019')
-//   .filter(ee.Filter.eq('Bioma', 'Cerrado')).geometry();
+// Limite IBGE do Cerrado (D05, PROTOCOLO §11), definido em 2026-10-29.
+var CERRADO = ee.FeatureCollection('projects/ee-barroso2501/assets/biomas_IBGE')
+  .filter(ee.Filter.eq('NM_BIOMA', 'Cerrado')).geometry();
 
 // Pasta do Google Drive para onde vão as tabelas exportadas.
 var PASTA_DRIVE = 'RegeNat_F0_diagnosticos';

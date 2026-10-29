@@ -15,7 +15,7 @@ Os IDs de asset começam por `projects/mapbiomas-public/assets/brazil/`; nas tab
 | Idem, cruzado com cobertura do ano anterior | `lulc/collection11/mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1` | 1987–2025 | [D] | `transição*100 + cobertura(ano−1)`; 515 = recuperação a partir de pastagem. Idade da veg. secundária C11 **não é pública** |
 | Idade da pastagem | `lulc/collection11/mapbiomas_brazil_collection11_pasture_origin_age_v2` | 1985–2025 (verificado) | [D] escopo limitado | Erros do asset anterior não detectados (`docs/verificacoes/pasture_origin_age_v2/`). Códigos: 100 = pastagem contínua desde 1985; 2xx = [L] idade ou ano de origem, a confirmar. Ausente da KB v0.5 |
 | Vigor da pastagem | `lulc/collection11/mapbiomas_brazil_collection11_pasture_vigor_v1` | 2000–2025 | [D] | Normalizado por estado e por região climática |
-| Biomassa da pastagem | `mapbiomas_brazil_collection11_pasture_biomass_v1` (só no catálogo `.github`) | [L] | [D]/[L] | Divergência D11 da KB. Derivada do uGPP do GPW |
+| Biomassa da pastagem | `lulc/collection11/mapbiomas_brazil_collection11_pasture_biomass_v1` | 2000–2025 (a confirmar, script 01) | [D] | GPP (LUE, uGPP do GPW) × 0,0115; índice relativo de produtividade (D11). Ausente do toolkit (D11 da KB) |
 | Fogo | `fire/collection5/...` (frequência, ano do último fogo, intervalo desde o fogo) | 1985–2025 | [D] | Circularidade com a LULC do Cerrado (KB:06) |
 | Solo | `soil/collection3/mapbiomas_brazil_collection3_soil_sand_fraction_v1` | — | [D] beta | |
 | Regiões de classificação | 38 regiões do Cerrado (Sano et al. 2019, refinadas) | — | [D] | **[L]** localizar o asset ou shapefile no repositório `mapbiomas/brazil-cerrado` |
@@ -28,3 +28,8 @@ Os IDs de asset começam por `projects/mapbiomas-public/assets/brazil/`; nas tab
 - Silva, T.R. et al. 2023. Factors affecting savanna and forest regeneration in pastures across the Cerrado. *J Environ Manage*.
 - Veldman, J.W. et al. 2016. Clarifying the confusion: old-growth savannahs and tropical ecosystem degradation. *Phil Trans R Soc B* (para a crítica "regeneração ≠ árvore").
 - PDFs na pasta de referências do Drive (inventário: `docs/piloto_2025.md`).
+
+## Limite do Cerrado (D05)
+
+- `projects/ee-barroso2501/assets/biomas_IBGE`, filtro `NM_BIOMA = 'Cerrado'`. Asset próprio de Mario, informado em 2026-10-29. **[L]** Registrar a edição e o ano do IBGE de origem no manifesto.
+- Os diagnósticos de F0 (`results/f0_diagnosticos/F0_02`, `F0_04`) usaram a ecorregião RESOLVE 2017 como limite provisório. Não são refeitos, porque foram só de definição (PROTOCOLO §11).
