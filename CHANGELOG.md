@@ -187,3 +187,18 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 **Removidos:** nenhum.
 
 **Desvios do protocolo:** nenhum. A implementação segue `docs/plano_validacao_P1.md`. Detalhe de execução: o sorteio final é feito em Python, não no GEE, pela lição do F0_05.
+
+## 2026-10-29 · pacote 1.2
+**Novos:**
+- `src/gee/10a_f1_fracoes_estratos_1km.js`, `src/gee/10b_f1_celulas_candidatas.js`, `src/gee/10d_modelo.js.txt` (modelo do script 10d).
+- `src/python/f1_10c_sortear_celulas.py` — sorteio das células e geração do script 10d.
+
+**Alterados:**
+- `src/python/f1_11_selecionar_amostra_p1.py`: entrada passa a ser `F1_10d_candidatos_*.csv`.
+- `results/f1/README.md`: nova ordem dos passos.
+- `CHANGELOG.md`.
+
+**Removidos (apagar à mão no GitHub):**
+- `src/gee/10_f1_candidatos_amostra_p1.js`. O `stratifiedSample` não processou em 5 h; as tarefas foram canceladas.
+
+**Desvios do protocolo:** nenhum. Mudança de implementação: o sorteio continua equivalente a um sorteio aleatório simples por pixel dentro de cada estrato.

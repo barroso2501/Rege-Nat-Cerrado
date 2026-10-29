@@ -1,0 +1,114 @@
+/**
+ * 10d_f1_pixel_por_celula.js — Rege-Nat-Cerrado, F1, amostra P1 (passo D de 4)
+ * GERADO AUTOMATICAMENTE por src/python/f1_10c_sortear_celulas.py — não edite à mão.
+ * ---------------------------------------------------------------------------
+ * O QUE FAZ
+ *   E e P: em cada célula sorteada no passo C, escolhe UM pixel elegível de 30 m
+ *     — o de menor valor de ee.Image.random(SEMENTE) entre os pixels do estrato
+ *     naquele ano. ee.Image.random é determinístico (depende só da semente e da
+ *     posição do pixel), então a escolha é reprodutível.
+ *   N (pastagem sem evento, estrato comum): pontos aleatórios uniformes no
+ *     Cerrado (fora do holdout); ficam os que caem em pixel N daquele ano.
+ *   Para todos: acrescenta região (raster MapBiomas) e zona.
+ *   Saída: 5 CSVs no mesmo formato do antigo script 10 (ano, estrato, lon, lat,
+ *   regiao, zona), que entram no passo final f1_11_selecionar_amostra_p1.py.
+ *
+ * COMO RODAR
+ *   Run → Tasks → Run nas 5 tarefas "F1_10d_candidatos_<ano>". Devem levar minutos.
+ *   Envie os 5 CSVs SEM ABRIR (eles têm o estrato).
+ *
+ * O QUE PODE QUEBRAR E COMO PERCEBER
+ *   - Tarefa N lenta: reduza N_PONTOS_N para 3000.
+ * ---------------------------------------------------------------------------
+ */
+
+// ----------------------------- CONFIG ---------------------------------------
+var C11 = 'projects/mapbiomas-public/assets/brazil/lulc/collection11/';
+var cobertura = ee.Image(C11 + 'mapbiomas_brazil_collection11_coverage_v3');
+var vegsec = ee.Image(C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_v5');
+var vegsecCob = ee.Image(C11 + 'mapbiomas_brazil_collection11_deforestation_secondary_vegetation_by_coverage_v1');
+var CERRADO = ee.FeatureCollection('projects/ee-barroso2501/assets/biomas_IBGE')
+  .filter(ee.Filter.eq('NM_BIOMA', 'Cerrado')).geometry();
+var ZONA = ee.Image('projects/ee-barroso2501/assets/RegeNat/F0_holdout_zona_exclusao_v1').unmask(0);
+var REGIOES = ee.Image('users/dh-conciani/collection7/classification_regions/raster').select(0);
+
+var SEMENTE = 20261030;
+var N_PONTOS_N = 5000;          // por ano; ~20–30% devem cair em pixel N
+var PASTA_DRIVE = 'RegeNat_F1';
+var ANOS = [2017, 2018, 2019, 2020, 2021];
+
+// [ano, estrato, lon_centro, lat_centro, meio_lado_graus] — gerado no passo C.
+var CELULAS = [
+/*__CELULAS__*/
+];
+// ---------------------------------------------------------------------------
+
+function banda(img, ano) { return img.select('classification_' + ano).unmask(0); }
+function todosIguais(img, anos, valor) {
+  var m = banda(img, anos[0]).eq(valor);
+  anos.slice(1).forEach(function (a) { m = m.and(banda(img, a).eq(valor)); });
+  return m;
+}
+var elegivel = ee.Image(0).paint(CERRADO, 1).and(ZONA.neq(1));
+
+// Máscaras dos estratos por ano.
+function mascaras(t) {
+  var pre15 = todosIguais(cobertura, [t - 3, t - 2, t - 1], 15);
+  var pos4 = todosIguais(cobertura, [t, t + 1, t + 2, t + 3], 4);
+  return {
+    E: pre15.and(pos4).and(banda(vegsecCob, t).eq(515)).and(elegivel),
+    P: pre15.and(pos4).and(banda(vegsec, t).eq(7)).and(elegivel),
+    N: pre15.and(todosIguais(cobertura, [t, t + 1, t + 2, t + 3], 15)).and(elegivel)
+  };
+}
+
+// Região e zona no ponto.
+function anexarRegiaoZona(f) {
+  var v = REGIOES.rename('regiao').addBands(ZONA.rename('zona'))
+    .reduceRegion({reducer: ee.Reducer.first(), geometry: f.geometry(), scale: 30});
+  return f.set({regiao: v.get('regiao'), zona: v.get('zona')});
+}
+
+var aleatorio = ee.Image.random(SEMENTE);
+var lonlat = ee.Image.pixelLonLat();
+
+ANOS.forEach(function (t) {
+  var m = mascaras(t);
+  var lista = [];
+
+  // E e P: um pixel por célula sorteada.
+  ['E', 'P'].forEach(function (est) {
+    var codigo = est === 'E' ? 1 : 3;
+    var cel = CELULAS.filter(function (c) { return c[0] === t && c[1] === est; });
+    var img = aleatorio.addBands(lonlat).updateMask(m[est]);
+    cel.forEach(function (c) {
+      var ret = ee.Geometry.Rectangle([c[2] - c[4], c[3] - c[4], c[2] + c[4], c[3] + c[4]]);
+      // min(3): menor 'random' e as coordenadas desse mesmo pixel.
+      var r = img.reduceRegion({reducer: ee.Reducer.min(3), geometry: ret, scale: 30, maxPixels: 1e6});
+      var lon = r.get('min1'), lat = r.get('min2');
+      lista.push(ee.Feature(null, {ano: t, estrato: codigo, lon: lon, lat: lat}));
+    });
+  });
+
+  // Células sem pixel elegível (não deveria ocorrer) são descartadas; as demais
+  // ganham a geometria do pixel escolhido.
+  var ep = ee.FeatureCollection(lista).filter(ee.Filter.notNull(['lon']))
+    .map(function (f) { return f.setGeometry(ee.Geometry.Point([f.get('lon'), f.get('lat')])); });
+
+  // N: pontos uniformes no Cerrado; ficam os que caem em pixel N.
+  var pts = ee.FeatureCollection.randomPoints({region: CERRADO, points: N_PONTOS_N, seed: SEMENTE + t, maxError: 50});
+  var n = m.N.rename('n').sampleRegions({collection: pts, scale: 30, geometries: true})
+    .filter(ee.Filter.eq('n', 1))
+    .map(function (f) {
+      var c = f.geometry().coordinates();
+      return ee.Feature(f.geometry(), {ano: t, estrato: 2, lon: c.get(0), lat: c.get(1)});
+    });
+
+  Export.table.toDrive({
+    collection: ep.merge(n).map(anexarRegiaoZona),
+    description: 'F1_10d_candidatos_' + t,
+    folder: PASTA_DRIVE,
+    fileFormat: 'CSV',
+    selectors: ['ano', 'estrato', 'lon', 'lat', 'regiao', 'zona']
+  });
+});

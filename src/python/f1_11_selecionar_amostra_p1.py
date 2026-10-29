@@ -2,7 +2,7 @@
 f1_11_selecionar_amostra_p1.py — Rege-Nat-Cerrado, fase F1, passo 2 de 2
 
 O QUE FAZ (docs/plano_validacao_P1.md §1, §2 e §4)
-    A partir dos candidatos exportados pelo script GEE 10 (5 CSVs, um por ano):
+    A partir dos candidatos exportados pelo script GEE 10d (5 CSVs, um por ano):
       1. sorteia, por ano, 100 pontos E, 30 N e 20 P (750 no total), em ordem
          aleatória com semente fixa, respeitando a distância mínima de 500 m entre
          QUALQUER par de pontos da amostra;
@@ -16,7 +16,7 @@ O QUE FAZ (docs/plano_validacao_P1.md §1, §2 e §4)
       5. registra os hashes das entradas e saídas e as contagens (tabela de atrito).
 
 COMO RODAR (da raiz do repositório)
-    python src/python/f1_11_selecionar_amostra_p1.py data/f1_candidatos/F1_10_candidatos_*.csv
+    python src/python/f1_11_selecionar_amostra_p1.py data/f1_candidatos/F1_10d_candidatos_*.csv
 
 O QUE PODE QUEBRAR E COMO PERCEBER
     - "Faltam pontos": um estrato não teve candidatos suficientes num ano depois da
