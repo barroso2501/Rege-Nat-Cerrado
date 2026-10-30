@@ -38,3 +38,14 @@ Os candidatos ficam em `data/f1_candidatos/`, fora do git até o fim da interpre
 **Por que a revisão.** O `stratifiedSample` a 30 m no Cerrado inteiro (script 10, removido) ficou 5 h em "Running" sem consumir processamento.
 
 **Por que o resultado é equivalente.** A nova estratégia continua equivalente a um sorteio aleatório simples de pixels dentro de cada estrato: P(pixel) = P(célula) × 1/n(célula), com P(célula) ∝ n(célula).
+
+## Situação em 2026-10-29
+
+- **Amostra gerada:** 750 pontos (100 E, 30 N e 20 P por ano) e 75 para reinterpretação. Atrito em `amostra_p1_registro.json`:
+  - 2 células sem pixel elegível no passo D (2017: uma célula E e uma célula P);
+  - 2 descartes pela distância de 500 m.
+- **CHAVE:** `amostra_p1_CHAVE.csv`, SHA-256 `eecc54b8…98d9`.
+  - Entregue a Mario num zip separado, `NAO_ABRIR_ate_fim_interpretacao.zip`, junto com o `10d_f1_pixel_por_celula.js`.
+  - Os dois só entram no repositório depois da interpretação.
+  - **[L] Limitação:** o cegamento depende da disciplina do intérprete, que também guarda a CHAVE. O hash prova que a chave não mudou, mas não que não foi aberta.
+- **Ferramenta:** `src/gee/12_ferramenta_interpretacao_p1.js`. Gerada por `src/python/f1_12_gerar_ferramenta.py` a partir do arquivo de interpretação, sem estrato.

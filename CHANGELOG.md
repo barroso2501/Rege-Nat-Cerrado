@@ -234,3 +234,18 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 **Removidos:** nenhum.
 
 **Desvios do protocolo:** nenhum.
+
+## 2026-10-29 · pacote 1.5 — amostra P1 pronta para interpretação
+**Novos:**
+- `results/f1/amostra_p1_interpretacao.csv` — 750 pontos sem estrato.
+- `results/f1/amostra_p1_registro.json` — semente, atrito e hashes, inclusive da CHAVE.
+- `src/gee/12_modelo_ferramenta_interpretacao.js.txt` e `src/gee/12_ferramenta_interpretacao_p1.js` — ferramenta de interpretação no GEE: Landsat e Sentinel-2 do período seco, NDVI 1985–2025 e link para o Google Earth.
+- `src/python/f1_12_gerar_ferramenta.py`.
+
+**Alterados:**
+- `results/f1/README.md`.
+- `CHANGELOG.md`.
+
+**Fora do pacote:** `NAO_ABRIR_ate_fim_interpretacao.zip`, com a CHAVE e o script 10d.
+
+**Desvios do protocolo:** nenhum.

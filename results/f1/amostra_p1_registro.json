@@ -1,0 +1,139 @@
+{
+  "semente": 20261030,
+  "distancia_minima_m": 500.0,
+  "n_por_ano": {
+    "E": 100,
+    "N": 30,
+    "P": 20
+  },
+  "entradas": {
+    "F1_10d_candidatos_2017_E.csv": "3cbd9b5268db1e5a3fa1aa1b22137c45a3d4afba5471fa8faf17a888a17c49b9",
+    "F1_10d_candidatos_2017_N.csv": "9f183a2d40d4e1959ab90cdd8430f053f698b96ebdba441aafb429ed4b8f5068",
+    "F1_10d_candidatos_2017_P.csv": "e1153562b768d6182ec61cd2c3e2b0ef50b17aa27d6056eb042b59f2e2550247",
+    "F1_10d_candidatos_2018_E.csv": "ed908526754ed3e01aa379f74f51bfae930a0c05fe487685c8f7475bf2ce598d",
+    "F1_10d_candidatos_2018_N.csv": "629a07c964cb72a9a7b093377ab8b052289f7106c98f56ff9494ea218c920bcb",
+    "F1_10d_candidatos_2018_P.csv": "95033c6caa08e2b6e681d867e81321d8137bf2950fe1a3dd7b47694d5023c788",
+    "F1_10d_candidatos_2019_E.csv": "48efba41c20a9aebc149ad38e83c0ff01322ffdaeaed5d2d11498ed0b4e0c39a",
+    "F1_10d_candidatos_2019_N.csv": "4163272e10bea7f97fc0f2a8e0507b9a8eb7d5f74b5168438b1b90e539bb9ccc",
+    "F1_10d_candidatos_2019_P.csv": "59e747eff5fc0e1aeecca843047f9077c4c411eb014b1f952511b2b6c24273a3",
+    "F1_10d_candidatos_2020_E.csv": "b5a10f16a73b8018871470723bd77e6a498a434dc0af90b55400f04a7d70b6d0",
+    "F1_10d_candidatos_2020_N.csv": "6c5ac1c692180d0a88f4dec944cd1868ae51378ff4973e8bfce230c7d06d35ff",
+    "F1_10d_candidatos_2020_P.csv": "9f08c77843d31e30ff35c44e118bf8820809f313def0e05564bc4d9b919cc69c",
+    "F1_10d_candidatos_2021_E.csv": "6b10d2f0159b4e7cb979840411b4e1ccf5dc8ab43de82429673a9978ab0c66cb",
+    "F1_10d_candidatos_2021_N.csv": "ddda9a7fd7e3f92059e064a34e1284e29bcf124b880c428d0b4a96ae81d90dd2",
+    "F1_10d_candidatos_2021_P.csv": "7e866a34c0e8d9d0db4bf32001abb051561e70656a95b6a2a20e853a42f72206"
+  },
+  "saidas": {
+    "amostra_p1_interpretacao.csv": "d5e688be95148f99e3856d433c127a67e873ad5ab05b4393ea9d40ba9eb88ef5",
+    "amostra_p1_CHAVE.csv": "eecc54b8332e8b0e89e692384c10837aa112d1fc621cd10ef18e418e992198d9"
+  },
+  "atrito": [
+    {
+      "ano": "2017",
+      "estrato": "E",
+      "candidatos": 399,
+      "descartados_distancia": 1,
+      "selecionados": 100
+    },
+    {
+      "ano": "2017",
+      "estrato": "N",
+      "candidatos": 1230,
+      "descartados_distancia": 0,
+      "selecionados": 30
+    },
+    {
+      "ano": "2017",
+      "estrato": "P",
+      "candidatos": 99,
+      "descartados_distancia": 0,
+      "selecionados": 20
+    },
+    {
+      "ano": "2018",
+      "estrato": "E",
+      "candidatos": 400,
+      "descartados_distancia": 0,
+      "selecionados": 100
+    },
+    {
+      "ano": "2018",
+      "estrato": "N",
+      "candidatos": 1309,
+      "descartados_distancia": 0,
+      "selecionados": 30
+    },
+    {
+      "ano": "2018",
+      "estrato": "P",
+      "candidatos": 100,
+      "descartados_distancia": 0,
+      "selecionados": 20
+    },
+    {
+      "ano": "2019",
+      "estrato": "E",
+      "candidatos": 400,
+      "descartados_distancia": 1,
+      "selecionados": 100
+    },
+    {
+      "ano": "2019",
+      "estrato": "N",
+      "candidatos": 1330,
+      "descartados_distancia": 0,
+      "selecionados": 30
+    },
+    {
+      "ano": "2019",
+      "estrato": "P",
+      "candidatos": 100,
+      "descartados_distancia": 0,
+      "selecionados": 20
+    },
+    {
+      "ano": "2020",
+      "estrato": "E",
+      "candidatos": 400,
+      "descartados_distancia": 0,
+      "selecionados": 100
+    },
+    {
+      "ano": "2020",
+      "estrato": "N",
+      "candidatos": 1235,
+      "descartados_distancia": 0,
+      "selecionados": 30
+    },
+    {
+      "ano": "2020",
+      "estrato": "P",
+      "candidatos": 100,
+      "descartados_distancia": 0,
+      "selecionados": 20
+    },
+    {
+      "ano": "2021",
+      "estrato": "E",
+      "candidatos": 400,
+      "descartados_distancia": 0,
+      "selecionados": 100
+    },
+    {
+      "ano": "2021",
+      "estrato": "N",
+      "candidatos": 1227,
+      "descartados_distancia": 0,
+      "selecionados": 30
+    },
+    {
+      "ano": "2021",
+      "estrato": "P",
+      "candidatos": 100,
+      "descartados_distancia": 0,
+      "selecionados": 20
+    }
+  ],
+  "n_total": 750,
+  "n_reinterpretacao": 75
+}
