@@ -219,3 +219,18 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-10-29 · pacote 1.4
+**Alterados:**
+- `src/gee/10d_modelo.js.txt` → versão 2. A versão 1 esgotou a memória em 2017, 2018 e 2020. Mudanças:
+  - a zona e o limite do Cerrado são lidos do asset de zona, sem rasterizar o polígono;
+  - um `reduceRegions` por estrato, em vez de 500 `reduceRegion`;
+  - os pontos N são sorteados no retângulo envolvente, com rejeição;
+  - 15 tarefas (ano × estrato) em vez de 5.
+- `src/gee/10d_f1_pixel_por_celula.js` regenerado (entregue fora do pacote). **Lista de células idêntica** à versão 1, porque a semente e a entrada são as mesmas. Novo hash em `results/f1/amostra_p1_passoC_registro.json`.
+- `src/python/f1_11_selecionar_amostra_p1.py`: padrão de entrada `F1_10d_candidatos_*_*.csv`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+**Desvios do protocolo:** nenhum.

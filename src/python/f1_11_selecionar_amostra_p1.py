@@ -16,7 +16,7 @@ O QUE FAZ (docs/plano_validacao_P1.md §1, §2 e §4)
       5. registra os hashes das entradas e saídas e as contagens (tabela de atrito).
 
 COMO RODAR (da raiz do repositório)
-    python src/python/f1_11_selecionar_amostra_p1.py data/f1_candidatos/F1_10d_candidatos_*.csv
+    python src/python/f1_11_selecionar_amostra_p1.py data/f1_candidatos/F1_10d_candidatos_*_*.csv
 
 O QUE PODE QUEBRAR E COMO PERCEBER
     - "Faltam pontos": um estrato não teve candidatos suficientes num ano depois da
