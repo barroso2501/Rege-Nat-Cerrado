@@ -8,18 +8,18 @@
  *   "Entre t-3 e t+3, a área deixou de ser pastagem manejada e passou a ter
  *    vegetação savânica em recuperação?" (docs/plano_validacao_P1.md §2)
  *
- * O QUE MOSTRA (só imagens; NENHUMA camada MapBiomas — cegamento)
- *   - Landsat (composição do período seco, mai–set), cor natural e falsa-cor
- *     (SWIR1-NIR-vermelho), para t-4, t-1, t, t+1, t+3 e 2025;
- *   - Sentinel-2 (mai–set, cor natural) para os anos ≥ 2017 entre t e 2025;
+ * O QUE MOSTRA (só imagens; NENHUMA camada MapBiomas — cegamento)   — VERSÃO 2
+ *   - MINIATURAS no painel, uma por ano de t-4 a 2025 (janela de 1,2 km, período
+ *     seco mai–set): Sentinel-2 a partir de 2016, Landsat antes. Anos da janela
+ *     t-3..t+3 com rótulo em preto. O ponto (pixel de 30 m) em vermelho.
+ *   - mapa com a imagem de satélite atual do Google e o ponto;
  *   - gráfico do NDVI do período seco, 1985–2025, no pixel, com t marcado;
  *   - link para o Google Earth Web (imagens históricas de alta resolução).
- *   Planet NICFI: camada opcional (ative USAR_NICFI se sua conta tiver acesso).
  *
  * COMO USAR
  *   1. Run. Escolha o código (P001…P750) no menu ou use "Próximo".
- *   2. Ligue/desligue as camadas no painel "Layers" do mapa (todas começam
- *      desligadas, exceto t-1 e t+3 em cor natural).
+ *   2. Leia as miniaturas e o NDVI; use o Google Earth Web (link) para a alta
+ *      resolução histórica quando as miniaturas não bastarem.
  *   3. Registre na planilha amostra_p1_interpretacao.csv: categoria (1 regeneração
  *      real; 2 sem mudança aparente; 3 outra mudança; 4 incerto), confiança
  *      (alta/baixa), imagens usadas e comentário curto.
@@ -32,7 +32,6 @@
  * ---------------------------------------------------------------------------
  */
 
-var USAR_NICFI = false;   // true só se sua conta tiver acesso ao Planet NICFI no GEE
 
 // [codigo, lon, lat, t]
 var PONTOS = [
@@ -821,7 +820,7 @@ var VIS_S2 = {bands: ['B4', 'B3', 'B2'], min: 0.0, max: 0.15, gamma: 1.3};
 
 // ---------- Interface ----------
 Map.setOptions('SATELLITE');
-var painel = ui.Panel({style: {width: '420px'}});
+var painel = ui.Panel({style: {width: '560px'}});
 ui.root.insert(0, painel);
 
 var codigos = PONTOS.map(function (p) { return p[0]; });
@@ -829,15 +828,20 @@ var seletor = ui.Select({items: codigos, placeholder: 'Escolha o ponto'});
 var info = ui.Label('');
 var linkGE = ui.Label('', {color: '1a73e8'});
 var areaGrafico = ui.Panel();
+var areaMini = ui.Panel({layout: ui.Panel.Layout.flow('horizontal', true)});
 var botaoAnt = ui.Button('◀ Anterior');
 var botaoProx = ui.Button('Próximo ▶');
 
 painel.add(ui.Label('Validação visual P1 — Rege-Nat-Cerrado', {fontWeight: 'bold', fontSize: '16px'}));
 painel.add(ui.Label('Categorias: 1 regeneração real · 2 sem mudança aparente · 3 outra mudança · 4 incerto'));
+painel.add(ui.Label('Já foi convertida? (retirada total da biomassa; fogo/degradação não) — sim/não/talvez', {fontSize: '12px'}));
+painel.add(ui.Label('Já foi pastagem plantada? (vs. campo nativo/agricultura) — sim/não/talvez', {fontSize: '12px'}));
+painel.add(ui.Label('Colunas auxiliares: só explicam as categorias 2–4; não entram na análise.', {fontSize: '12px', color: '666666'}));
 painel.add(seletor);
 painel.add(ui.Panel([botaoAnt, botaoProx], ui.Panel.Layout.flow('horizontal')));
 painel.add(info);
 painel.add(linkGE);
+painel.add(areaMini);
 painel.add(areaGrafico);
 
 function mostrar(codigo) {
@@ -847,29 +851,31 @@ function mostrar(codigo) {
   var regiao = ponto.buffer(1500).bounds();
 
   Map.layers().reset();
-  Map.centerObject(ponto, 16);
+  Map.centerObject(ponto, 16);   // fundo: imagem de satélite atual do Google
 
-  // Landsat: anos de referência em torno de t.
-  [t - 4, t - 1, t, t + 1, t + 3, 2025].forEach(function (ano) {
-    var img = secaLandsat(ano, regiao);
-    var ligar = (ano === t - 1 || ano === t + 3);
-    Map.addLayer(img, VIS_NAT, 'Landsat ' + ano + ' (t' + (ano - t >= 0 ? '+' : '') + (ano - t) + ') natural', ligar);
-    Map.addLayer(img, VIS_FALSA, 'Landsat ' + ano + ' falsa-cor', false);
-  });
-  // Sentinel-2: anos ≥ 2017, de t a 2025.
-  for (var a = Math.max(2017, t); a <= 2025; a += 2) {
-    Map.addLayer(secaS2(a, regiao), VIS_S2, 'Sentinel-2 ' + a, false);
-  }
-  if (USAR_NICFI) {
-    var nicfi = ee.ImageCollection('projects/planet-nicfi/assets/basemaps/americas')
-      .filterDate(ee.Date.fromYMD(t + 1, 6, 1), ee.Date.fromYMD(t + 1, 9, 30)).median();
-    Map.addLayer(nicfi, {bands: ['R', 'G', 'B'], min: 64, max: 5454, gamma: 1.8}, 'NICFI ' + (t + 1), false);
-  }
-  // Marcador do ponto (contorno do pixel de 30 m) por último, por cima de tudo.
-  Map.addLayer(ee.Image().paint(ee.FeatureCollection([ee.Feature(ponto.buffer(15).bounds())]), 1, 2),
-               {palette: ['ff0000']}, 'Ponto (30 m)');
+  // Contorno do pixel de 30 m, para o mapa e para as miniaturas.
+  var contorno = ee.Image().paint(ee.FeatureCollection([ee.Feature(ponto.buffer(15).bounds())]), 1, 2)
+    .visualize({palette: ['ff0000']});
+  Map.addLayer(contorno, {}, 'Ponto (30 m)');
 
-  info.setValue(codigo + '  ·  t = ' + t + '  ·  lon ' + lon.toFixed(5) + ', lat ' + lat.toFixed(5) +
+  // MINIATURAS (v2): uma por ano, de t-4 a 2025, todas na mesma janela de 1,2 km.
+  // Sentinel-2 (10 m) a partir de 2016; Landsat (30 m) antes disso.
+  // Carregam em paralelo e são bem mais rápidas que camadas no mapa.
+  var caixa = ponto.buffer(600).bounds();
+  areaMini.clear();
+  for (var ano = t - 4; ano <= 2025; ano++) {
+    var usaS2 = ano >= 2016;
+    var base = usaS2 ? secaS2(ano, caixa).visualize(VIS_S2) : secaLandsat(ano, caixa).visualize(VIS_NAT);
+    var rot = ano + (ano === t ? ' (t)' : '') + (usaS2 ? ' S2' : ' L');
+    var corRot = (ano >= t - 3 && ano <= t + 3) ? '000000' : '999999';   // janela em preto
+    areaMini.add(ui.Panel([
+      ui.Label(rot, {fontSize: '11px', margin: '0', color: corRot}),
+      ui.Thumbnail({image: base.blend(contorno), params: {region: caixa, dimensions: 120, format: 'png'},
+                    style: {margin: '0'}})
+    ], ui.Panel.Layout.flow('vertical'), {margin: '2px'}));
+  }
+
+  info.setValue(codigo + '  ·  centro da janela t = ' + t + '  ·  lon ' + lon.toFixed(5) + ', lat ' + lat.toFixed(5) +
                 '  ·  janela de interpretação: ' + (t - 3) + '–' + (t + 3));
   linkGE.setValue('Abrir no Google Earth Web (alta resolução, histórico)');
   linkGE.setUrl('https://earth.google.com/web/@' + lat + ',' + lon + ',600a,800d,35y,0h,0t,0r');

@@ -31,6 +31,27 @@
   4. **Incerto** (imagem insuficiente ou ambígua).
 - **Registro por ponto:** categoria, imagens usadas, confiança (alta/baixa) e comentário curto.
 
+### 2.1 Colunas auxiliares (desvio de 2026-10-31, ver `docs/desvios.md`)
+
+**Valores das duas colunas:** `sim` / `não` / `talvez`.
+
+**`ja_foi_convertida`:** há evidência, nas imagens disponíveis, de **retirada total da biomassa acima do solo** em algum momento?
+- Degradação, fogo e raleamento **não** contam como conversão.
+- `não` significa "sem evidência no período visível". As imagens começam em t−4 e o histórico de alta resolução costuma começar nos anos 2000, então `não` não significa "nunca".
+- Se a resposta for `sim`, anotar o ano aproximado no comentário.
+
+**`ja_foi_pastagem_plantada`:** quanta certeza há de que, antes de t, a área era **pastagem plantada**, e não campo nativo nem agricultura? `sim` = certeza alta, `talvez` = intermediária, `não` = provável campo nativo ou agricultura.
+- **Indícios a favor:** textura homogênea, limites retos, cercas, trilhas de gado, carreadores, ausência de estrato arbustivo antes de t.
+- **Indícios de campo nativo:** mosaico irregular, transição gradual para a vegetação nativa vizinha, afloramentos.
+- **Indícios de agricultura:** linhas de plantio, pivô, solo exposto sazonal.
+
+**Orientação de coerência** (não obrigatória; Mario pode vetar). Se `ja_foi_pastagem_plantada` = `não` **e** `ja_foi_convertida` = `não`, a categoria principal tende a ser **2** (só mudança de rótulo) ou **4** (incerto), e não 1: regeneração a partir de pastagem pressupõe pastagem.
+
+**Uso (decisão de Mario, 2026-10-31):**
+- As duas colunas **não entram em nenhuma análise**: nem no critério de aprovação, nem em análise secundária.
+- Servem só para **explicar** as atribuições das categorias 2, 3 e 4. Podem ser citadas descritivamente no white paper, junto com os comentários.
+- O critério de aprovação (§3) **não muda** e **não pode** ser recalculado excluindo pontos por essas colunas.
+
 ## 3. Critério de aprovação
 
 - **Acerto (estrato E)** = n(regeneração real) / n(E).

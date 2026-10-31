@@ -249,3 +249,26 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 **Fora do pacote:** `NAO_ABRIR_ate_fim_interpretacao.zip`, com a CHAVE e o script 10d.
 
 **Desvios do protocolo:** nenhum.
+
+## 2026-10-30 · pacote 1.6
+**Alterados:**
+- `src/gee/12_modelo_ferramenta_interpretacao.js.txt` e `12_ferramenta_interpretacao_p1.js` → versão 2.
+  - Motivo: Mario levou ~6 min por ponto nos 10 primeiros, usando só Sentinel-2 e Google Earth.
+  - Miniaturas por ano (t−4 a 2025) no painel, em vez de camadas no mapa: Sentinel-2 a partir de 2016, Landsat antes.
+  - Rótulo "centro da janela (t)" no lugar de "ano de referência".
+  - Camada NICFI removida.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+**Desvios do protocolo:** nenhum. A amostra e as categorias são as mesmas.
+
+## 2026-10-31 · pacote 1.7
+**Alterados:**
+- `docs/desvios.md`: **primeiro desvio registrado**, com as colunas auxiliares da validação visual (antes de qualquer resultado).
+- `docs/plano_validacao_P1.md`: novo §2.1 com as definições (`sim` / `não` / `talvez`), uma orientação de coerência não obrigatória e o uso: as colunas não entram em análise e só explicam as categorias 2–4 (decisão de Mario, 2026-10-31).
+- `results/f1/amostra_p1_interpretacao.csv`: colunas `ja_foi_convertida` e `ja_foi_pastagem_plantada`.
+- `src/gee/12_modelo_ferramenta_interpretacao.js.txt` e `12_ferramenta_interpretacao_p1.js`: legenda das colunas.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
