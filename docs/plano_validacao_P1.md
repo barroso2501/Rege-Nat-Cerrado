@@ -31,6 +31,16 @@
   4. **Incerto** (imagem insuficiente ou ambígua).
 - **Registro por ponto:** categoria, imagens usadas, confiança (alta/baixa) e comentário curto.
 
+### 2.0 Notas de interpretação (esclarecimentos; não mudam as categorias)
+
+**N1 — Reconversão depois da regeneração** (orientação dada em 2026-11-03, registrada em 2026-11-04):
+- **Reconversão depois da janela** (ano > t+3), com regeneração visível dentro da janela: **categoria 1**.
+  - A janela define o evento (classe 4 de t a t+3, PROTOCOLO §4).
+  - A persistência depois de t+3 é assunto da P4, não da P1.
+  - Marcar `ja_foi_convertida` = `sim` e anotar no comentário o ano aproximado da reconversão (ex.: "regeneração 2018–2022; reconvertida ~2023").
+- **Reconversão dentro da janela** (até t+3): **categoria 3** (outra mudança), com explicação no comentário. A regeneração não se sustentou no período que o evento exige.
+- **Pontos interpretados antes desta nota:** não alterar a categoria. Se algum caso de reconversão dentro da janela tiver recebido outra categoria, anotar no comentário.
+
 ### 2.1 Colunas auxiliares (desvio de 2026-10-31, ver `docs/desvios.md`)
 
 **Valores das duas colunas:** `sim` / `não` / `talvez`.

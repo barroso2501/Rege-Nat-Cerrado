@@ -272,3 +272,14 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `CHANGELOG.md`.
 
 **Removidos:** nenhum.
+
+## 2026-11-04 · pacote 1.8
+**Alterados:**
+- `docs/plano_validacao_P1.md`: novo §2.0 com a nota de interpretação N1 (reconversão depois da regeneração).
+- `docs/desvios.md`: registro do esclarecimento N1.
+- `CHANGELOG.md`.
+
+**Andamento da P1:** 229 de 750 pontos interpretados. Máximo de 70 pontos num dia.
+- Mantido o tamanho da amostra (750). A redução de N e P, considerada em 2026-10-30, não é necessária.
+
+**Removidos:** nenhum.
