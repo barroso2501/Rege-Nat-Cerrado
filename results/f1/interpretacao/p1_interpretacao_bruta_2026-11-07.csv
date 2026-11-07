@@ -1,0 +1,751 @@
+codigo,lon,lat,ano_referencia_t,categoria,confianca,imagens_usadas,ja foi convertida,já foi pastagem plantada?,comentario
+P001,-45.561428,-18.865025,2019,2,alta,sentinel e GE,sim,sim,"pastagem com alteração de estado, mas sem mudança de classe"
+P002,-46.113892,-17.187691,2018,1,baixa,sentinel e GE,talvez,talvez,"area aberta com arvores dispersas possivelmente em processo de regeneração. a duvida é sobre se houve ou não conversão. se houve, deve ter sido parcial"
+P003,-54.279309,-15.975774,2020,1,alta,sentinel e GE,sim,sim,sinais de adensamento de lenhosa e redução da intensidade de uso 
+P004,-46.05649,-15.893039,2019,2,alta,sentinel e GE,sim,sim,"area de pastagem com alta densidade de arboreas. aparentemente o extrato herbaceo é de gramineas plantadas. Não parece haver regeneração, mas manutenção das lenhosas"
+P005,-48.96757,-9.84046,2017,1,alta,sentinel e GE,sim,sim,"area com regeneração real, mas ponto localizado na borda da regeneração. esse ponto pode ser considerado um exemplo de regenração esperada no Cerrado. Imagens historicas no GE ilustram bem o caso"
+P006,-51.958152,-18.248961,2020,2,alta,sentinel e GE,sim,sim,"area com aparente redução de intensidade de uso, mas sem regeneração"
+P007,-43.204159,-17.071808,2021,1,alta,sentinel e GE,sim,sim,area com aparente regeneração de borda
+P008,-49.268326,-11.92554,2019,1,alta,sentinel e GE,sim,sim,"area com aparente regeneração, com adensamento de arboreas. outro bom exemplo de regeneração"
+P009,-45.605625,-17.492489,2020,3,media,sentinel e GE,sim,não,"a area possivelmente nunca foi pastagem plantada, mas é area manejada"
+P010,-42.644688,-14.162884,2017,1,alta,sentinel e GE,sim,sim,area de pastagem com regeneração. Bom exemplo de regeneração
+P011,-48.629355,-9.3392,2017,2,alta,sentinel e GE,sim,sim,"area de pastagem consolidada antiga, sem sinal de regeneração"
+P012,-44.654849,-15.645912,2019,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P013,-42.170108,-4.800103,2020,1,media,sentinel e GE,talvez,talvez,"duvida se a area foi convertida para pastagem, na borda de area convertida para pastagem"
+P014,-50.090285,-19.391887,2018,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P015,-47.180821,-8.985623,2021,2,alta,sentinel e GE,talvez,não,sem sinal que a área foi pastagem
+P016,-42.016227,-15.586893,2018,1,baixa,sentinel e GE,sim,sim,borda de regeneração em área com recuperação de arboreas e conversão antiga
+P017,-47.19753,-14.28227,2019,1,media,sentinel e GE,sim,sim,sinais de regeneração por adensamento de arvores
+P018,-52.02849,-15.959065,2020,1,baixa,sentinel e GE,sim,sim,"sinais de regeneração, mas dúvida se a área foi realmente convertida a pastagem"
+P019,-49.732396,-7.817903,2018,2,media,sentinel e GE,talvez,não,sem sinal que a área foi pastagem
+P020,-45.927671,-16.032098,2018,2,media,sentinel e GE,talvez,não,sem sinal que a área foi convertida
+P021,-48.343421,-8.882407,2017,1,alta,sentinel e GE,sim,sim,area com adensamento de arboreas
+P022,-49.134657,-12.549959,2018,1,baixa,sentinel e GE,talvez,talvez,"área com sinais de recuperação, mas com duvidas se a area chegou a ser convertida"
+P023,-46.290142,-17.093368,2021,1,baixa,sentinel e GE,sim,talvez,"área com sinais de recuperação, mas com duvidas se a area foi pastagem"
+P024,-47.189984,-11.884307,2021,2,media,sentinel e GE,não,não,área que possivelmente nunca foi convertida mas apresenta sinais de degradação (solo arenoso)
+P025,-50.072498,-12.913237,2019,1,media,sentinel e GE,sim,sim,estagio inicial de regeneração
+P026,-48.035928,-12.655331,2021,2,media,sentinel e GE,não,não,"área possivelmente nunca foi convertida, mas pode ter uso pecuário"
+P027,-46.63752,-6.859311,2018,1,alta,sentinel e GE,sim,sim,adensamento de arbóreas
+P028,-50.027223,-19.57703,2019,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P029,-43.179635,-16.681311,2017,3,media,sentinel e GE,talvez,não,aparentemente mudança de savana para floresta
+P030,-52.452135,-15.243826,2019,2,alta,sentinel e GE,não,não,área nunca convertida
+P031,-44.957221,-15.591205,2017,1,baixa,sentinel e GE,talvez,talvez,"sinal de conversão proximo a 2017, mas pode ser apenas cicatriz de fogo. area possivelmente abandonada apos essa data"
+P032,-45.593498,-17.654725,2021,2,alta,sentinel e GE,sim,sim,sem sinais de regeneração. Possivel área de integração lavoura-floresta. Antigo plantio de arvores
+P033,-47.036911,-15.188311,2021,1,alta,sentinel e GE,sim,sim,sinais de adensamento de lenhosa e redução da intensidade de uso 
+P034,-47.450316,-21.633543,2019,2,alta,sentinel e GE,sim,não,área de cultivo agricola
+P035,-55.044943,-16.294855,2021,1,alta,sentinel e GE,sim,sim,adensamento de arbóreas
+P036,-54.465799,-17.237817,2018,2,baixa,sentinel e GE,talvez,talvez,ponto localizado na borda de uma regeneração.
+P037,-50.575106,-16.053658,2017,1,alta,sentinel e GE,sim,sim,adensamento de arbóreas
+P038,-43.194188,-16.380016,2020,2,media,sentinel e GE,talvez,não,possivelmente nunca convertida
+P039,-55.07297,-15.000203,2020,1,alta,sentinel e GE,sim,sim,adensamento de arbóreas
+P040,-46.417613,-13.105387,2020,1,baixa,sentinel e GE,talvez,talvez,"duvida se a area foi convertida para pastagem, na borda de area convertida para pastagem"
+P041,-51.063699,-18.12149,2021,2,alta,sentinel e GE,sim,talvez,"sem regeneração, atualmente agricultura"
+P042,-45.964323,-18.381013,2018,2,alta,sentinel e GE,sim,sim,sem regeneração
+P043,-51.857091,-17.137565,2018,1,baixa,sentinel e GE,talvez,talvez,com regeneração
+P044,-46.878179,-14.563892,2020,2,alta,sentinel e GE,não,não,possivelmente área campestre em área úmida
+P045,-53.218578,-14.774906,2020,1,alta,sentinel e GE,sim,sim,com regeneração
+P046,-46.259689,-17.461228,2021,1,media,sentinel e GE,talvez,talvez,com regeneração
+P047,-47.136894,-6.218722,2020,4,baixa,sentinel e GE,talvez,talvez,"sem conversão aparente, mas com adensamento de arborea"
+P048,-46.99999,-14.056433,2020,1,baixa,sentinel e GE,talvez,talvez,adensamento de arboreas evidente. Área de uso pretérita evidente.
+P049,-46.717021,-14.786764,2020,4,baixa,sentinel e GE,não,talvez,adensamento de arbora. aparente área de recuperação de degradação
+P050,-43.979765,-6.520556,2018,2,alta,sentinel e GE,sim,sim,area de uso sem regeneração
+P051,-53.105121,-16.013772,2018,1,alta,sentinel e GE,sim,sim,com regeneração
+P052,-49.377202,-19.522053,2021,1,alta,sentinel e GE,sim,sim,com regeneração
+P053,-48.442325,-15.385311,2020,2,media,sentinel e GE,não,não,area natural
+P054,-55.023114,-20.389287,2020,1,alta,sentinel e GE,sim,sim,adensamento arboreas
+P055,-42.436369,-3.694097,2020,2,media,sentinel e GE,não,não,borda de area de pastagem
+P056,-47.277839,-12.444586,2018,2,media,sentinel e GE,não,não,sem sinal de conversão
+P057,-53.053378,-16.607469,2020,1,alta,sentinel e GE,sim,sim,adensamento de árboreas
+P058,-49.071865,-11.560913,2020,1,alta,sentinel e GE,sim,sim,adensamento de árboreas
+P059,-46.071582,-16.085189,2020,1,alta,sentinel e GE,sim,sim,adensamento de árboreas
+P060,-44.423622,-18.735668,2019,2,alta,sentinel e GE,sim,sim,sem regeneração
+P061,-46.95229,-15.4923,2017,1,media,sentinel e GE,sim,sim,"regeneração de árboras, mas não intensa"
+P062,-44.94213,-15.831055,2017,4,baixa,sentinel e GE,sim,sim,"divida se a área está realmente em regeneração continua. A ultima imagem disponivel, da época seca, dava sinal de uso intenso, e não regeneração."
+P063,-42.439873,-4.919758,2019,4,baixa,sentinel e GE,sim,sim,dúvida se a área está realmente em regeneração. há aumento de lenhosas
+P064,-42.503204,-15.190197,2021,1,media,sentinel e GE,sim,sim,adensamento de lenhosas
+P065,-42.512367,-16.997428,2018,2,media,sentinel e GE,não,não,sem sinal de conversão
+P066,-48.006822,-5.693747,2020,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P067,-49.331927,-9.44565,2020,1,alta,sentinel e GE,sim,sim,adensamento de lenhosas
+P068,-50.394814,-15.610609,2021,1,media,sentinel e GE,sim,sim,adensamento de lenhosas
+P069,-52.033071,-20.439952,2017,2,alta,sentinel e GE,sim,sim,sem regeneração
+P070,-47.18675,-17.674937,2017,3,media,sentinel e GE,sim,sim,"pequena area alterda perto de estrada. Não é uma área real de pastagem, mas uma área perturbada, com regeneração. Pode ser 1 dependendo do critério"
+P071,-51.275522,-16.781293,2021,2,alta,sentinel e GE,não,talvez,"área de degradação, sem conversão."
+P072,-55.741586,-14.661179,2021,1,alta,sentinel e GE,sim,sim,area em regeneração
+P073,-52.672851,-16.021588,2017,1,media,sentinel e GE,sim,sim,em regeneração aparentemente inicial
+P074,-47.191332,-13.389704,2018,1,media,sentinel e GE,sim,sim,em regeneração aparentemente inicial
+P075,-47.759157,-10.292133,2017,4,baixa,sentinel e GE,talvez,talvez,"área de borda, sem certeza de conversão, com expansão do pequeno fragmento de vegetação nativa"
+P076,-46.881413,-20.208456,2020,2,alta,sentinel e GE,não,não,area natural campestre
+P077,-47.362461,-14.578714,2018,2,alta,sentinel e GE,sim,sim,"sem sinal de regeneração, área degradada"
+P078,-54.156958,-16.322883,2017,2,media,sentinel e GE,não,não,"sem sinal de conversão, apenas degradação e regeneração"
+P079,-47.04284,-11.839301,2019,1,media,sentinel e GE,sim,sim,área com sinais de regeneração
+P080,-47.340093,-7.786372,2017,2,alta,sentinel e GE,sim,sim,"área recem desmatada, sem regeneração"
+P081,-46.878987,-6.815922,2018,1,media,sentinel e GE,sim,sim,área com sinais de regeneração
+P082,-43.66203,-7.653781,2019,2,alta,sentinel e GE,não,não,area natural campestre
+P083,-47.509874,-14.833386,2018,1,media,sentinel e GE,sim,sim,em regeneração aparentemente inicial
+P084,-55.32899,-15.857735,2021,1,alta,sentinel e GE,sim,sim,área com sinais de regeneração
+P085,-46.816465,-16.997697,2019,4,baixa,sentinel e GE,talvez,talvez,"em regeneração, mas sem certeza se é area degradada ou convertida"
+P086,-46.130331,-14.957084,2017,1,alta,sentinel e GE,sim,sim,área com sinais de regeneração de lenhosas
+P087,-44.085137,-18.737554,2018,2,media,sentinel e GE,não,não,area sem sinal de conversão
+P088,-44.219615,-19.058792,2018,2,baixa,sentinel e GE,talvez,talvez,sem certeza da conversão. Em caso tenha acontecido a pastagem foi mal formada
+P089,-42.474637,-17.037582,2021,2,media,sentinel e GE,sim,talvez,área de mosaico de uso (pomar) com adensamento de arboreas
+P090,-45.029177,-18.373467,2020,1,baixa,sentinel e GE,talvez,talvez,sem certeza se a area foi convertida ou apenas queimada
+P091,-46.261845,-17.773033,2019,1,media,sentinel e GE,sim,sim,em estágio inicial de regeneração
+P092,-51.813972,-17.118161,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P093,-47.220706,-11.613195,2018,2,media,sentinel e GE,não,não,sem sinais de conversão
+P094,-49.070517,-14.487894,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P095,-43.965481,-6.142186,2020,2,alta,sentinel e GE,sim,sim,sem sinais de regeneração.
+P096,-48.865971,-8.933341,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P097,-49.077524,-10.084083,2019,1,alta,sentinel e GE,sim,sim,área em regeneração avançada
+P098,-52.4392,-18.103164,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P099,-44.821935,-9.649927,2018,1,media,sentinel e GE,sim,sim,área em borda
+P100,-45.089004,-15.97793,2017,2,media,sentinel e GE,sim,sim,fraco sinal de regeneração
+P101,-55.024731,-20.186357,2017,1,alta,sentinel e GE,sim,sim,área em regeneração evidente
+P102,-44.677486,-15.275627,2018,1,media,sentinel e GE,sim,sim,"área em regeneração, com conversão branda"
+P103,-47.786915,-8.325092,2020,3,baixa,sentinel e GE,sim,sim,"não é regeneração, é possivelmente agrofloresta"
+P104,-57.022764,-21.184565,2017,1,alta,sentinel e GE,sim,sim,área em estagio inicial de regeneração
+P105,-48.587853,-11.252073,2018,2,media,sentinel e GE,não,não,área possivelmente não convertida
+P106,-48.35474,-13.496693,2019,1,media,sentinel e GE,talvez,talvez,área com sinais de regeneração
+P107,-55.445951,-16.085728,2018,1,alta,sentinel e GE,sim,sim,era uma área em regeneração que foi desmatada em 2024. Se o ano focal for 2018 esse ponto pode ser classificado como 1
+P108,-49.668256,-8.382494,2017,2,media,sentinel e GE,não,não,aparentemente a área não foi convertida
+P109,-49.354026,-12.051124,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P110,-51.832837,-18.509562,2019,2,alta,sentinel e GE,sim,sim,sem regeneração
+P111,-54.467146,-17.501922,2018,2,alta,sentinel e GE,sim,sim,sem regeneração
+P112,-47.557844,-11.976744,2018,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P113,-55.525452,-15.943165,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P114,-42.749522,-13.425277,2020,2,alta,sentinel e GE,não,não,área natural (cerrado rupestre) com historico de fogo
+P115,-44.468358,-13.240134,2018,1,alta,sentinel e GE,sim,sim,"área em regeneração até aproximadamente 2023, em 2024 novamente convertida."
+P116,-54.602972,-20.013342,2020,1,baixa,sentinel e GE,sim,sim,"área de borda, com regeneração muito proxima"
+P117,-46.896504,-17.408137,2019,2,baixa,sentinel e GE,talvez,talvez,"sem sinal de conversão, apenas degradação e regeneração"
+P118,-52.906773,-15.549433,2019,2,baixa,sentinel e GE,talvez,talvez,"sem sinal de conversão, apenas degradação e regeneração"
+P119,-51.752258,-20.697858,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P120,-49.494702,-15.136568,2019,2,alta,sentinel e GE,sim,sim,sem regeneração
+P121,-47.972596,-12.148951,2020,2,media,sentinel e GE,não,não,"área sem sinal de conversão, área de borda"
+P122,-44.759951,-13.026695,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P123,-48.223765,-7.028823,2021,1,baixa,sentinel e GE,sim,sim,"área em regeneração, pequena área, com borda."
+P124,-43.906732,-6.573916,2020,1,baixa,sentinel e GE,sim,sim,"área em possivel regeneração, com sinal de queima, degradação  e reversão da regeneração em datas recentes"
+P125,-42.403221,-16.534706,2020,1,baixa,sentinel e GE,sim,talvez,"área de alteração, possivelmente sem corte raso, alto grau de degradação, em processo de recuperação de lenhosas"
+P126,-46.848265,-14.761701,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P127,-54.178787,-18.952072,2017,2,media,sentinel e GE,não,não,"área sem sinal de conversão, com adensamento de árboreas"
+P128,-56.574055,-15.000473,2018,1,baixa,sentinel e GE,talvez,talvez,área em processo de adensamento de árvores
+P129,-49.679306,-7.717921,2018,2,media,sentinel e GE,não,não,"sem sinal de conversão, área em processo de adensamento de árborea"
+P130,-55.072431,-23.232454,2020,2,baixa,sentinel e GE,talvez,talvez,"área com sinal de degradação, incluindo voçorocas. Não tenho certeza se a área foi convertida ou apenas manejada com fogo. Área de pastagem natural."
+P131,-47.991191,-15.00182,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P132,-48.518862,-12.080499,2019,1,media,sentinel e GE,sim,sim,"área em regeneração, mas borda"
+P133,-54.742031,-21.745114,2019,2,alta,sentinel e GE,sim,sim,"área agricola, sem regeneração"
+P134,-42.08414,-5.601849,2017,1,media,sentinel e GE,sim,sim,área com sinais de regeneração em estagio inicial
+P135,-44.222849,-19.015134,2017,1,media,sentinel e GE,sim,sim,área com sinais de regeneração em estagio inicial
+P136,-54.68894,-17.928532,2017,1,media,sentinel e GE,sim,sim,área com sinais de regeneração em estagio inicial
+P137,-48.782428,-14.59677,2020,1,media,sentinel e GE,sim,sim,"área em regeneração, mas com conversão inicial branda"
+P138,-43.162927,-16.336627,2020,2,baixa,sentinel e GE,talvez,talvez,sem certeza se a área foi realmente convertida ou se trata de área degradada pelo fogo em regeneração
+P139,-56.471917,-15.602254,2021,1,baixa,sentinel e GE,sim,talvez,provavel área de regeneração ou formação de pomar (classe 21). Proximo a casa.
+P140,-48.056679,-15.277783,2020,2,media,sentinel e GE,não,não,"área natural não convertida, mas possivelmente usada como pasto natural. Sinais de degradação"
+P141,-42.71314,-17.555012,2017,1,baixa,sentinel e GE,sim,sim,"área com fraco sinal de regeneração, somente aumento do tamanho dos elementos arboreos"
+P142,-56.376516,-15.545391,2021,2,media,sentinel e GE,talvez,talvez,"sem sinal claro de conversão, mas com possivel uso pelo gado. O ponto tem estrada na sua area."
+P143,-42.135883,-5.338822,2018,1,alta,sentinel e GE,sim,sim,área com sinal de regeneração
+P144,-54.524818,-19.057714,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P145,-43.834507,-19.547924,2021,1,baixa,sentinel e GE,sim,talvez,"duvida se a área foi convertida para pastagem. aparentemente área de degradação, com regeneração"
+P146,-49.146784,-9.747754,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P147,-43.070759,-16.195681,2018,1,media,sentinel e GE,sim,sim,área em regeneração. O sinal de conversão é fraco
+P148,-48.730954,-10.766982,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P149,-46.620003,-17.248866,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P150,-50.314774,-15.043592,2019,2,baixa,sentinel e GE,talvez,talvez,"sem confirmação de conversão preterita, conversão em 2024"
+P151,-47.739214,-9.087223,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P152,-56.695867,-15.406871,2018,1,media,sentinel e GE,sim,sim,área em regeneração. Não foi possivel identificar a data da conversão
+P153,-42.850852,-16.835731,2017,1,media,sentinel e GE,sim,sim,"área em regeneração, em borda."
+P154,-47.442231,-18.446231,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P155,-56.159033,-14.269604,2017,1,baixa,sentinel e GE,talvez,talvez,"área na borda de um fragmento estável, possivel conversão parcial e regeneração"
+P156,-56.577019,-15.272123,2020,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P157,-46.412223,-13.162789,2021,1,baixa,sentinel e GE,talvez,talvez,"conversão possivel, mas não evidente. Possivelmente área de degradação. Apresenta sinais de regeneração"
+P158,-55.690921,-14.120843,2019,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P159,-54.802398,-15.272932,2017,1,media,sentinel e GE,sim,talvez,"área em regeneração, originalmente área de agricultura temporária. Possivelmente utilizada como pastagem, mas sem confirmação"
+P160,-53.062271,-16.620135,2021,1,media,sentinel e GE,sim,sim,área em inicio de regeneração
+P161,-47.718732,-7.799847,2017,2,media,sentinel e GE,não,não,"área sem sinal claro de conversão, mas manejo com fogo e possivel uso como pasto natural. Sem regeneração evidente"
+P162,-52.677163,-16.160108,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P163,-60.164801,-12.633232,2018,1,alta,sentinel e GE,sim,sim,"área passou por um processo de conversão e regeneração, mas em 2023 sofreu conversão intensa e fim do processo de regeneração. Pode ser usado se as informações usadas forem até 2022."
+P164,-52.795202,-21.854259,2017,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P165,-46.826975,-14.498404,2017,2,media,sentinel e GE,não,não,"sem sinal de conversão, com possivel adensamento de arboreas"
+P166,-47.526852,-5.326695,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P167,-49.091268,-10.092707,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P168,-49.002874,-9.370192,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P169,-48.531528,-12.653445,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P170,-45.689169,-17.094715,2018,2,media,sentinel e GE,não,não,"área sem sinal claro de conversão, mas com manejo para gado e sinais de aumento de arboreas"
+P171,-55.255688,-16.525004,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P172,-49.391755,-12.862303,2020,2,media,sentinel e GE,sim,sim,sem sinal de regeneração
+P173,-49.550757,-14.558502,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P174,-52.667462,-15.523831,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P175,-45.467105,-18.748065,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P176,-52.886291,-16.942181,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P177,-45.141825,-17.567409,2021,1,alta,sentinel e GE,sim,sim,área em regeneração fraca
+P178,-46.144345,-17.190386,2018,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P179,-51.307861,-18.330617,2019,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P180,-54.517003,-17.980005,2020,2,media,sentinel e GE,sim,sim,sem sinal de regeneração
+P181,-49.834265,-12.831041,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P182,-47.245769,-14.498674,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P183,-47.306945,-20.249688,2018,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P184,-46.565026,-12.387723,2017,1,alta,sentinel e GE,sim,sim,área em regeneração (borda)
+P185,-53.719029,-19.7902,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P186,-52.494177,-18.680421,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P187,-55.344082,-14.839046,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P188,-42.40403,-17.084474,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P189,-53.546283,-16.088422,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P190,-42.626632,-15.131986,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P191,-56.484313,-15.000203,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P192,-56.539021,-15.779582,2019,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P193,-45.078494,-15.254606,2017,1,baixa,sentinel e GE,sim,sim,"sinal fraco de regeneração, em borda"
+P194,-47.225827,-14.474958,2021,1,baixa,sentinel e GE,sim,sim,"sinal fraco de regeneração, aparentemente estabilizado no periodo final da serie"
+P195,-48.873247,-17.766835,2021,1,baixa,sentinel e GE,sim,sim,"área proxima de regeneração clara, mas o pixel está na borda, sem sinal tão evidente"
+P196,-48.972421,-8.821771,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P197,-50.411792,-15.648607,2021,2,media,sentinel e GE,sim,sim,sem sinal de regeneração
+P198,-43.117651,-6.88087,2020,2,media,sentinel e GE,não,não,sem sinal de conversão
+P199,-52.345146,-18.048726,2020,1,baixa,sentinel e GE,talvez,talvez,sinal fraco de conversão
+P200,-48.324017,-13.221809,2017,1,media,sentinel e GE,sim,sim,sinal fraco de regeneração
+P201,-52.73753,-14.829883,2018,1,baixa,sentinel e GE,sim,sim,regeneração em borda de capão
+P202,-48.268771,-7.338203,2018,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P203,-47.717924,-11.656584,2018,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P204,-45.28304,-19.634432,2017,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P205,-43.997012,-18.943448,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P206,-48.094677,-11.305972,2020,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P207,-43.749886,-18.454585,2020,2,baixa,sentinel e GE,sim,sim,sem sinais de regeneração
+P208,-48.737961,-15.944512,2017,2,alta,sentinel e GE,sim,sim,café
+P209,-52.416293,-16.978833,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P210,-51.140236,-20.144585,2021,2,alta,sentinel e GE,sim,sim,área de cultivo agricola
+P211,-42.995301,-5.007883,2021,2,alta,sentinel e GE,sim,não,"área periurbana, com atividade de mosaico (piscicultura)"
+P212,-52.700879,-15.635133,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P213,-47.281073,-18.039294,2021,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P214,-48.694303,-18.592566,2020,2,baixa,sentinel e GE,sim,não,"área periurbana, sem passagem por pastagem"
+P215,-45.446085,-17.40679,2018,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P216,-46.681717,-19.937883,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P217,-48.616419,-10.119656,2021,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P218,-50.353312,-13.864553,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P219,-48.113003,-17.522134,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P220,-48.139144,-15.082938,2017,2,media,sentinel e GE,talvez,não,"área proximo a habitações, sem sinal de ter sido pastagem"
+P221,-42.435561,-16.958351,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P222,-45.465488,-4.628974,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P223,-47.433607,-9.030898,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P224,-52.232497,-15.104498,2017,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P225,-47.390219,-10.878014,2018,2,alta,sentinel e GE,sim,talvez,área de plantação de eucalipto
+P226,-46.827783,-11.561183,2018,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P227,-47.873961,-7.405307,2020,2,media,sentinel e GE,não,não,sem sinal de conversão
+P228,-51.441531,-15.757214,2018,2,media,sentinel e GE,não,não,sem sinal de conversão (area de borda)
+P229,-44.542739,-18.811935,2020,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P230,-55.818662,-14.296284,2018,1,baixa,sentinel e GE,talvez,talvez,sinal fraco de conversão
+P231,-46.295801,-19.51855,2017,2,alta,sentinel e GE,sim,sim,"área agricola, sem regeneração"
+P232,-42.082523,-3.599504,2018,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P233,-42.430171,-16.868879,2017,2,baixa,sentinel e GE,não,não,"sem sinal de conversão, aumento arboreas"
+P234,-56.202422,-15.507123,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P235,-53.725767,-20.915879,2019,1,media,sentinel e GE,sim,sim,área em regeneração. Possivel área de integração Floresta-Pastagem
+P236,-55.649419,-15.224962,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P237,-47.049308,-15.133064,2021,1,baixa,sentinel e GE,sim,sim,"área em regeneração fraca, proxima a residencias"
+P238,-48.290061,-11.110319,2019,2,media,sentinel e GE,sim,sim,"sem sinal de regeneração, borda"
+P239,-53.519064,-16.409121,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P240,-45.353648,-8.547695,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P241,-49.065397,-14.205733,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P242,-54.819915,-15.038472,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P243,-49.336778,-12.198538,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P244,-48.429659,-13.513941,2019,2,media,sentinel e GE,sim,sim,sem sinal de regenração
+P245,-53.861323,-20.825059,2018,2,media,sentinel e GE,sim,sim,sem sinal de regeneração
+P246,-51.135924,-18.383977,2017,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P247,-51.394369,-19.212134,2020,2,media,sentinel e GE,sim,sim,"sem sinal de regeneração, conversão para area agricola"
+P248,-49.703291,-8.961369,2021,1,baixa,sentinel e GE,sim,sim,sinal fraco de conversão
+P249,-52.263489,-15.101264,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P250,-53.834373,-19.114847,2021,2,alta,sentinel e GE,sim,sim,sem sinal de regeneração
+P251,-46.070504,-15.831325,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P252,-46.806224,-16.88936,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P253,-54.453941,-17.051327,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P254,-48.447176,-8.578956,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P255,-49.962814,-12.97064,2018,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P256,-57.333491,-21.867464,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P257,-48.302188,-15.76988,2018,1,media,sentinel e GE,sim,sim,Área reconvertida em 2026. Área de loteamento a partir de 2025
+P258,-44.124214,-12.604935,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P259,-55.492573,-15.307697,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P260,-43.07049,-4.36972,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P261,-47.043649,-15.184538,2020,1,media,sentinel e GE,sim,sim,área em regeneração (borda)
+P262,-56.31561,-15.099647,2021,3,media,sentinel e GE,sim,sim,"área em regeneração ou formação de pomar, proximo a residencia. possivel classe 21"
+P263,-52.852335,-16.612859,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P264,-56.815522,-15.7432,2019,1,alta,sentinel e GE,sim,sim,"área em regeneração até aproximadamente 2023, em 2024 novamente convertida."
+P265,-45.491629,-17.16155,2020,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P266,-47.018855,-12.53298,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P267,-46.929113,-15.383155,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P268,-42.668673,-15.7114,2020,3,media,sentinel e GE,sim,sim,"área em cultivo, sem regeneração"
+P269,-42.424511,-16.018623,2021,1,baixa,sentinel e GE,sim,talvez,"área em regeneração, mas aparente vindo do plantio (reflorestamento?). Dúvida se podemos manter como amostra"
+P270,-53.162254,-16.94299,2021,1,media,sentinel e GE,sim,sim,área com sinais de regeneração
+P271,-44.258691,-19.087358,2019,1,baixa,sentinel e GE,talvez,talvez,dúvida se a área foi realmente convertida. possivel disturbio com sinais de regeneração
+P272,-43.633464,-6.627007,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P273,-47.768319,-9.41924,2017,1,baixa,sentinel e GE,sim,sim,sinal fraco de regeneração
+P274,-47.856714,-8.747121,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P275,-49.547253,-12.435693,2017,2,baixa,sentinel e GE,sim,sim,sem sinal de regeneração
+P276,-49.448079,-14.003882,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P277,-47.673996,-6.627546,2018,2,baixa,sentinel e GE,sim,sim,área sem sinal consistente de regeneração
+P278,-47.550837,-15.40741,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P279,-50.890414,-16.639808,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P280,-55.002363,-19.289479,2020,2,alta,sentinel e GE,sim,sim,área sem regeneração
+P281,-53.506668,-20.345628,2018,1,media,sentinel e GE,sim,sim,área com sinal de regeneração fraca
+P282,-48.958138,-14.997778,2021,1,media,sentinel e GE,sim,sim,área em regeneração (borda)
+P283,-45.772443,-17.946318,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P284,-45.149102,-15.64699,2020,1,baixa,sentinel e GE,sim,sim,área com sinal de regeneração fraca
+P285,-55.457808,-14.647704,2017,2,baixa,sentinel e GE,talvez,talvez,sem confirmação de conversão por falta de imagens
+P286,-48.474934,-10.292672,2020,1,alta,sentinel e GE,sim,sim,"área em regeneração até 2023, com reconversão em 2024"
+P287,-55.52087,-15.327639,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P288,-51.987257,-19.00624,2017,1,media,sentinel e GE,sim,sim,área em regeneração (aparente conversão incompleta)
+P289,-48.182533,-7.775323,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P290,-47.75215,-5.682428,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P291,-53.11644,-15.345156,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P292,-47.27757,-7.854015,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P293,-56.118879,-14.536403,2019,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P294,-48.619922,-13.200788,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P295,-46.044093,-15.874444,2020,2,baixa,sentinel e GE,talvez,talvez,"sem confirmação de conversão, mas com adensamento de arbóreas"
+P296,-47.970979,-7.207498,2020,2,baixa,sentinel e GE,sim,sim,área sem regeneração (proxima a residencia)
+P297,-52.531636,-16.501019,2020,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P298,-46.23759,-15.766107,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P299,-48.794016,-15.429239,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P300,-48.334258,-14.18606,2021,3,media,sentinel e GE,sim,sim,"área de cultivo agricola, classe 21"
+P301,-49.006647,-9.859594,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P302,-49.848279,-15.230621,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P303,-55.667475,-21.361623,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P304,-47.604736,-18.583942,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P305,-48.371987,-9.213077,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P306,-56.134779,-14.926631,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P307,-47.702563,-7.891745,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P308,-53.416656,-19.174135,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P309,-48.249906,-11.45635,2018,1,alta,sentinel e GE,sim,sim,"área com sinais fracos em regeneração, mas com sinais fortes apenas após 2022"
+P310,-49.886547,-7.994422,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P311,-43.26749,-3.330549,2020,1,baixa,sentinel e GE,talvez,talvez,baixa confiança que a área foi convertida. Aparenta degradação
+P312,-47.91708,-8.370098,2021,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P313,-55.353245,-15.214452,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P314,-47.72008,-12.393921,2021,2,media,sentinel e GE,não,não,"área sem sinal de conversão, mas com adensamento de arboreas"
+P315,-47.054698,-11.727731,2021,2,media,sentinel e GE,não,não,"área sem sinal de conversão, mas com adensamento de arboreas"
+P316,-48.263381,-7.676958,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P317,-55.765571,-15.959065,2020,3,media,sentinel e GE,sim,talvez,"área em contexto semi-urbano. a conversão não foi para pecuária, mas há regeneração"
+P318,-53.816856,-16.486197,2018,1,alta,sentinel e GE,sim,sim,área em regeneração com conversão após 2023
+P319,-43.848521,-18.613048,2018,3,alta,sentinel e GE,sim,não,área de degradação profunda (voçoroca) com estabilização e regeneração
+P320,-55.171875,-22.168759,2017,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, área de cultivo agrícola"
+P321,-55.645646,-15.896812,2018,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P322,-43.607593,-17.370678,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P323,-43.739375,-19.303762,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P324,-48.105996,-8.134829,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P325,-52.710581,-17.898348,2019,2,baixa,sentinel e GE,sim,sim,área com sinal muito fraco e curto de regeneração
+P326,-52.94046,-20.062659,2017,1,baixa,sentinel e GE,sim,sim,área de borda
+P327,-49.276142,-13.173839,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P328,-42.764075,-13.824937,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P329,-48.871361,-11.571424,2019,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P330,-43.855528,-18.599843,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P331,-45.582718,-17.117353,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P332,-46.315474,-15.273471,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P333,-57.203864,-21.614139,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P334,-54.153455,-17.253987,2021,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, possivel área de cultivo"
+P335,-53.100809,-17.889994,2020,2,alta,sentinel e GE,sim,não,"área de cana-de-açucar, sem regeneração"
+P336,-55.326295,-14.862492,2018,1,alta,sentinel e GE,sim,sim,"área em regeneração, com nova conversão em 2023"
+P337,-56.617174,-22.206489,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P338,-55.820818,-15.627048,2021,1,baixa,sentinel e GE,sim,sim,"área proxima a residencias, fraco sinal de regeneração, possivel classe 21"
+P339,-52.429767,-17.991054,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P340,-48.017871,-17.75336,2019,1,media,sentinel e GE,sim,sim,área com sinal inicial de regeneração
+P341,-43.141367,-16.347946,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P342,-54.70538,-17.876789,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P343,-49.83157,-7.632491,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P344,-41.783653,-15.962299,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P345,-47.17085,-14.968403,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P346,-55.413072,-23.586301,2021,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P347,-45.74172,-15.693343,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P348,-49.812975,-8.847372,2017,2,alta,sentinel e GE,sim,sim,"área sem sinal de conversão, com adensamento de vegetação"
+P349,-56.38999,-15.910826,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração a partir de 2020 - entre 2017 e 18 sem sinal evidente de regeneração
+P350,-49.206612,-13.248489,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração a partir de 2021 - entre 2017 e 18 sem sinal evidente de regeneração
+P351,-43.145409,-5.4256,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P352,-48.081472,-18.075137,2018,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P353,-46.297149,-6.307925,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P354,-48.124052,-7.272446,2017,1,baixa,sentinel e GE,sim,sim,"área com sinal fraco de regeneração, reconversão em 2024"
+P355,-48.86112,-10.440624,2018,2,baixa,sentinel e GE,talvez,talvez,"área sem sinal de regeneração. área de floresta, não savana"
+P356,-46.586047,-19.576221,2020,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P357,-51.306244,-16.584832,2020,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P358,-46.800295,-16.858099,2021,1,alta,sentinel e GE,sim,sim,"área em regeneração, reconvertida em 2024"
+P359,-49.117948,-11.105198,2020,1,media,sentinel e GE,sim,sim,área em regeneração (pasto sujo)
+P360,-52.20447,-19.355505,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P361,-49.706255,-12.894373,2018,1,alta,sentinel e GE,sim,sim,"área em regeneração, reconvertida em 2023"
+P362,-47.951037,-7.060893,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P363,-52.850718,-17.659037,2019,2,media,sentinel e GE,talvez,talvez,área sem sinal de conversão total. aparentemente um capão de mata com historico de degradação e recuperação
+P364,-43.365317,-17.765757,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P365,-46.089368,-7.140933,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P366,-46.598713,-16.823604,2021,1,alta,sentinel e GE,sim,sim,área em regeneração com adensamento de arbóreas
+P367,-46.475015,-16.695324,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P368,-52.143295,-15.192353,2019,2,media,sentinel e GE,não,não,"área sem sinal de conversão, apenas degradação e recuperação"
+P369,-46.694384,-17.848492,2018,2,media,sentinel e GE,não,não,"área sem sinal de conversão, em borda de área convertida"
+P370,-55.25434,-19.916863,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P371,-42.402413,-16.165228,2020,2,media,sentinel e GE,não,não,área sem sinal de conversão. Borda de área convertida
+P372,-48.828781,-10.834895,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P373,-51.901827,-16.087345,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P374,-44.417154,-18.637302,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P375,-42.141812,-4.2789,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P376,-46.113353,-15.783624,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P377,-46.455881,-20.170726,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P378,-48.228077,-22.919571,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P379,-52.624073,-16.964549,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P380,-49.897866,-17.172599,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal evidente de regeneração
+P381,-47.500172,-17.96114,2017,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P382,-49.594415,-12.859338,2021,2,media,sentinel e GE,não,não,área sem sinal de regeneração
+P383,-53.845692,-15.690379,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P384,-54.905884,-15.032004,2017,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P385,-52.631888,-21.962326,2020,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, apesar de aparente aparecimento de lenhosas de pequeno porte"
+P386,-53.61204,-16.486735,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P387,-46.666087,-7.091346,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P388,-46.606798,-14.609167,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P389,-55.482871,-15.74293,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P390,-49.495241,-12.85826,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P391,-52.196116,-18.402842,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P392,-52.828889,-21.346531,2017,1,baixa,sentinel e GE,sim,sim,"área em regeneração, mas parcialmente convertida "
+P393,-42.577045,-17.147536,2019,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P394,-45.467644,-17.00147,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P395,-55.592556,-15.461039,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P396,-42.397831,-13.645993,2018,1,alta,sentinel e GE,sim,sim,"área em regeneração, reconvertido em 2024"
+P397,-46.966573,-14.935255,2017,1,media,sentinel e GE,sim,sim,área em regeneração até 2021
+P398,-46.763374,-19.468154,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P399,-49.968743,-18.90491,2021,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P400,-53.669173,-15.859083,2020,2,baixa,sentinel e GE,talvez,talvez,sem sinal de corte raso
+P401,-52.657221,-16.549258,2020,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P402,-45.519657,-16.785874,2021,1,baixa,sentinel e GE,talvez,talvez,área com sinal fraco de conversão
+P403,-48.72233,-9.404687,2019,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P404,-54.342909,-20.224086,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P405,-53.119943,-19.909586,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P406,-54.929869,-15.002898,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P407,-54.024367,-17.856307,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P408,-53.448457,-20.145394,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P409,-46.079397,-16.103514,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P410,-52.170783,-15.621927,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P411,-46.562331,-13.809307,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P412,-43.245661,-18.104242,2017,3,alta,sentinel e GE,sim,sim,"área de cultivo agricola, classe 21"
+P413,-46.059454,-16.138818,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P414,-52.862845,-16.363037,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P415,-44.050103,-18.828374,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração (borda)
+P416,-48.504579,-17.762792,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P417,-46.548317,-20.05673,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P418,-45.375208,-19.16659,2019,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P419,-44.976086,-18.767199,2020,2,baixa,sentinel e GE,talvez,talvez,"área sem sinal de conversão, em 2021 reconvertido (loteamento)"
+P420,-42.103274,-4.49234,2017,2,alta,sentinel e GE,sim,não,área de expansão urbana
+P421,-47.513378,-9.746676,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração após 2019
+P422,-46.790054,-11.620741,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P423,-58.766124,-15.082669,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P424,-56.091121,-15.420884,2021,2,baixa,sentinel e GE,sim,sim,área sem sinal consistente de regeneração
+P425,-47.748916,-15.343809,2017,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P426,-46.615691,-13.433631,2020,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P427,-45.240191,-18.215274,2021,2,media,sentinel e GE,não,não,"área sem sinal de conversão, em área periurbana"
+P428,-48.361208,-19.751662,2021,2,alta,sentinel e GE,sim,talvez,"área de cultivo agricola, classe 21"
+P429,-44.561873,-5.335319,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P430,-51.989952,-15.917563,2018,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P431,-46.510858,-17.746084,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P432,-46.147849,-6.781158,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P433,-53.265201,-16.015659,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P434,-52.369131,-16.139357,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P435,-46.953368,-16.74033,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P436,-48.300032,-10.431192,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P437,-56.36331,-20.390634,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P438,-52.30014,-16.774825,2020,3,alta,sentinel e GE,sim,sim,área já está em processo de regeneração e deixou de ser pastagem antes de 2020
+P439,-55.817045,-15.117164,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P440,-52.205278,-16.115641,2020,2,media,sentinel e GE,sim,sim,"área sem sinal de regeneração, em limite com área de cultivo"
+P441,-53.599104,-17.271773,2017,1,baixa,sentinel e GE,sim,sim,"área em regeneração, reconvertida em 2022. área de linhão de energia"
+P442,-47.317725,-18.298278,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P443,-54.041345,-17.528063,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P444,-47.621984,-17.462306,2018,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão evidente
+P445,-47.043649,-14.664683,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P446,-48.489756,-16.22856,2021,2,baixa,sentinel e GE,talvez,talvez,áreas sem sinal de conversão
+P447,-48.645524,-11.191436,2019,1,baixa,sentinel e GE,sim,talvez,"conversão antiga, possivelmente com baixa intensidade de uso pecuário"
+P448,-44.90979,-18.58502,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P449,-53.107277,-22.019729,2020,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P450,-46.228427,-16.28192,2017,1,alta,sentinel e GE,sim,sim,"área em regeneração, reconvertido em 2022"
+P451,-46.869286,-6.606256,2020,2,baixa,sentinel e GE,sim,sim,área sem sinal claro de regeneração
+P452,-48.619922,-10.648944,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal claro de regeneração
+P453,-44.173801,-6.471778,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal claro de regeneração
+P454,-44.77127,-17.857115,2021,2,media,sentinel e GE,sim,sim,área sem sinal claro de regeneração
+P455,-56.043959,-15.496882,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P456,-51.621014,-16.769435,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P457,-45.646858,-17.330523,2019,3,alta,sentinel e GE,sim,sim,área de manejo integrado de floresta e pastagem
+P458,-46.887342,-18.15329,2020,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P459,-54.416481,-17.725063,2019,2,media,sentinel e GE,sim,sim,área sem sinal claro de regeneração
+P460,-47.931364,-12.599276,2017,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P461,-46.327332,-20.181776,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P462,-49.272369,-10.463532,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P463,-50.603672,-16.377051,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P464,-49.25054,-12.808943,2021,2,baixa,sentinel e GE,talvez,talvez,área sem sinal claro de conversão
+P465,-46.821046,-16.601001,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P466,-55.202328,-15.03416,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P467,-47.53359,-10.963713,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P468,-54.116264,-21.105064,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P469,-45.697523,-20.841768,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração. área de cultivo classe 21
+P470,-48.036467,-7.848895,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P471,-52.306339,-19.531755,2020,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P472,-44.475904,-9.25916,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P473,-44.946442,-19.821461,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P474,-48.768414,-13.436596,2021,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P475,-56.225599,-14.70322,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P476,-48.485714,-15.732151,2021,1,baixa,sentinel e GE,sim,sim,área sem sinal fraco de regeneração
+P477,-52.880901,-16.896367,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P478,-47.115604,-19.871048,2020,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P479,-42.492424,-16.637922,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P480,-45.924707,-16.880467,2021,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P481,-53.962653,-17.660654,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P482,-52.587691,-15.775809,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P483,-41.990356,-4.793904,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P484,-43.062136,-17.778423,2017,2,media,sentinel e GE,sim,talvez,"área sem sinal de regeneração, possivel área de cultivo (classe 21) proximo a residencia"
+P485,-47.201842,-13.453304,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P486,-42.469517,-5.490817,2019,2,baixa,sentinel e GE,talvez,não,área sem sinal claro de conversão
+P487,-50.593162,-14.289277,2019,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P488,-45.803973,-16.303479,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P489,-53.907406,-20.097963,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P490,-47.321767,-12.931563,2020,2,media,sentinel e GE,não,não,"área sem sinal de conversão, possivel manejo de pasto natural por fogo"
+P491,-55.153819,-14.77814,2020,2,media,sentinel e GE,não,não,área sem sinal de conversão (proximo a borda de área em regeneração)
+P492,-56.627684,-15.648607,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P493,-53.006486,-14.817217,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P494,-50.737341,-18.916229,2017,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, conversão tardia em cultivo"
+P495,-44.846459,-20.209264,2019,1,media,sentinel e GE,sim,sim,área com recuperação de arboreas
+P496,-44.405297,-19.754088,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P497,-48.459843,-18.117178,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P498,-44.385084,-18.96932,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P499,-49.458859,-8.606175,2021,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P500,-52.658029,-14.622641,2020,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P501,-47.998468,-9.810277,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P502,-48.383306,-11.405685,2020,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P503,-51.771392,-18.845083,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P504,-54.183908,-17.590046,2017,2,media,sentinel e GE,sim,sim,"área sem sinal de regeneração, com renovação de pastagem"
+P505,-51.930124,-15.914598,2021,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P506,-52.372634,-20.630754,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P507,-55.404179,-14.829074,2021,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P508,-47.925165,-18.356219,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P509,-45.09116,-18.146283,2021,1,baixa,sentinel e GE,sim,talvez,"área em regeneração, mas possivelmente nunca usado como pastagem (em reflorestamento)"
+P510,-46.622159,-6.619461,2019,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P511,-57.436168,-15.98332,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P512,-51.128378,-16.174391,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P513,-49.729701,-12.450246,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P514,-48.185228,-13.145811,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P515,-57.711322,-13.298884,2018,2,media,sentinel e GE,talvez,talvez,área na borda entre area estavel de pasto e área estável de savana
+P516,-42.476524,-16.382711,2018,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P517,-47.432799,-5.692669,2017,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P518,-52.331941,-18.858018,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P519,-50.11939,-19.535528,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P520,-52.261064,-18.421707,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P521,-56.375707,-14.467682,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P522,-46.697348,-12.396616,2021,1,baixa,sentinel e GE,sim,sim,"área em regeneração (área úmida, APP)"
+P523,-54.047813,-19.629581,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P524,-44.14227,-8.739036,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P525,-48.962989,-15.648877,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P526,-46.855002,-19.60883,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P527,-54.851176,-19.123201,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P528,-43.970063,-8.783502,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P529,-49.114714,-15.814347,2017,2,media,sentinel e GE,talvez,talvez,área na borda entre área estável e estrada. 
+P530,-42.397292,-16.665949,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P531,-47.486428,-12.754774,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P532,-46.319247,-14.730978,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P533,-46.362366,-15.48179,2021,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P534,-55.836987,-15.165943,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P535,-56.572708,-15.300151,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P536,-54.533712,-16.922778,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P537,-53.803381,-20.752296,2017,1,alta,sentinel e GE,sim,sim,"área em regeneração, reconvertido em 2024"
+P538,-55.512785,-15.143574,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P539,-44.092952,-4.572919,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P540,-48.396511,-22.775661,2017,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, área de cultivo agrícola"
+P541,-42.996918,-3.375554,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P542,-47.114795,-13.419079,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P543,-49.768239,-16.540634,2020,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P544,-44.596638,-18.998964,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P545,-42.605073,-14.032448,2020,2,media,sentinel e GE,sim,sim,lote em área periurbana
+P546,-44.708208,-12.275613,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P547,-56.563545,-21.958284,2020,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P548,-49.367231,-8.964333,2018,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P549,-47.052542,-14.801316,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P550,-50.539802,-14.781643,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P551,-46.80299,-19.379221,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P552,-49.647505,-12.518697,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P553,-48.369292,-11.416464,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P554,-46.611379,-6.723755,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração (possivel considerar 2020?)
+P555,-48.650645,-10.966678,2018,2,media,sentinel e GE,não,não,"área sem sinal de conversão, com adensamento de arboreas"
+P556,-54.565242,-16.803122,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P557,-54.80644,-19.871587,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P558,-53.016727,-16.193525,2018,1,baixa,sentinel e GE,sim,sim,"área em regeneração, mas parte cai na borda de vegetação estável"
+P559,-52.181024,-18.314717,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P560,-48.206518,-13.105926,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P561,-48.751166,-15.532186,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P562,-49.675533,-8.016251,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P563,-48.750358,-9.494968,2019,1,media,sentinel e GE,sim,sim,"área em regeneração, reconvertida possivelmente em 2025"
+P564,-42.387591,-5.547681,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P565,-52.306608,-18.053308,2017,1,media,sentinel e GE,sim,sim,área em regeneração. recovertido em 2023
+P566,-53.109972,-16.034254,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P567,-52.025256,-17.219761,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P568,-57.081783,-21.398005,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P569,-54.196304,-15.98332,2021,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P570,-57.543697,-16.256587,2017,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P571,-50.559205,-16.676999,2020,2,baixa,sentinel e GE,sim,sim,área sem confirmação de regeneração durante a janela
+P572,-47.761582,-12.28801,2018,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P573,-53.057151,-20.015498,2020,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P574,-49.593876,-9.814858,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P575,-44.914641,-5.077413,2017,2,media,sentinel e GE,sim,sim,"área sem sinal de regeneração, proximo a residencia (classe 21)"
+P576,-49.051922,-19.512621,2021,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P577,-47.661869,-16.684545,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P578,-45.442581,-17.320821,2019,2,baixa,sentinel e GE,talvez,talvez,área sem confirmação de conversão
+P579,-48.014368,-10.054978,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P580,-56.478654,-14.403542,2017,2,baixa,sentinel e GE,sim,talvez,"área sem sinal de regeneração, proximo a residencia (classe 21)"
+P581,-47.192679,-11.69593,2017,2,baixa,sentinel e GE,talvez,talvez,área sem sinal claro de conversão
+P582,-47.020472,-11.815586,2019,2,baixa,sentinel e GE,não,não,"área sem sinal de conversão, com adensamento de arboreas"
+P583,-46.552629,-16.491317,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P584,-48.507543,-17.96653,2019,1,alta,sentinel e GE,sim,talvez,área em regeneração (reconvertido e abandonado)
+P585,-44.073279,-18.990071,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P586,-49.167535,-9.065663,2017,1,baixa,sentinel e GE,sim,sim,área com sinal de regeneração
+P587,-49.572586,-12.973604,2020,1,baixa,sentinel e GE,sim,sim,área com sinal de regeneração
+P588,-49.969551,-7.876383,2019,1,baixa,sentinel e GE,sim,sim,área em regeneração (borda de área não convertida)
+P589,-46.116318,-16.52689,2019,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P590,-46.83506,-8.091979,2018,1,media,sentinel e GE,sim,sim,"área em regeneração, reconversão em 2024"
+P591,-48.064494,-12.123618,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P592,-46.549126,-12.207161,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P593,-48.865162,-10.718473,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P594,-47.184055,-19.457374,2018,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P595,-48.721522,-11.711291,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P596,-44.04067,-19.16093,2017,1,baixa,sentinel e GE,sim,sim,área com adensamento de arbóreas entes de 2017
+P597,-48.940351,-10.790428,2019,2,alta,sentinel e GE,sim,sim,área convertida em cultivo
+P598,-53.423933,-18.762887,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P599,-54.099286,-21.232266,2021,2,alta,sentinel e GE,sim,sim,"área sem sinal de regeneração, convertida para cultivo"
+P600,-44.436558,-18.312292,2021,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P601,-55.717062,-14.629379,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P602,-48.502692,-10.336061,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P603,-48.131598,-15.980086,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P604,-46.160784,-17.404095,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P605,-48.928224,-16.468949,2021,3,media,sentinel e GE,sim,sim,regeneração interrompida em 2022/23
+P606,-48.468736,-10.327167,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P607,-52.638895,-14.805359,2018,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P608,-49.178046,-10.371634,2018,1,media,sentinel e GE,sim,sim,área em regeneração com reconversão em 2021
+P609,-42.423433,-16.913615,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P610,-52.123891,-15.944243,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P611,-49.003952,-9.705713,2018,1,media,sentinel e GE,sim,sim,área em regeneração
+P612,-52.827272,-15.818658,2018,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P613,-54.816142,-19.13452,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P614,-54.754428,-21.751043,2021,2,alta,sentinel e GE,sim,sim,"área de cultivo agricola, sem regeneração"
+P615,-46.582004,-17.304652,2020,2,baixa,sentinel e GE,talvez,talvez,área inconclusiva. possivelmente não convertida
+P616,-53.890697,-19.354697,2017,2,baixa,sentinel e GE,sim,sim,área de rodovia e área de servidão
+P617,-52.105565,-18.087533,2018,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P618,-45.551996,-9.396063,2019,2,alta,sentinel e GE,sim,não,área de cultivo
+P619,-43.343488,-16.605583,2018,1,alta,sentinel e GE,sim,sim,"área de regeneração, reconvertido em 2023/24"
+P620,-44.72896,-18.171346,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P621,-45.502409,-17.310311,2019,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P622,-48.677055,-19.663268,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P623,-44.490726,-12.313073,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P624,-47.738945,-17.849839,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P625,-46.086404,-16.137201,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P626,-52.647788,-15.880373,2020,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P627,-42.647383,-15.370758,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P628,-43.083156,-5.964319,2020,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração (área umida)
+P629,-58.270523,-14.685973,2021,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P630,-48.153966,-14.180131,2019,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P631,-45.81637,-17.297914,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P632,-46.782508,-12.479082,2018,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P633,-46.653151,-12.337327,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P634,-50.325554,-19.445247,2019,3,media,sentinel e GE,não,não,área de fragmento de vegetação nativa com degradação
+P635,-49.90622,-7.854554,2017,2,baixa,sentinel e GE,talvez,talvez,área sem sinal claro de conversão
+P636,-48.390313,-13.312359,2020,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P637,-54.483316,-21.226337,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P638,-57.086364,-15.91918,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P639,-48.388427,-11.649308,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P640,-45.72582,-17.270426,2021,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P641,-49.001527,-10.461376,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P642,-46.938546,-14.781643,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P643,-44.564568,-18.365921,2017,1,baixa,sentinel e GE,sim,sim,"área com sinal fraco de regeneração, mistura com estrada"
+P644,-44.196169,-18.758036,2019,2,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P645,-54.445048,-20.811315,2021,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P646,-48.210021,-8.142644,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco regeneração
+P647,-42.048836,-4.334686,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P648,-56.093007,-21.178636,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P649,-46.646683,-14.229988,2018,1,alta,sentinel e GE,sim,sim,área em regeneração
+P650,-52.293673,-15.830247,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P651,-54.067486,-15.945051,2020,1,media,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P652,-47.089193,-20.222739,2021,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P653,-53.532809,-17.577919,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P654,-43.36882,-16.595342,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração. Área de cultivo de eucalipto que transicionou para 'pastagem'
+P655,-52.005313,-15.626509,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração (possivem monodominancia)
+P656,-47.939988,-18.953958,2018,3,alta,sentinel e GE,sim,não,área de cultivo arboreo (café?)
+P657,-46.501156,-15.634594,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P658,-47.248734,-12.74642,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P659,-52.762593,-15.566411,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P660,-48.243169,-15.634324,2017,3,alta,sentinel e GE,sim,não,área de cultivo
+P661,-42.709637,-13.623356,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P662,-51.680572,-16.237992,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P663,-41.986313,-4.390202,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P664,-52.045468,-18.102625,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P665,-44.477791,-12.295286,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P666,-56.896101,-15.335724,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P667,-49.6343,-14.007385,2020,3,media,sentinel e GE,sim,não,área de cultivo
+P668,-48.241821,-12.768519,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P669,-47.963973,-6.246211,2020,3,alta,sentinel e GE,sim,não,reflorestamento
+P670,-46.332722,-15.236011,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P671,-52.051936,-15.826474,2018,2,baixa,sentinel e GE,não,não,área sem sinal de conversão
+P672,-51.070706,-15.544313,2018,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P673,-48.304075,-18.346518,2017,1,media,sentinel e GE,sim,sim,"área em regeneração, reconvertido em 2023"
+P674,-49.995423,-7.819251,2017,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P675,-56.540907,-15.22604,2019,2,alta,sentinel e GE,não,não,área sem sinal de conversão (area de borda de mata)
+P676,-56.705838,-16.130194,2019,1,alta,sentinel e GE,sim,sim,área em regeneração
+P677,-44.627091,-18.431408,2020,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P678,-52.763132,-14.740141,2018,2,baixa,sentinel e GE,talvez,talvez,área sem sinal claro de conversão
+P679,-45.934409,-20.580358,2019,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P680,-48.261495,-7.631952,2021,1,media,sentinel e GE,sim,sim,área com sinal de regeneração
+P681,-52.610059,-19.344726,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P682,-55.286679,-15.993021,2017,2,alta,sentinel e GE,sim,talvez,área de cultivo
+P683,-49.025242,-13.995528,2020,3,alta,sentinel e GE,não,não,"área de mata, sem sinal de conversão"
+P684,-49.907029,-14.416748,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P685,-55.763146,-14.639889,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P686,-44.149816,-12.409821,2020,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P687,-45.821221,-20.081254,2020,1,media,sentinel e GE,sim,sim,área em regeneração (borda com pastagem)
+P688,-47.773709,-7.047149,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P689,-58.326848,-15.005324,2019,2,media,sentinel e GE,talvez,talvez,"área sem evidencia de conversão, em borda entre area natural e "
+P690,-54.207893,-18.70252,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P691,-47.388871,-18.116369,2017,1,baixa,sentinel e GE,sim,sim,"área em regeneração, proximo a residencia"
+P692,-45.903956,-6.404674,2019,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P693,-55.024192,-14.977566,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P694,-42.518295,-4.554324,2018,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P695,-54.34776,-17.036774,2017,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P696,-53.363297,-17.290638,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P697,-49.166457,-11.908292,2019,2,media,sentinel e GE,talvez,não,área sem sinal claro de conversão
+P698,-52.690369,-17.931765,2020,1,alta,sentinel e GE,sim,sim,área em regeneração
+P699,-42.292998,-4.350047,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P700,-55.519253,-15.538384,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P701,-46.167791,-16.961046,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P702,-46.622428,-18.519533,2019,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P703,-52.129011,-20.058886,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P704,-46.756367,-12.322505,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P705,-47.879621,-15.420076,2019,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P706,-56.097858,-14.518347,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P707,-42.337734,-5.735519,2018,1,baixa,sentinel e GE,sim,sim,área com sinal fraco de regeneração
+P708,-46.377997,-6.729684,2018,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P709,-56.182749,-15.248677,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P710,-44.724648,-17.964374,2019,3,media,sentinel e GE,sim,não,"área de reflorestamento, sem confirmação de pastagem"
+P711,-43.154842,-16.06821,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P712,-52.24166,-16.395107,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P713,-48.804526,-10.020213,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P714,-48.674899,-9.562342,2017,1,media,sentinel e GE,sim,sim,área em regeneração
+P715,-44.936201,-17.559324,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P716,-49.7677,-14.252086,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P717,-46.37099,-17.960601,2020,2,baixa,sentinel e GE,sim,não,área com sinal de degradação
+P718,-47.775865,-12.841821,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P719,-51.43641,-18.276719,2019,3,alta,sentinel e GE,não,não,área de campo umido natural
+P720,-49.255121,-16.036141,2017,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P721,-45.862993,-16.81471,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P722,-50.297526,-17.000123,2017,3,alta,sentinel e GE,talvez,não,área de campo umido natural
+P723,-49.983026,-7.80901,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P724,-47.872883,-10.360315,2019,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P725,-43.00123,-16.588874,2017,2,baixa,sentinel e GE,sim,sim,área sem sinal de regeneração
+P726,-45.271183,-15.864742,2021,1,media,sentinel e GE,sim,sim,área em regeneração
+P727,-48.63717,-11.977552,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P728,-47.346291,-15.233586,2017,2,alta,sentinel e GE,sim,talvez,"área proxima de residencia, classe 21"
+P729,-42.484878,-16.564889,2019,2,media,sentinel e GE,não,não,área sem sinal de conversão
+P730,-56.913888,-21.953433,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P731,-44.260308,-19.288401,2019,3,media,sentinel e GE,sim,não,"área alterada, sem implementação de pastagem, com regeneração"
+P732,-48.217836,-18.788219,2021,3,media,sentinel e GE,sim,não,"área alterada, sem implementação de pastagem, com regeneração"
+P733,-42.676758,-3.732365,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P734,-46.990019,-15.580964,2021,1,alta,sentinel e GE,sim,sim,área em regeneração
+P735,-48.168249,-8.867585,2020,1,media,sentinel e GE,sim,sim,área em regeneração
+P736,-47.006189,-20.073169,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P737,-56.612593,-16.055005,2017,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P738,-55.53138,-14.368239,2018,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P739,-45.535826,-7.412314,2021,2,baixa,sentinel e GE,talvez,talvez,área sem sinal de conversão
+P740,-53.691541,-17.465809,2019,2,alta,sentinel e GE,não,não,área sem sinal de conversão
+P741,-45.090621,-12.674465,2017,1,alta,sentinel e GE,sim,sim,área em regeneração
+P742,-53.861323,-19.268998,2019,2,alta,sentinel e GE,sim,sim,área sem sinal de regeneração
+P743,-50.078158,-16.622291,2021,1,baixa,sentinel e GE,sim,sim,área em regeneração
+P744,-56.351183,-15.347312,2018,2,alta,sentinel e GE,sim,sim,área sem sinal de regenração
+P745,-49.41574,-12.912698,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P746,-45.758698,-18.071094,2019,1,media,sentinel e GE,sim,sim,área em regeneração
+P747,-45.142364,-12.83697,2021,2,media,sentinel e GE,sim,sim,área sem sinal de regeneração
+P748,-54.978108,-14.994813,2020,2,media,sentinel e GE,sim,sim,"área com transição para cultivo, classe 21"
+P749,-42.904212,-17.499766,2017,2,media,sentinel e GE,sim,sim,"área sem sinal de regeneração, plantio no fim da serie"
+P750,-48.30111,-18.337355,2019,1,baixa,sentinel e GE,sim,s,área em regeneração

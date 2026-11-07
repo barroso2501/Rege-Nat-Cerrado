@@ -49,3 +49,18 @@ Os candidatos ficam em `data/f1_candidatos/`, fora do git até o fim da interpre
   - Os dois só entram no repositório depois da interpretação.
   - **[L] Limitação:** o cegamento depende da disciplina do intérprete, que também guarda a CHAVE. O hash prova que a chave não mudou, mas não que não foi aberta.
 - **Ferramenta:** `src/gee/12_ferramenta_interpretacao_p1.js`. Gerada por `src/python/f1_12_gerar_ferramenta.py` a partir do arquivo de interpretação, sem estrato.
+
+## Situação em 2026-11-07 — interpretação concluída
+
+- **Planilha bruta:** `interpretacao/p1_interpretacao_bruta_2026-11-07.csv`, exportada do Google Sheets sem edição. SHA-256 `83b8177f…c664`.
+- **Validação sem a CHAVE:** `src/python/f1_13_validar_interpretacao.py`.
+  - Os 750 códigos, coordenadas e anos t conferem com a amostra sorteada.
+  - Saídas: `interpretacao/p1_interpretacao_analise.csv` (colunas normalizadas; `categoria_bruta`, `categoria` e `categoria_sens`) e `interpretacao/p1_validacao_registro.json`.
+  - As correções ficam em `interpretacao/correcoes_pre_desbloqueio.csv` (regra em `docs/desvios.md`, 2026-11-07). Nunca edite o arquivo bruto.
+- **Reinterpretação (75 pontos):** `src/python/f1_14_preparar_reinterpretacao.py` lê da CHAVE só `codigo` e `reinterpretar`.
+  - Planilha `reinterpretacao/amostra_p1_reinterpretacao.csv` (R01–R75) e ferramenta `src/gee/14_ferramenta_reinterpretacao_p1.js`.
+  - **Começar em 2026-11-21 ou depois.** Não consultar a planilha da 1ª rodada.
+  - O mapa R → P fica fora do repositório até o fim da reinterpretação; o hash dele está em `reinterpretacao/reinterp_registro.json`.
+  - **[L]** O link do Google Earth ainda mostra as coordenadas. Reconhecer um ponto exigiria procurá-lo de propósito na 1ª planilha: o cegamento aqui também depende de disciplina.
+- **CHAVE:** continua fechada até o fim da reinterpretação.
+

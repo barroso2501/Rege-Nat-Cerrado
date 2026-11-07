@@ -283,3 +283,26 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - Mantido o tamanho da amostra (750). A redução de N e P, considerada em 2026-10-30, não é necessária.
 
 **Removidos:** nenhum.
+
+## 2026-11-05 · pacote 1.9
+**Novos:**
+- `docs/nota_mapbiomas_validacao_regeneracao.md` — nota ao Diretor Técnico do MapBiomas: motivo e processo da validação visual dos eventos pastagem → savana (P1). Sem resultados de acurácia; interpretação em andamento (229/750).
+
+**Alterados:** nenhum. **Removidos:** nenhum.
+
+## 2026-11-07 · pacote 1.10
+**Interpretação P1 concluída (750/750).** CHAVE ainda fechada.
+
+**Novos:**
+- `results/f1/interpretacao/p1_interpretacao_bruta_2026-11-07.csv` — planilha do intérprete, sem edição.
+- `results/f1/interpretacao/correcoes_pre_desbloqueio.csv` — 5 correções documentadas (3 na análise principal, 2 só na sensibilidade).
+- `src/python/f1_13_validar_interpretacao.py` → `results/f1/interpretacao/p1_interpretacao_analise.csv` e `p1_validacao_registro.json`.
+- `src/python/f1_14_preparar_reinterpretacao.py` → `results/f1/reinterpretacao/amostra_p1_reinterpretacao.csv`, `reinterp_registro.json` e `src/gee/14_ferramenta_reinterpretacao_p1.js`.
+
+**Alterados:**
+- `docs/desvios.md`: desvio de 2026-11-07 (confiança em 3 níveis; regra das correções; data e forma da reinterpretação; CHAVE fechada até o fim dela).
+- `results/f1/README.md`: situação em 2026-11-07.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+

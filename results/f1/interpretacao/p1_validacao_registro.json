@@ -1,0 +1,95 @@
+{
+  "observacao": "Validação feita SEM abrir a CHAVE. Contagens do conjunto dos 750 pontos, sem estrato.",
+  "entradas": {
+    "p1_interpretacao_bruta_2026-11-07.csv": "83b8177f492c96ce51a003512db8576658e9a9a23ff5318193edb21890e4c664",
+    "amostra_p1_interpretacao.csv": "5518cef41ef15eb04194a6ede8c17fcefe91329b0fcf2ee5902179a9217606a4",
+    "correcoes_pre_desbloqueio.csv": "2019284dbd242d650dcd5852f4bc7c477c840866f32f55b267d80fb5045c086b"
+  },
+  "saidas": {
+    "p1_interpretacao_analise.csv": "f44eb626bce1a838b91a59022ef8b8a050c6ff2ef56604b09faa547bdf9ab4e4"
+  },
+  "checagens": {
+    "n_pontos": 750,
+    "coordenadas_e_t_iguais_a_amostra": true,
+    "codigos_faltando": 0,
+    "codigos_repetidos": 0,
+    "vocabulario_ok": true
+  },
+  "correcoes": [
+    {
+      "codigo": "P750",
+      "campo": "ja_foi_pastagem_plantada",
+      "valor_bruto": "s",
+      "valor_corrigido": "sim",
+      "tipo": "digitacao",
+      "aplicar_em": "principal"
+    },
+    {
+      "codigo": "P608",
+      "campo": "categoria",
+      "valor_bruto": "1",
+      "valor_corrigido": "3",
+      "tipo": "regra_N1",
+      "aplicar_em": "principal"
+    },
+    {
+      "codigo": "P358",
+      "campo": "categoria",
+      "valor_bruto": "1",
+      "valor_corrigido": "3",
+      "tipo": "regra_N1",
+      "aplicar_em": "principal"
+    },
+    {
+      "codigo": "P350",
+      "campo": "categoria",
+      "valor_bruto": "1",
+      "valor_corrigido": "2",
+      "tipo": "julgamento_janela",
+      "aplicar_em": "sensibilidade"
+    },
+    {
+      "codigo": "P438",
+      "campo": "categoria",
+      "valor_bruto": "3",
+      "valor_corrigido": "1",
+      "tipo": "julgamento_janela",
+      "aplicar_em": "sensibilidade"
+    }
+  ],
+  "contagens": {
+    "categoria_bruta": {
+      "1": 414,
+      "2": 306,
+      "3": 24,
+      "4": 6
+    },
+    "categoria": {
+      "1": 412,
+      "2": 306,
+      "3": 26,
+      "4": 6
+    },
+    "categoria_sens": {
+      "1": 412,
+      "2": 307,
+      "3": 25,
+      "4": 6
+    },
+    "confianca": {
+      "alta": 297,
+      "baixa": 193,
+      "media": 260
+    },
+    "ja_foi_convertida": {
+      "não": 83,
+      "sim": 606,
+      "talvez": 61
+    },
+    "ja_foi_pastagem_plantada": {
+      "não": 106,
+      "sim": 572,
+      "talvez": 72
+    }
+  }
+}

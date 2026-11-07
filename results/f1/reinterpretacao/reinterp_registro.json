@@ -1,0 +1,14 @@
+{
+  "semente": 20261107,
+  "n": 75,
+  "data_minima_inicio": "2026-11-21",
+  "entradas": {
+    "amostra_p1_CHAVE.csv (só codigo/reinterpretar)": "eecc54b8332e8b0e89e692384c10837aa112d1fc621cd10ef18e418e992198d9",
+    "amostra_p1_interpretacao.csv": "5518cef41ef15eb04194a6ede8c17fcefe91329b0fcf2ee5902179a9217606a4"
+  },
+  "saidas": {
+    "amostra_p1_reinterpretacao.csv": "bf61047c4f94cf1d7764e36284fe14d6f6b92913b2756095f3053c6a0d6d8e3f",
+    "14_ferramenta_reinterpretacao_p1.js": "f601eecc0633b12cc056fd42ac96e351252ab9ffc9a118f5b570518527a84c73",
+    "reinterp_mapa_R_P.csv (privado)": "5acf50b3ee8d134ac3d2ba9777a427a56c197c8881ef776c41913fe940e98bb9"
+  }
+}
