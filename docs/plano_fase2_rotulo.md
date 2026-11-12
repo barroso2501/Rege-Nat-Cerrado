@@ -33,15 +33,29 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 | Q3 | Foi implantada pastagem? | sim / não / talvez | idem |
 | Q4 | A partir de t, o pastoreio cessou ou caiu muito e há recuperação? | 1a / 1b / não / incerto | idem |
 
-**Critério 1a × 1b (de Mario): o estrato herbáceo, não o arbóreo.**
-- **1a** — acúmulo de **macega seca** (biomassa herbácea não pastejada), sinal de redução ou fim do pastoreio, com ou sem aumento de lenhosas.
-- **1b** — lenhosas aumentando com estrato herbáceo pastejado (baixo, verde-rasteiro, trilhas de gado).
-- **[H]** O acúmulo de macega também ocorre com lotação baixa sem abandono. 1a mede **redução de pastoreio**, que é condição para a regeneração, mas não a garante.
-- **[H]** A macega aumenta o risco de fogo. Fogo depois do abandono é esperado e não deve, por si só, desclassificar 1a.
+**Critério 1a × 1b — composto (Mario, 2026-11-12).** A regeneração (1a) pode aparecer de três formas:
+- **herbácea:** acúmulo forte de **macega seca** (biomassa herbácea não pastejada), sinal de redução ou fim do pastoreio;
+- **predominantemente arbórea:** aumento claro de lenhosas;
+- **as duas** juntas.
+
+**Condição: pelo menos uma imagem de alta resolução na janela.** Sem ela, nem o sinal herbáceo nem o arbóreo podem ser lidos com segurança, e 1a não pode ser atribuída.
+
+**Pendente (Mario):** quando o sinal é **só arbóreo** e o herbáceo mostra pastoreio ativo (baixo, verde-rasteiro, trilhas de gado), é 1a ou 1b (pasto sujo)? A definição v2 dizia 1b. Esse é justamente o caso que o estrato N sugere ter inflado a categoria 1.
+
+**Pontos sem alta resolução na janela — regra a fixar antes da Etapa 4 (proposta):**
+- registrar `alta_resolucao_na_janela` = sim/não em todos os pontos;
+- sem alta resolução: Q1–Q3 podem ser respondidas com Sentinel-2 e NDVI, mas Q4 recebe **"1 sem distinção"** (há recuperação, mas 1a/1b não determinável) ou **4**;
+- **acerto principal** calculado só nos pontos com alta resolução na janela. Isso também resolve a dependência do NDVI (Etapa 4);
+- **sensibilidade:** todos os pontos, com "1 sem distinção" contado como erro;
+- **[L]** A disponibilidade de alta resolução não é aleatória (varia com a região e com a proximidade de cidades e estradas). O relatório compara os pontos com e sem alta resolução por região e por ano.
+
+**Ressalvas [H]:**
+- O acúmulo de macega também ocorre com lotação baixa sem abandono. O sinal herbáceo mede **redução de pastoreio**, que é condição para a regeneração, mas não a garante.
+- A macega aumenta o risco de fogo. Fogo depois do abandono é esperado e não deve, por si só, desclassificar 1a.
 
 **Conversão parcial.** Quando a árvore é mantida (correntão, queima), a rebrota é rápida e a curva de NDVI pode nem mostrar a conversão. É o modo de regeneração típico do Cerrado, pela rebrota de órgãos subterrâneos. Fica dentro do escopo, e a intensidade (Q1b) é registrada para análise.
 
-**Categorias revistas:** **1a**, **1b**, **2** sem mudança, **3** outra mudança, **4** incerto.
+**Categorias revistas:** **1a** regeneração; **1b** adensamento em pasto manejado; **1?** recuperação sem alta resolução para distinguir 1a/1b; **2** sem mudança; **3** outra mudança; **4** incerto.
 
 **Teste de viabilidade:**
 - A macega é visível com segurança na alta resolução do período seco. No Sentinel-2 é visível só às vezes.
@@ -52,6 +66,7 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 - **Quem e o quê:** Mario revê os pontos com categoria 1 (412) e separa 1a e 1b, cego quanto ao estrato (só os códigos P).
 - **Quando:** só **depois da reinterpretação** de consistência (a partir de 21/11). Rever os mesmos pontos antes contaminaria o intervalo de 14 dias.
 - **Uso:** dado de **projeto** do detector, nunca de validação final.
+- **Registrar também** `alta_resolucao_na_janela` (sim/não). Assim se sabe quantas das 412 atribuições da P1 tiveram alta resolução e quantas dependeram do NDVI.
 
 ## Etapa 3 — Projetar o detector
 

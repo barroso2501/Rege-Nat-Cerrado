@@ -395,3 +395,10 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
 
+## 2026-11-12 · pacote 1.20
+**Alterados:**
+- `docs/plano_fase2_rotulo.md`: critério 1a composto (herbáceo forte, predominantemente arbóreo ou ambos), com a condição de pelo menos uma imagem de alta resolução na janela; categoria "1?" (recuperação sem alta resolução); proposta de acerto principal só nos pontos com alta resolução; registro de `alta_resolucao_na_janela` na Etapa 2. Pendente: arbóreo com pastoreio ativo é 1a ou 1b?
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
