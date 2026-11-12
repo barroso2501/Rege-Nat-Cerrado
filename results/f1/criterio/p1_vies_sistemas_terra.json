@@ -1,0 +1,249 @@
+{
+  "entradas": {
+    "ST_landscape_wgs84.shp": "64767ff5b9d2e44e6af57458369d43a7b541471f89e600c7db2777c25c18b8ff"
+  },
+  "geometrias_invalidas_corrigidas": 24,
+  "pontos_em_mais_de_um_poligono": 0,
+  "pontos_sem_classe": 5,
+  "tabelas": {
+    "relevo": {
+      "plano/chapada": {
+        "E_n": 404,
+        "E_acertos": 271,
+        "E_p": 0.6707920792079208,
+        "E_ic": [
+          0.6235480253666476,
+          0.7148187517102399
+        ]
+      },
+      "colinoso": {
+        "E_n": 80,
+        "E_acertos": 56,
+        "E_p": 0.7,
+        "E_ic": [
+          0.5923184599007563,
+          0.789354288009154
+        ]
+      },
+      "baixada": {
+        "E_n": 12,
+        "E_acertos": 7,
+        "E_p": 0.5833333333333334,
+        "E_ic": [
+          0.31951131084242423,
+          0.8067396875653928
+        ]
+      },
+      "sem classe": {
+        "E_n": 4,
+        "E_acertos": 4,
+        "E_p": 1.0,
+        "E_ic": [
+          0.5101091596030786,
+          0.9999999999999999
+        ]
+      },
+      "_qui2_E_grupos_n>=5": {
+        "qui2": 0.7124610087977081,
+        "gl": 2,
+        "p": 0.7003111768226464
+      }
+    },
+    "matriz": {
+      "savânica": {
+        "E_n": 381,
+        "E_acertos": 261,
+        "E_p": 0.6850393700787402,
+        "E_ic": [
+          0.6367475557149757,
+          0.7296370859238851
+        ]
+      },
+      "florestal/caatinga": {
+        "E_n": 103,
+        "E_acertos": 66,
+        "E_p": 0.6407766990291263,
+        "E_ic": [
+          0.544601138797081,
+          0.726829074751574
+        ]
+      },
+      "ecotonal": {
+        "E_n": 12,
+        "E_acertos": 7,
+        "E_p": 0.5833333333333334,
+        "E_ic": [
+          0.31951131084242423,
+          0.8067396875653928
+        ]
+      },
+      "sem classe": {
+        "E_n": 4,
+        "E_acertos": 4,
+        "E_p": 1.0,
+        "E_ic": [
+          0.5101091596030786,
+          0.9999999999999999
+        ]
+      },
+      "_qui2_E_grupos_n>=5": {
+        "qui2": 1.1757041223005953,
+        "gl": 2,
+        "p": 0.5555192254945984
+      }
+    },
+    "relevo_matriz": {
+      "plano/chapada · savânica": {
+        "E_n": 306,
+        "E_acertos": 207,
+        "E_p": 0.6764705882352942,
+        "E_ic": [
+          0.6221461149889418,
+          0.7264192461152226
+        ]
+      },
+      "plano/chapada · florestal/caatinga": {
+        "E_n": 98,
+        "E_acertos": 64,
+        "E_p": 0.6530612244897959,
+        "E_ic": [
+          0.5546614291142162,
+          0.7399140839385503
+        ]
+      },
+      "colinoso · savânica": {
+        "E_n": 75,
+        "E_acertos": 54,
+        "E_p": 0.72,
+        "E_ic": [
+          0.6095930972018306,
+          0.8089684117840055
+        ]
+      },
+      "baixada · ecotonal": {
+        "E_n": 12,
+        "E_acertos": 7,
+        "E_p": 0.5833333333333334,
+        "E_ic": [
+          0.31951131084242423,
+          0.8067396875653928
+        ]
+      },
+      "colinoso · florestal/caatinga": {
+        "E_n": 5,
+        "E_acertos": 2,
+        "E_p": 0.4,
+        "E_ic": [
+          0.11762077314099711,
+          0.7692757205908813
+        ]
+      },
+      "sem classe · sem classe": {
+        "E_n": 4,
+        "E_acertos": 4,
+        "E_p": 1.0,
+        "E_ic": [
+          0.5101091596030786,
+          0.9999999999999999
+        ]
+      },
+      "_qui2_E_grupos_n>=5": {
+        "qui2": 3.07985198307903,
+        "gl": 4,
+        "p": 0.5445524316051644
+      }
+    },
+    "paisagem": {
+      "Well drained plains dominated by savanna": {
+        "E_n": 297,
+        "E_acertos": 201,
+        "E_p": 0.6767676767676768,
+        "E_ic": [
+          0.6216109509778935,
+          0.7274100928318632
+        ]
+      },
+      "Plains dominated by semidecidous and decidous forest": {
+        "E_n": 84,
+        "E_acertos": 53,
+        "E_p": 0.6309523809523809,
+        "E_ic": [
+          0.5241523982256111,
+          0.726298815588239
+        ]
+      },
+      "Hilly terrain dominated by savanna": {
+        "E_n": 75,
+        "E_acertos": 54,
+        "E_p": 0.72,
+        "E_ic": [
+          0.6095930972018306,
+          0.8089684117840055
+        ]
+      },
+      "Lowland depression with ecotonal vegetation": {
+        "E_n": 12,
+        "E_acertos": 7,
+        "E_p": 0.5833333333333334,
+        "E_ic": [
+          0.31951131084242423,
+          0.8067396875653928
+        ]
+      },
+      "Plains with semi-evergreen forest and others": {
+        "E_n": 9,
+        "E_acertos": 8,
+        "E_p": 0.8888888888888888,
+        "E_ic": [
+          0.565000291629209,
+          0.9801091125830901
+        ]
+      },
+      "Plains dominated by savanna": {
+        "E_n": 9,
+        "E_acertos": 6,
+        "E_p": 0.6666666666666666,
+        "E_ic": [
+          0.35420213352505864,
+          0.8794161825659264
+        ]
+      },
+      "Hilly terrain dominated by semidecidous and decidous forest": {
+        "E_n": 5,
+        "E_acertos": 2,
+        "E_p": 0.4,
+        "E_ic": [
+          0.11762077314099711,
+          0.7692757205908813
+        ]
+      },
+      "sem classe": {
+        "E_n": 4,
+        "E_acertos": 4,
+        "E_p": 1.0,
+        "E_ic": [
+          0.5101091596030786,
+          0.9999999999999999
+        ]
+      },
+      "Well drained plains dominated by forest and others": {
+        "E_n": 4,
+        "E_acertos": 3,
+        "E_p": 0.75,
+        "E_ic": [
+          0.3006418400969081,
+          0.954412739704631
+        ]
+      },
+      "Plains dominated by decidous woodland caatinga": {
+        "E_n": 1,
+        "E_acertos": 0,
+        "E_p": 0.0,
+        "E_ic": [
+          0.0,
+          0.7934506882081973
+        ]
+      }
+    }
+  }
+}
