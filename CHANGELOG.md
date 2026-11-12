@@ -389,3 +389,9 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+## 2026-11-12 · pacote 1.19
+**Novos:**
+- `results/f1/criterio/p1_fases_interpretacao.md` — acerto por fase de interpretação, a partir das fases relatadas por Mario (exploratório). Fase consistente: 63,1% (IC 56,7–69,0). A fase frouxa não inflou a categoria 1.
+
+**Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
+
