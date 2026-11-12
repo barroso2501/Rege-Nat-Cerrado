@@ -345,3 +345,36 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `data/f1_gee/F1_16_distancia_biomas.csv` — saída do GEE 16, sem estrato. Fica fora do git (`data/*`); o hash está no `.json`.
 
 **Alterados:** `CHANGELOG.md`. **Removidos:** nenhum. A tabela por ponto com estrato fica na pasta privada.
+
+## 2026-11-12 · pacote 1.15
+**Viés espacial × sistemas de terras (exploratório [E]).** Nenhum agrupamento explica o erro: relevo p = 0,70, matriz p = 0,56, relevo × matriz p = 0,55. Terreno colinoso de matriz savânica: 72%; planos savânicos: 68%.
+
+**Novos:**
+- `src/python/f1_18_vies_sistemas_terra.py` (junção local de ponto em polígono; agrupamentos fixados antes da junção).
+- `results/f1/criterio/p1_vies_sistemas_terra.md` e `.json`.
+- `data/sistemas_terra/ST_landscape_wgs84.*` — mapa de paisagens preparado por Mario (ref. Silva et al. 2006). Fica fora do git (`data/*`); o hash está no `.json`.
+
+**Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
+
+## 2026-11-12 · pacote 1.16
+**Caminho depois da reprovação da P1 (D12).**
+
+**Novos:**
+- `docs/plano_fase2_rotulo.md` — plano em 5 etapas, com rascunho da definição operacional (1a × 1b) para Mario editar.
+
+**Alterados:**
+- `docs/decisoes.md`: D12, com teste crítico.
+- `docs/desvios.md`: 2026-11-12 (b) — P2 e P3 suspensas com o rótulo 15→4; fase de redefinição.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+## 2026-11-12 · pacote 1.17
+**Correção de empacotamento.** Os pacotes 1.14–1.16 incluíam arquivos de `data/` que o `.gitignore` exclui. O shapefile de 76 MB passava do limite de 25 MB do upload web do GitHub. A partir deste pacote, `data/` leva só `README.md` e `manifestos/`.
+
+**Alterados:**
+- `data/manifestos/manifesto.csv`: linhas do mapa de sistemas de terras (asset GEE e SHA-256 do .shp) e do CSV do GEE 16.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum do repositório. Se `data/sistemas_terra/` ou `data/f1_gee/` chegaram ao GitHub por upload anterior, apague-os pela interface web.
+

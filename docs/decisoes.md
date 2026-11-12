@@ -193,3 +193,28 @@ Fica como [L] para trabalho futuro.
   - o valor é convencional;
   - a autocorrelação espacial da regeneração não foi medida;
   - a sensibilidade com 0 km e 25 km fica a critério da F3, como desvio declarado se for feita.
+
+## D12 — Caminho depois da reprovação da P1 (Mario, 2026-11-12)
+
+**Decisão:** não usar o evento 15→4 como rótulo e não ampliar para antrópico→natural. Seguir o `docs/plano_fase2_rotulo.md`, cada etapa aprovada antes de executar:
+1. definição operacional de regeneração;
+2. recaracterização dos pontos da P1;
+3. projeto do detector;
+4. validação numa amostra nova e cega;
+5. P2 e P3.
+
+**Base:**
+- **[D]** P1: 67,6% (IC 95% 63,4–71,5%).
+- **[E]** Nenhum recorte espacial explica o erro.
+- **[D]** O produto de Vegetação Secundária tem acurácia preliminar de 70–78% (tabela do MapBiomas).
+
+**Teste crítico:**
+1. **Os pontos da P1 dependem do mapa.** E e P são eventos do mapa e N é pequeno (150). Um detector projetado neles aprende a separar o verdadeiro do falso *entre os eventos*, mas mal informa a omissão. **Mitigação:** a amostra de validação da Etapa 4 tem um estrato de não detecção dimensionado para medir omissão.
+2. **Sobreajuste.** Comparar vários detectores nos mesmos 750 pontos infla o desempenho aparente. **Mitigação:** escolher o detector uma vez, antes da Etapa 4, e validar em amostra nova uma vez só.
+3. **1a × 1b pode não ser separável na imagem.** Se o intérprete não conseguir separar com confiança, a definição não é operacional. **Mitigação:** teste de viabilidade na Etapa 1, com a proporção de "incerto" registrada.
+4. **Intérprete único** de novo, agora também definindo o conceito. **[L]** Sem segundo intérprete, a fronteira 1a/1b é a de uma pessoa. Recomendado: um segundo intérprete numa subamostra da Etapa 4, se houver alguém disponível.
+5. **Holdout.** Usá-lo para validar o rótulo consumiria a reserva da P3 (PROTOCOLO §9.3). **Recomendação:** amostra nova fora do holdout. Decisão de Mario pendente.
+6. **Custo:** 5–7 semanas. O white paper pode reportar já o diagnóstico da P1, como resultado em si.
+
+**Status:** caminho aprovado. Etapa 1 (definição) aguarda a edição de Mario.
+
