@@ -327,3 +327,11 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum. **Fora do repositório até o fim da reinterpretação:** CHAVE, mapa R → P e `p1_pontos_com_estrato.csv`.
 
+
+## 2026-11-12 · pacote 1.13
+**Análise exploratória [E] do viés espacial do erro (estrato E).** Não muda o critério da P1.
+
+**Novos:**
+- `src/python/f1_16_gerar_distancia_biomas.py` → `src/gee/16_distancia_biomas_p1.js`: distância de cada ponto aos biomas vizinhos (asset IBGE). Classes fixadas antes de ver as distâncias: ≤50, 50–150 e >150 km.
+
+**Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
