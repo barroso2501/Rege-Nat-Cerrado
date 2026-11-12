@@ -335,3 +335,13 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 - `src/python/f1_16_gerar_distancia_biomas.py` → `src/gee/16_distancia_biomas_p1.js`: distância de cada ponto aos biomas vizinhos (asset IBGE). Classes fixadas antes de ver as distâncias: ≤50, 50–150 e >150 km.
 
 **Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
+
+## 2026-11-12 · pacote 1.14
+**Viés espacial × biomas vizinhos (exploratório [E]).** Gradiente fraco e não significativo (E: 62% a ≤50 km, 69% a 50–150 km, 71% no core; χ² p = 0,26). Nenhum bioma vizinho se destaca (64–72%; p = 0,62).
+
+**Novos:**
+- `src/python/f1_17_vies_espacial_biomas.py`.
+- `results/f1/criterio/p1_vies_espacial_biomas.md` e `.json` (só agregados).
+- `data/f1_gee/F1_16_distancia_biomas.csv` — saída do GEE 16, sem estrato. Fica fora do git (`data/*`); o hash está no `.json`.
+
+**Alterados:** `CHANGELOG.md`. **Removidos:** nenhum. A tabela por ponto com estrato fica na pasta privada.
