@@ -64,3 +64,12 @@ Os candidatos ficam em `data/f1_candidatos/`, fora do git até o fim da interpre
   - **[L]** O link do Google Earth ainda mostra as coordenadas. Reconhecer um ponto exigiria procurá-lo de propósito na 1ª planilha: o cegamento aqui também depende de disciplina.
 - **CHAVE:** continua fechada até o fim da reinterpretação.
 
+## Situação em 2026-11-12 — critério calculado (P1 reprovada)
+
+- CHAVE aberta em 2026-11-12, com o hash conferido, depois do registro em `docs/desvios.md` (revogação do item (d) de 2026-11-07).
+- `src/python/f1_15_calcular_criterio_p1.py` → `criterio/p1_criterio.json` e `criterio/p1_criterio_resumo.md`.
+- **Resultado (estrato E, n = 500, acerto ponderado por área):** 67,6%, IC 95% de 63,4% a 71,5%. **Reprovado** (critério: ≥75% e limite inferior ≥70%). Os quatro cenários (principal, incerto excluído, janela, bruto) ficam entre 67,6% e 67,9% e todos reprovam.
+- **Preliminar quanto à consistência:** a reinterpretação de 10% começa em 2026-11-21.
+- **Consequência (plano §3):** a P2 e a P3 **não prosseguem** com o evento como rótulo sem um desvio registrado que justifique outra definição.
+- A tabela por ponto com estrato (`p1_pontos_com_estrato.csv`), a CHAVE e o mapa R → P ficam fora do repositório até o fim da reinterpretação.
+

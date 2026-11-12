@@ -306,3 +306,24 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+
+## 2026-11-09 · pacote 1.11
+**Novos:**
+- `docs/resumo_validacao_para_mapbiomas.md` — resumo para a equipe do MapBiomas: o que, por que e como validamos (situação: interpretação concluída, chave fechada, sem resultado).
+
+**Alterados:** `CHANGELOG.md`. **Removidos:** nenhum.
+
+## 2026-11-12 · pacote 1.12
+**Critério da P1 calculado: reprovado** (E: 67,6%, IC 95% 63,4–71,5%). Preliminar quanto à consistência.
+
+**Novos:**
+- `src/python/f1_15_calcular_criterio_p1.py`.
+- `results/f1/criterio/p1_criterio.json` e `results/f1/criterio/p1_criterio_resumo.md`.
+
+**Alterados:**
+- `docs/desvios.md`: desvio de 2026-11-12 (CHAVE aberta antes da reinterpretação), registrado antes da abertura.
+- `results/f1/README.md`: situação em 2026-11-12.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum. **Fora do repositório até o fim da reinterpretação:** CHAVE, mapa R → P e `p1_pontos_com_estrato.csv`.
+
