@@ -13,12 +13,12 @@
 
 O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa manteve como pastagem receberam a categoria 1. Projetada para a área total desse estrato, essa taxa é implausível como regeneração. **[H]** A categoria 1 capturou também o **adensamento de lenhosas em pastagem manejada** ("pasto sujo").
 
-**Rascunho da definição — v2 (2026-11-12, com o relato de Mario sobre a inspeção da P1):**
+**Rascunho da definição — v3 (2026-11-12, com o relato de Mario sobre a inspeção da P1):**
 
-> **Regeneração natural savânica**: área de savana que foi **convertida** (corte raso ou conversão parcial: correntão, raleamento, queima), onde foi **implantada pastagem**, e onde, **a partir de t** (ano de referência), há **abandono ou forte redução do pastoreio** com recuperação da vegetação nativa, persistindo até t+3.
+> **Regeneração natural savânica**: área de savana que foi **convertida** (corte raso ou conversão parcial: correntão, raleamento, queima), onde foi **implantada pastagem**, e onde, **a partir de t** (ano de referência), há **trajetória de recuperação** da vegetação savânica, **com componente arbóreo presente**, persistindo até t+3 (matriz de decisão abaixo).
 >
 > **Não é regeneração:**
-> - adensamento de lenhosas com pastoreio ativo (1b);
+> - pasto sujo estável (categoria 2). Pasto sujo com lenhosas aumentando é 1c, uma possível etapa da regeneração, e fica separado;
 > - área que não foi convertida nem recebeu pastagem (campo ou savana nativa degradada, rebrota depois de fogo);
 > - silvicultura, pomar, ILPF;
 > - regeneração florestal (fora do escopo savânico).
@@ -31,20 +31,35 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 | Q1b | Intensidade da conversão | corte raso / parcial (correntão, raleamento, queima com árvores mantidas) / incerta | idem |
 | Q2 | Antes da conversão, era savana? | sim / não (campo, floresta) / talvez | idem |
 | Q3 | Foi implantada pastagem? | sim / não / talvez | idem |
-| Q4 | A partir de t, o pastoreio cessou ou caiu muito e há recuperação? | 1a / 1b / não / incerto | idem |
+| Q4 | A partir de t, há trajetória de recuperação com componente arbóreo? (matriz abaixo) | 1a / 1c / 1? / 2 / 4 | idem |
 
-**Critério 1a × 1b — composto (Mario, 2026-11-12).** A regeneração (1a) pode aparecer de três formas:
-- **herbácea:** acúmulo forte de **macega seca** (biomassa herbácea não pastejada), sinal de redução ou fim do pastoreio;
-- **predominantemente arbórea:** aumento claro de lenhosas;
-- **as duas** juntas.
+**Critério — trajetória (Mario, 2026-11-12, v3).** O que separa regeneração de pasto sujo é a **trajetória**, não o estado num ano:
+- pasto sujo **estável** não é regeneração;
+- pasto sujo com **aumento de densidade de lenhosas** pode ser uma **etapa** da regeneração;
+- como o alvo é **savana**, o **componente arbóreo precisa estar presente** (remanescente ou rebrotando). Sinal só herbáceo, sem árvores, não é regeneração savânica.
 
-**Condição: pelo menos uma imagem de alta resolução na janela.** Sem ela, nem o sinal herbáceo nem o arbóreo podem ser lidos com segurança, e 1a não pode ser atribuída.
+**Matriz de decisão** (Q4, a partir de t, até t+3):
 
-**Pendente (Mario):** quando o sinal é **só arbóreo** e o herbáceo mostra pastoreio ativo (baixo, verde-rasteiro, trilhas de gado), é 1a ou 1b (pasto sujo)? A definição v2 dizia 1b. Esse é justamente o caso que o estrato N sugere ter inflado a categoria 1.
+| Componente arbóreo | Trajetória das lenhosas | Pastoreio (estrato herbáceo) | Categoria |
+|---|---|---|---|
+| ausente | — | qualquer | **não é regeneração savânica** (2, ou 3 se outra mudança) |
+| presente | aumenta | reduzido ou ausente (macega) | **1a** regeneração |
+| presente | aumenta | ativo (pasto sujo em adensamento) | **1c** regeneração inicial sob pastoreio (possível etapa) |
+| presente | estável | reduzido ou ausente (macega) | **1a** *(a confirmar por Mario)* |
+| presente | estável | ativo | **2** pasto sujo estável |
+| presente | diminui | qualquer | **2** ou **3** |
+| — | sem alta resolução para ler arbóreo e herbáceo | — | **1?** ou **4** |
+
+**Evidência mínima:**
+- presença e estrutura do arbóreo e estado do herbáceo: **≥1 imagem de alta resolução** na janela;
+- trajetória: ≥2 datas de alta resolução, **ou** 1 de alta resolução + série Sentinel-2/NDVI;
+- **[L]** No segundo caso, a tendência volta a depender do NDVI (ver a regra de independência na Etapa 4). Registrar qual foi usado.
+
+**Alvo do detector, a fixar antes da Etapa 4 (proposta):** principal = **1a**; sensibilidade = **1a + 1c**. Assim o white paper pode reportar a regeneração estabelecida e, à parte, a fração "em processo", sem forçar uma escolha agora.
 
 **Pontos sem alta resolução na janela — regra a fixar antes da Etapa 4 (proposta):**
 - registrar `alta_resolucao_na_janela` = sim/não em todos os pontos;
-- sem alta resolução: Q1–Q3 podem ser respondidas com Sentinel-2 e NDVI, mas Q4 recebe **"1 sem distinção"** (há recuperação, mas 1a/1b não determinável) ou **4**;
+- sem alta resolução: Q1–Q3 podem ser respondidas com Sentinel-2 e NDVI, mas Q4 recebe **"1?"** (há recuperação, mas 1a/1c não determinável) ou **4**;
 - **acerto principal** calculado só nos pontos com alta resolução na janela. Isso também resolve a dependência do NDVI (Etapa 4);
 - **sensibilidade:** todos os pontos, com "1 sem distinção" contado como erro;
 - **[L]** A disponibilidade de alta resolução não é aleatória (varia com a região e com a proximidade de cidades e estradas). O relatório compara os pontos com e sem alta resolução por região e por ano.
@@ -55,7 +70,7 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 
 **Conversão parcial.** Quando a árvore é mantida (correntão, queima), a rebrota é rápida e a curva de NDVI pode nem mostrar a conversão. É o modo de regeneração típico do Cerrado, pela rebrota de órgãos subterrâneos. Fica dentro do escopo, e a intensidade (Q1b) é registrada para análise.
 
-**Categorias revistas:** **1a** regeneração; **1b** adensamento em pasto manejado; **1?** recuperação sem alta resolução para distinguir 1a/1b; **2** sem mudança; **3** outra mudança; **4** incerto.
+**Categorias revistas:** **1a** regeneração; **1c** regeneração inicial sob pastoreio (adensamento de lenhosas em pasto sujo); **1?** recuperação sem alta resolução para classificar; **2** sem mudança, incluindo pasto sujo estável; **3** outra mudança; **4** incerto. (A antiga 1b se divide em 1c, se as lenhosas aumentam, e 2, se estão estáveis.)
 
 **Teste de viabilidade:**
 - A macega é visível com segurança na alta resolução do período seco. No Sentinel-2 é visível só às vezes.
@@ -63,7 +78,7 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 
 ## Etapa 2 — Recaracterizar os pontos da P1 com a nova definição
 
-- **Quem e o quê:** Mario revê os pontos com categoria 1 (412) e separa 1a e 1b, cego quanto ao estrato (só os códigos P).
+- **Quem e o quê:** Mario revê os pontos com categoria 1 (412) e os reclassifica pela matriz de decisão (1a, 1c, 1?, 2…), cego quanto ao estrato (só os códigos P).
 - **Quando:** só **depois da reinterpretação** de consistência (a partir de 21/11). Rever os mesmos pontos antes contaminaria o intervalo de 14 dias.
 - **Uso:** dado de **projeto** do detector, nunca de validação final.
 - **Registrar também** `alta_resolucao_na_janela` (sim/não). Assim se sabe quantas das 412 atribuições da P1 tiveram alta resolução e quantas dependeram do NDVI.

@@ -402,3 +402,16 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+## 2026-11-12 · pacote 1.21
+**Alterados:**
+- `docs/plano_fase2_rotulo.md`, definição v3:
+  - a trajetória separa regeneração de pasto sujo;
+  - o componente arbóreo é obrigatório;
+  - matriz de decisão;
+  - categoria nova 1c (regeneração inicial sob pastoreio); a 1b se divide em 1c e 2;
+  - evidência mínima para a trajetória;
+  - alvo proposto do detector: 1a no principal, 1a + 1c na sensibilidade.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
