@@ -415,3 +415,13 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+## 2026-11-12 · pacote 1.22
+**Etapa 1 da Fase 2 fechada (D13).**
+
+**Alterados:**
+- `docs/plano_fase2_rotulo.md`: célula "lenhosas estáveis + pastoreio reduzido confirmado pela curva" = 1a.
+- `docs/decisoes.md`: D13 (definição operacional v3), com teste crítico; alvo do detector fixado (1a no principal; 1a + 1c na sensibilidade).
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+

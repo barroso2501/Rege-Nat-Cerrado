@@ -220,3 +220,23 @@ Fica como [L] para trabalho futuro.
 
 **Status:** caminho aprovado. Definição v2 incorporada ao plano (critério herbáceo; sequência Q1–Q4; conversão parcial dentro do escopo), aguardando a confirmação de Mario.
 
+## D13 — Definição operacional de regeneração (Etapa 1 da Fase 2; Mario, 2026-11-12)
+
+**Decisão:** definição v3 em `docs/plano_fase2_rotulo.md`:
+- a **trajetória** separa regeneração de pasto sujo;
+- o **componente arbóreo é obrigatório**;
+- 1a = lenhosas aumentando com pastoreio reduzido, **ou** lenhosas estáveis com pastoreio reduzido confirmado pela curva;
+- 1c = lenhosas aumentando sob pastoreio ativo (possível etapa);
+- 2 = pasto sujo estável;
+- 1? = sem alta resolução para classificar;
+- conversão parcial (correntão, queima) dentro do escopo, com a intensidade registrada.
+
+**Teste crítico:**
+1. **Depende de um especialista.** A fronteira 1a/1c/2 é o julgamento de uma pessoa sobre a trajetória. **[L]** Sem segundo intérprete, não há medida de concordância entre intérpretes. Recomendado: um segundo intérprete numa subamostra da Etapa 4.
+2. **Dependência do NDVI.** A trajetória e a célula "lenhosas estáveis + pastoreio reduzido" usam a curva. Como o mapa também é Landsat, os erros podem estar correlacionados. **Mitigação:** registrar a evidência por pergunta e aplicar a regra de independência da Etapa 4.
+3. **Exigir alta resolução seleciona a amostra.** A disponibilidade não é aleatória. **Mitigação:** comparar os pontos com e sem alta resolução por região e por ano.
+4. **1a com lenhosas estáveis pode ser abandono recente sem regeneração efetiva.** A persistência até t+3 limita esse risco, mas não o elimina. **Mitigação:** registrar qual célula da matriz levou a 1a, para analisar à parte.
+5. **Alvo do detector:** 1a no principal, 1a + 1c na sensibilidade. Fixado aqui, antes de qualquer dado novo.
+
+**Status:** Etapa 1 fechada. Falta Mario descrever a assinatura da curva para "pastoreio reduzido".
+

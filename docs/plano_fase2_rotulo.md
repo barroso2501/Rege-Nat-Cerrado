@@ -45,10 +45,15 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 | ausente | — | qualquer | **não é regeneração savânica** (2, ou 3 se outra mudança) |
 | presente | aumenta | reduzido ou ausente (macega) | **1a** regeneração |
 | presente | aumenta | ativo (pasto sujo em adensamento) | **1c** regeneração inicial sob pastoreio (possível etapa) |
-| presente | estável | reduzido ou ausente (macega) | **1a** *(a confirmar por Mario)* |
+| presente | estável | reduzido ou ausente (macega), **confirmado pela curva** | **1a** (Mario, 2026-11-12) |
 | presente | estável | ativo | **2** pasto sujo estável |
 | presente | diminui | qualquer | **2** ou **3** |
 | — | sem alta resolução para ler arbóreo e herbáceo | — | **1?** ou **4** |
+
+**Nota sobre a célula "arbóreo estável + pastoreio reduzido":**
+- **o que vale:** é 1a quando a redução do pastoreio é confirmada pela curva (NDVI/Sentinel-2), além da imagem de alta resolução;
+- **[H]** a assinatura esperada na curva (por exemplo, NDVI seco menos deprimido sem o consumo pelo gado, ou o oposto, pela palha seca) ainda não está descrita. Mario deve registrá-la em uma ou duas frases, para que seja aplicada sempre da mesma forma;
+- **[L]** esta célula depende do NDVI por construção, então a evidência registrada é obrigatória.
 
 **Evidência mínima:**
 - presença e estrutura do arbóreo e estado do herbáceo: **≥1 imagem de alta resolução** na janela;
