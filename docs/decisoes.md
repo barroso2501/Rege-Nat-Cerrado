@@ -216,5 +216,7 @@ Fica como [L] para trabalho futuro.
 5. **Holdout.** Usá-lo para validar o rótulo consumiria a reserva da P3 (PROTOCOLO §9.3). **Recomendação:** amostra nova fora do holdout. Decisão de Mario pendente.
 6. **Custo:** 5–7 semanas. O white paper pode reportar já o diagnóstico da P1, como resultado em si.
 
-**Status:** caminho aprovado. Etapa 1 (definição) aguarda a edição de Mario.
+7. **Referência dependente do NDVI** (relato de Mario, 2026-11-12). Na P1, a curva de NDVI decidia os casos duvidosos. Um detector de NDVI validado contra essa referência seria circular. **Mitigação:** regra de independência na Etapa 4 do plano.
+
+**Status:** caminho aprovado. Definição v2 incorporada ao plano (critério herbáceo; sequência Q1–Q4; conversão parcial dentro do escopo), aguardando a confirmação de Mario.
 

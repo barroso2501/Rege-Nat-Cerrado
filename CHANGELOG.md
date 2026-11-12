@@ -378,3 +378,14 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum do repositório. Se `data/sistemas_terra/` ou `data/f1_gee/` chegaram ao GitHub por upload anterior, apague-os pela interface web.
 
+## 2026-11-12 · pacote 1.18
+**Relato de Mario sobre o processo de inspeção da P1, incorporado.**
+
+**Alterados:**
+- `docs/plano_fase2_rotulo.md`: definição v2 (critério 1a/1b pelo estrato herbáceo, a macega seca; sequência de decisão Q1–Q4 com evidência registrada; conversão parcial dentro do escopo; ancoragem em t); regra de independência entre referência e detector na Etapa 4.
+- `docs/desvios.md`: 2026-11-12 (c), relato retrospectivo (mudança de ancoragem durante a interpretação; NDVI decisivo; critério herbáceo).
+- `docs/decisoes.md`: D12, item 7 do teste crítico.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+

@@ -13,27 +13,39 @@
 
 O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa manteve como pastagem receberam a categoria 1. Projetada para a área total desse estrato, essa taxa é implausível como regeneração. **[H]** A categoria 1 capturou também o **adensamento de lenhosas em pastagem manejada** ("pasto sujo").
 
-**Rascunho da definição, para Mario editar:**
+**Rascunho da definição — v2 (2026-11-12, com o relato de Mario sobre a inspeção da P1):**
 
-> **Regeneração natural savânica**: área que era **pastagem plantada** antes de t (formação de pastagem visível: limpeza, textura homogênea, limites retos, cercas) e onde, entre t−3 e t+3:
-> (a) **cessa o manejo** — sem reforma, gradagem, roçada ou limpeza recorrente visível;
-> (b) a **cobertura lenhosa e arbustiva aumenta de forma contínua** e caminha para a estrutura da savana vizinha;
-> (c) o processo **persiste ≥4 anos** (t a t+3).
+> **Regeneração natural savânica**: área de savana que foi **convertida** (corte raso ou conversão parcial: correntão, raleamento, queima), onde foi **implantada pastagem**, e onde, **a partir de t** (ano de referência), há **abandono ou forte redução do pastoreio** com recuperação da vegetação nativa, persistindo até t+3.
 >
 > **Não é regeneração:**
-> - adensamento de lenhosas com manejo ativo (pasto sujo: gado, cercas mantidas, roçada periódica, queima de manejo);
-> - área que não era pastagem plantada (campo ou savana nativa degradada, ou rebrotando depois de fogo);
+> - adensamento de lenhosas com pastoreio ativo (1b);
+> - área que não foi convertida nem recebeu pastagem (campo ou savana nativa degradada, rebrota depois de fogo);
 > - silvicultura, pomar, ILPF;
 > - regeneração florestal (fora do escopo savânico).
 
-**Categorias revistas:**
-- **1a** regeneração (definição acima);
-- **1b** adensamento em pasto manejado;
-- **2** sem mudança;
-- **3** outra mudança;
-- **4** incerto.
+**Sequência de decisão por ponto** (a que Mario passou a usar na P1). Cada pergunta registra a resposta **e a evidência** que a sustenta:
 
-**Teste de viabilidade:** dá para separar 1a de 1b com Sentinel-2, Landsat e o histórico do Google Earth? Se não der com confiança, a definição precisa de outro critério observável.
+| # | Pergunta | Resposta | Evidência que decidiu |
+|---|---|---|---|
+| Q1 | A área foi convertida em algum momento? | sim / não / talvez + ano aprox. | alta resolução / Sentinel-2 / NDVI |
+| Q1b | Intensidade da conversão | corte raso / parcial (correntão, raleamento, queima com árvores mantidas) / incerta | idem |
+| Q2 | Antes da conversão, era savana? | sim / não (campo, floresta) / talvez | idem |
+| Q3 | Foi implantada pastagem? | sim / não / talvez | idem |
+| Q4 | A partir de t, o pastoreio cessou ou caiu muito e há recuperação? | 1a / 1b / não / incerto | idem |
+
+**Critério 1a × 1b (de Mario): o estrato herbáceo, não o arbóreo.**
+- **1a** — acúmulo de **macega seca** (biomassa herbácea não pastejada), sinal de redução ou fim do pastoreio, com ou sem aumento de lenhosas.
+- **1b** — lenhosas aumentando com estrato herbáceo pastejado (baixo, verde-rasteiro, trilhas de gado).
+- **[H]** O acúmulo de macega também ocorre com lotação baixa sem abandono. 1a mede **redução de pastoreio**, que é condição para a regeneração, mas não a garante.
+- **[H]** A macega aumenta o risco de fogo. Fogo depois do abandono é esperado e não deve, por si só, desclassificar 1a.
+
+**Conversão parcial.** Quando a árvore é mantida (correntão, queima), a rebrota é rápida e a curva de NDVI pode nem mostrar a conversão. É o modo de regeneração típico do Cerrado, pela rebrota de órgãos subterrâneos. Fica dentro do escopo, e a intensidade (Q1b) é registrada para análise.
+
+**Categorias revistas:** **1a**, **1b**, **2** sem mudança, **3** outra mudança, **4** incerto.
+
+**Teste de viabilidade:**
+- A macega é visível com segurança na alta resolução do período seco. No Sentinel-2 é visível só às vezes.
+- **[H]** Proxies espectrais possíveis: refletância no SWIR alta no período seco (material seco), NDVI seco baixo com NDVI úmido alto, ou o vigor e a biomassa da pastagem do MapBiomas. A biomassa vem de GPP: mede produção verde, não a palha em pé. Precisa de teste.
 
 ## Etapa 2 — Recaracterizar os pontos da P1 com a nova definição
 
@@ -58,6 +70,13 @@ Os candidatos são comparados nos pontos da P1. O detector é escolhido **uma ve
 - **Alternativa:** usar o holdout. É independente no espaço, mas consome a única reserva que temos para a P3.
 
 **Critério, fixado antes do sorteio:** o mesmo da P1 (acerto da categoria 1a ≥75% e limite inferior do IC ≥70%), com a mesma regra de "incerto" e o mesmo desenho de estratos (detecção, não detecção, borda).
+
+**Independência da referência (lição da P1).** Na P1 a curva de NDVI decidia os casos de dúvida. Se o detector usar a trajetória de NDVI (candidato B), validá-lo contra interpretações decididas pelo NDVI mede o NDVI contra ele mesmo e infla a concordância. Por isso, na Etapa 4:
+- registrar por ponto a **evidência que decidiu** cada pergunta (Q1–Q4) e se havia alta resolução na janela;
+- não mostrar ao intérprete a curva de NDVI quando o detector usar NDVI, **ou** reportar o acerto principal só nos pontos com alta resolução disponível na janela e informar quantos são;
+- a escolha entre essas duas opções é fixada antes do sorteio.
+
+**Ancoragem no ano t.** A pergunta passa a ser explícita: a recuperação começa **a partir de t** (Q4). Na P1, isso só foi aplicado depois de certo ponto (ver `docs/desvios.md`, 2026-11-12 (c)).
 
 **Uma tentativa só.** Se reprovar, o resultado é reportado como está. Redesenhar e revalidar exigiria outra amostra nova.
 
