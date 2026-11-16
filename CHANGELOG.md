@@ -425,3 +425,18 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+## 2026-11-16 · pacote 1.23
+**Materiais da Etapa 2 e da preparação da Etapa 3 (Fase 2).**
+
+**Novos:**
+- `src/python/f2_19_preparar_etapa2.py` → `results/fase2_rotulo/etapa2/etapa2_reclassificacao.csv` (412 pontos), `etapa2_registro.json` e `src/gee/19_ferramenta_etapa2.js`.
+- `src/gee/19_modelo_ferramenta_etapa2.js.txt` — ferramenta da P1 com os textos da matriz v3 e um segundo gráfico (observações Landsat de NDVI e NDTI de t−4 a t+4).
+- `results/fase2_rotulo/etapa2/README.md` — valores permitidos e instruções.
+- `src/python/f2_20_gerar_extracao_preditores.py` → `src/gee/20_extrair_preditores_p1.js`: 4 tarefas de exportação (idade, vigor, biomassa, fogo MODIS; NDVI e NDTI sazonais de 1990 a 2025) para os 750 pontos, sem rótulo.
+
+**Alterados:**
+- `docs/plano_fase2_rotulo.md`: critério visual do pastoreio reduzido (macega seca no início ou no meio da seca).
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+

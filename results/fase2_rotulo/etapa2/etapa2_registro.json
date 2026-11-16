@@ -1,0 +1,13 @@
+{
+  "semente": 20261116,
+  "n": 412,
+  "inicio_minimo": "depois da reinterpretação (≥ 2026-11-21)",
+  "entradas": {
+    "p1_interpretacao_analise.csv": "f44eb626bce1a838b91a59022ef8b8a050c6ff2ef56604b09faa547bdf9ab4e4",
+    "19_modelo_ferramenta_etapa2.js.txt": "455a423d6c7714cb13f16eb4578d285bc0087eb42e3435dc4d6c8e544897811f"
+  },
+  "saidas": {
+    "etapa2_reclassificacao.csv": "fc036b32a5964b94292d6c558fcaa56eae8887dae1df08f9b494a0b241e166c0",
+    "19_ferramenta_etapa2.js": "0b26590a6dae3b052dbd14ff5557f37dab4a65037ecb5c9785f38e1f48f568b6"
+  }
+}

@@ -52,7 +52,8 @@ O problema conceitual que o estrato N expôs: 16,7% das pastagens que o mapa man
 
 **Nota sobre a célula "arbóreo estável + pastoreio reduzido":**
 - **o que vale:** é 1a quando a redução do pastoreio é confirmada pela curva (NDVI/Sentinel-2), além da imagem de alta resolução;
-- **[H]** a assinatura esperada na curva (por exemplo, NDVI seco menos deprimido sem o consumo pelo gado, ou o oposto, pela palha seca) ainda não está descrita. Mario deve registrá-la em uma ou duas frases, para que seja aplicada sempre da mesma forma;
+- **critério visual** (Mario, 2026-11-16): macega seca no início ou no meio da estação seca, sinal de que não houve pastejo intenso na época úmida. Não é bom manejo: a macega abafa a brotação no começo das chuvas;
+- **[H]** a assinatura esperada na curva (por exemplo, NDVI seco menos deprimido sem o consumo pelo gado, ou o oposto, pela palha seca) ainda não está descrita. Mario a descreve ao rever os pontos na Etapa 2 (coluna `assinatura_curva`), e a regra escrita sai daí;
 - **[L]** esta célula depende do NDVI por construção, então a evidência registrada é obrigatória.
 
 **Evidência mínima:**
