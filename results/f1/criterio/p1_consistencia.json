@@ -1,0 +1,109 @@
+{
+  "entradas": {
+    "p1_reinterpretacao_bruta_2026-11-22.csv": "27f3b553f64cf4e8b148a7b43c748ac951cafc0afce397e14a863ea69eeb25c2",
+    "reinterp_mapa_R_P.csv (privado)": "5acf50b3ee8d134ac3d2ba9777a427a56c197c8881ef776c41913fe940e98bb9"
+  },
+  "n": 75,
+  "quatro_categorias": {
+    "concordancia": 0.76,
+    "kappa": 0.489795918367347,
+    "kappa_ic95_bootstrap": [
+      0.2827442827442828,
+      0.6774193548387096
+    ]
+  },
+  "binario_1_vs_nao1": {
+    "concordancia": 0.76,
+    "kappa": 0.47674418604651164,
+    "kappa_ic95_bootstrap": [
+      0.2616033755274262,
+      0.6719160104986878
+    ]
+  },
+  "conferencia_com_categoria_principal": {
+    "concordancia": 0.76,
+    "kappa": 0.489795918367347
+  },
+  "matriz_confusao_1a_x_2a": {
+    "1": {
+      "1": 40,
+      "2": 5,
+      "3": 0,
+      "4": 0
+    },
+    "2": {
+      "1": 10,
+      "2": 17,
+      "3": 0,
+      "4": 0
+    },
+    "3": {
+      "1": 3,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "4": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    }
+  },
+  "direcao": {
+    "1→não1": 5,
+    "não1→1": 13
+  },
+  "por_fase_1a_rodada": {
+    "P001–100 (frouxo)": {
+      "n": 10,
+      "concordancia_binaria": 0.9,
+      "1→não1": 0,
+      "não1→1": 1,
+      "prop1_1a": 0.5,
+      "prop1_2a": 0.6
+    },
+    "P101–399 (transição)": {
+      "n": 29,
+      "concordancia_binaria": 0.8275862068965517,
+      "1→não1": 2,
+      "não1→1": 3,
+      "prop1_1a": 0.6896551724137931,
+      "prop1_2a": 0.7241379310344828
+    },
+    "P400–750 (consistente)": {
+      "n": 36,
+      "concordancia_binaria": 0.6666666666666666,
+      "1→não1": 3,
+      "não1→1": 9,
+      "prop1_1a": 0.5555555555555556,
+      "prop1_2a": 0.7222222222222222
+    }
+  },
+  "por_estrato": {
+    "E": {
+      "n": 56,
+      "concordancia_binaria": 0.7321428571428571,
+      "1→não1": 5,
+      "não1→1": 10,
+      "prop1_1a": 0.7142857142857143,
+      "prop1_2a": 0.8035714285714286
+    },
+    "N": {
+      "n": 12,
+      "concordancia_binaria": 0.75,
+      "1→não1": 0,
+      "não1→1": 3,
+      "prop1_1a": 0.0,
+      "prop1_2a": 0.25
+    },
+    "P": {
+      "n": 7,
+      "concordancia_binaria": 1.0,
+      "1→não1": 0,
+      "não1→1": 0,
+      "prop1_1a": 0.7142857142857143,
+      "prop1_2a": 0.7142857142857143
+    }
+  }
+}

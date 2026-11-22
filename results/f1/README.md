@@ -73,3 +73,9 @@ Os candidatos ficam em `data/f1_candidatos/`, fora do git até o fim da interpre
 - **Consequência (plano §3):** a P2 e a P3 **não prosseguem** com o evento como rótulo sem um desvio registrado que justifique outra definição.
 - A tabela por ponto com estrato (`p1_pontos_com_estrato.csv`), a CHAVE e o mapa R → P ficam fora do repositório até o fim da reinterpretação.
 
+## Situação em 2026-11-22 — consistência calculada
+
+- Reinterpretação dos 75 pontos feita em 21–22/11 (`reinterpretacao/p1_reinterpretacao_bruta_2026-11-22.csv`).
+- `src/python/f1_21_consistencia_reinterpretacao.py` → `criterio/p1_consistencia.md` e `.json`: concordância de 76% e kappa binário de 0,48 (IC 0,26–0,67).
+- **Ressalva:** a 2ª rodada não usou o histórico de alta resolução (desvio de 2026-11-22). A P1 deixa de ser "preliminar quanto à consistência", mas com essa limitação declarada.
+

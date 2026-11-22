@@ -440,3 +440,20 @@ Cada pacote zipado enviado ao repositório tem uma entrada aqui. Formato: data �
 
 **Removidos:** nenhum.
 
+## 2026-11-22 · pacote 1.24
+**Consistência intra-intérprete da P1 calculada:** kappa binário de 0,48 (IC 0,26–0,67), concordância de 76%. Mudanças assimétricas: 13 não 1 → 1 contra 5 1 → não 1.
+
+**Novos:**
+- `results/f1/reinterpretacao/p1_reinterpretacao_bruta_2026-11-22.csv` (planilha da 2ª rodada, sem edição).
+- `src/python/f1_21_consistencia_reinterpretacao.py`.
+- `results/f1/criterio/p1_consistencia.md` e `.json`.
+
+**Alterados:**
+- `docs/desvios.md`: 2026-11-22 (2ª rodada sem o histórico de alta resolução).
+- `results/f1/README.md`.
+- `CHANGELOG.md`.
+
+**Removidos:** nenhum.
+
+**A CHAVE e os arquivos privados** (mapa R → P, tabelas por ponto com estrato) podem entrar no repositório agora, porque a interpretação da P1 terminou. Ficam fora até Mario decidir (ver a resposta de 2026-11-22).
+

@@ -1,0 +1,76 @@
+codigo,lon,lat,ano_referencia_t,categoria,confianca,imagens_usadas,ja_foi_convertida,ja_foi_pastagem_plantada,comentario,data_interpretacao
+R01,-48.369292,-11.416464,2018,1,alta,"sentinel, curva",sim,sim,,21/11/2026
+R02,-45.467105,-18.748065,2021,1,media,"sentinel, curva, alta",talvez,talvez,area em borda,21/11/2026
+R03,-52.005313,-15.626509,2017,1,media,"sentinel, curva, alta",talvez,sim,possivel conversão fora da janela de analise (curva),21/11/2026
+R04,-50.593162,-14.289277,2019,2,media,"sentinel, curva, alta",talvez,sim,"possivel conversão fora da janela de analise (curva), sem sinal de regeneração entre 2019 e 2021",21/11/2026
+R05,-48.249906,-11.45635,2018,1,media,"sentinel, curva, alta",sim,sim,algum sinal de regeneração na janela de analise,21/11/2026
+R06,-44.759951,-13.026695,2017,1,alta,"sentinel, curva, alta",sim,sim,,21/11/2026
+R07,-46.549126,-12.207161,2018,1,media,"sentinel, curva, alta",talvez,talvez,area em borda,21/11/2026
+R08,-43.979765,-6.520556,2018,2,alta,"sentinel, curva, alta",sim,sim,área sem sinal de regeneração,21/11/2026
+R09,-49.594415,-12.859338,2021,2,media,"sentinel, curva, alta",sim,sim,aumento de arborea mas sem sinal de redução de pastejo. Herbaceo como de pasto plantado,21/11/2026
+R10,-45.561428,-18.865025,2019,2,alta,"sentinel, curva, alta",sim,sim,sem sinal de regeneração,21/11/2026
+R11,-57.436168,-15.98332,2020,1,baixa,"sentinel, curva, alta",talvez,talvez,"sem sinal de conversão pelas imagens, mas há uma possibilidade pela curva",21/11/2026
+R12,-54.978108,-14.994813,2020,1,media,"sentinel, curva, alta",sim,sim,area em borda,21/11/2026
+R13,-47.18675,-17.674937,2017,1,media,"sentinel, curva, alta",sim,talvez,,21/11/2026
+R14,-49.166457,-11.908292,2019,1,baixa,"sentinel, curva, alta",talvez,talvez,"area com possivel adensamento de arvoreas, mas dificil saber se houve corte raso na area",21/11/2026
+R15,-47.621984,-17.462306,2018,1,baixa,"sentinel, curva, alta",sim,sim,algum sinal de regeneração,21/11/2026
+R16,-56.563545,-21.958284,2020,2,alta,"sentinel, curva, alta",sim,sim,sem sinal de regeneração,21/11/2026
+R17,-46.95229,-15.4923,2017,1,media,"sentinel, curva, alta",sim,sim,"a imagem mostra regeneração, mas a curva não.",21/11/2026
+R18,-54.819915,-15.038472,2018,1,media,"sentinel, curva, alta",sim,talvez,Possivel conversão e abandono. a regeneração possivelmente começa antes de 2017,21/11/2026
+R19,-54.453941,-17.051327,2017,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R20,-43.365317,-17.765757,2020,2,media,"sentinel, curva, alta",não,não,"área sem sinal de conversão, borda",22/11/2026
+R21,-43.633464,-6.627007,2018,2,media,"sentinel, curva, alta",sim,sim,área sem sinal de regeneracao,22/11/2026
+R22,-53.816856,-16.486197,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R23,-48.468736,-10.327167,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R24,-48.113003,-17.522134,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R25,-47.043649,-14.664683,2017,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R26,-48.629355,-9.3392,2017,2,baixa,"sentinel, curva, alta",sim,sim,sem sinal claro de regeneração,22/11/2026
+R27,-49.391755,-12.862303,2020,2,media,"sentinel, curva, alta",sim,sim,sem sinal claro de regeneração,22/11/2026
+R28,-48.300032,-10.431192,2019,1,baixa,"sentinel, curva, alta",sim,sim,o sinal de regeneração some em 2021,22/11/2026
+R29,-45.09116,-18.146283,2021,2,media,"sentinel, curva, alta",talvez,não,não parece ter sido area de pastagem,22/11/2026
+R30,-53.834373,-19.114847,2021,2,media,"sentinel, curva, alta",sim,talvez,"sinal muito fraco, possivelmente nao chegou a ser regeneração",22/11/2026
+R31,-54.483316,-21.226337,2017,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R32,-48.261495,-7.631952,2021,2,media,"sentinel, curva, alta",sim,sim,o sinal de regeneração aparece entre 2017 e 2020,22/11/2026
+R33,-56.134779,-14.926631,2018,2,baixa,"sentinel, curva, alta",sim,sim,sinal fraco de regeneração,22/11/2026
+R34,-46.455881,-20.170726,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R35,-52.045468,-18.102625,2019,2,baixa,"sentinel, curva, alta",sim,sim,sinal fraco de regeneracao,22/11/2026
+R36,-50.078158,-16.622291,2021,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R37,-44.654849,-15.645912,2019,2,baixa,"sentinel, curva, alta",sim,sim,2021 tem reconversão,22/11/2026
+R38,-48.962989,-15.648877,2020,2,media,"sentinel, curva, alta",sim,sim,sem sinal de regeneracao,22/11/2026
+R39,-48.056679,-15.277783,2020,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R40,-52.850718,-17.659037,2019,1,alta,"sentinel, curva, alta",sim,sim,borda,22/11/2026
+R41,-46.327332,-20.181776,2020,1,baixa,"sentinel, curva, alta",sim,talvez,,22/11/2026
+R42,-43.141367,-16.347946,2021,1,alta,"sentinel, curva, alta",sim,sim,otimo exemplo de regeneracao detectada,22/11/2026
+R43,-44.173801,-6.471778,2019,2,media,"sentinel, curva, alta",sim,sim,sem regeneracao aparente,22/11/2026
+R44,-46.116318,-16.52689,2019,1,baixa,"sentinel, curva, alta",talvez,talvez,,22/11/2026
+R45,-43.204159,-17.071808,2021,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R46,-55.592556,-15.461039,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R47,-46.953368,-16.74033,2020,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R48,-58.766124,-15.082669,2020,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R49,-55.024192,-14.977566,2020,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R50,-49.051922,-19.512621,2021,2,media,"sentinel, curva, alta",sim,sim,sem regeneracao aparente,22/11/2026
+R51,-46.552629,-16.491317,2017,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R52,-54.041345,-17.528063,2018,1,media,"sentinel, curva, alta",sim,sim,borda,22/11/2026
+R53,-44.073279,-18.990071,2019,1,baixa,"sentinel, curva, alta",sim,sim,regeneracao fraca,22/11/2026
+R54,-49.146784,-9.747754,2021,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R55,-42.141812,-4.2789,2020,1,baixa,"sentinel, curva, alta",sim,sim,sinal fraco de regeneracao,22/11/2026
+R56,-47.786915,-8.325092,2020,1,baixa,"sentinel, curva, alta",sim,sim,sinal fraco de regeneracao,22/11/2026
+R57,-53.519064,-16.409121,2018,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R58,-57.022764,-21.184565,2017,1,baixa,"sentinel, curva, alta",sim,sim,,22/11/2026
+R59,-56.627684,-15.648607,2019,2,baixa,"sentinel, curva, alta",não,não,sem sinal de conversão,22/11/2026
+R60,-51.307861,-18.330617,2019,2,alta,"sentinel, curva, alta",sim,sim,sem regeneracao,22/11/2026
+R61,-48.63717,-11.977552,2017,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R62,-47.043649,-15.184538,2020,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R63,-42.403221,-16.534706,2020,1,baixa,"sentinel, curva, alta",sim,sim,a curva não mostra regeneracao,22/11/2026
+R64,-52.24166,-16.395107,2017,1,media,"sentinel, curva, alta",sim,talvez,,22/11/2026
+R65,-52.672851,-16.021588,2017,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R66,-46.756367,-12.322505,2018,1,baixa,"sentinel, curva, alta",sim,sim,,22/11/2026
+R67,-51.813972,-17.118161,2017,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R68,-56.118879,-14.536403,2019,2,media,"sentinel, curva, alta",não,não,area sem sinal de conversao,22/11/2026
+R69,-55.326295,-14.862492,2018,1,media,"sentinel, curva, alta",sim,sim,,22/11/2026
+R70,-48.72233,-9.404687,2019,1,baixa,"sentinel, curva, alta",sim,sim,sinal fraco de regeneracao,22/11/2026
+R71,-52.345146,-18.048726,2020,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R72,-46.290142,-17.093368,2021,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R73,-54.80644,-19.871587,2019,2,media,"sentinel, curva, alta",sim,sim,sem regeneracao aparente,22/11/2026
+R74,-48.485714,-15.732151,2021,1,alta,"sentinel, curva, alta",sim,sim,,22/11/2026
+R75,-48.217836,-18.788219,2021,1,baixa,"sentinel, curva, alta",sim,sim,area de duvida,22/11/2026
